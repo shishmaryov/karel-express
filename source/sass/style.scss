@@ -2,6 +2,10 @@
 @import "helpers/variables";
 @import "helpers/mixins";
 
+//Components
+@import "components/select";
+@import "components/air-datepicker";
+
 // Vendor
 @import "vendor/normalize";
 
@@ -15,3 +19,6 @@
 // Blocks
 @import "blocks/container";
 @import "blocks/header";
+@import "blocks/section";
+@import "blocks/promo.scss";
+@import "blocks/promo-form";

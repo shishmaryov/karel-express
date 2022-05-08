@@ -1,0 +1,109 @@
+.select {
+	position: relative;
+	width: 100%;
+	stroke: 1px solid #BDBDBD;
+}
+
+.select__toggle {
+	display: flex;
+	background-color: #F8F8F8;
+	border-radius: 5px;
+	cursor: pointer;
+	align-items: center;
+	border: none;
+	width: 100%;
+	font-size: 14px;
+	font-weight: 300;
+	color: #8C8C8C;
+	padding-left: 14px;
+	padding-right: 14px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	user-select: none;
+	justify-content: space-between;
+
+	@media(min-width: 1024px) {
+		font-size: 16px;
+		padding-top: 12px;
+		padding-bottom: 12px;
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+}
+
+.select__toggle::after {
+	content: url('../img/icons/arrow-select.svg');
+	width: 24px;
+	height: 24px;
+	flex-shrink: 0;
+}
+
+.select__toggle:focus {
+	outline: none;
+}
+
+.select_show .select__toggle::after {
+	transform: rotate(180deg);
+}
+
+.select__dropdown {
+	display: none;
+	position: absolute;
+	top: 45px;
+	left: 0;
+	right: 0;
+	border: 1px solid #ccc;
+	max-height: 10rem;
+	overflow-y: auto;
+	border-radius: 0.3125rem;
+	z-index: 2;
+	background-color: #F8F8F8;
+}
+
+.select_show .select__dropdown {
+	display: block;
+}
+
+.select_show .select__backdrop {
+	display: block;
+}
+
+.select__options {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.select__option {
+	padding: 0.375rem 0.75rem;
+	font-size: 14px;
+	color: #8C8C8C;
+	padding-top: 12px;
+	padding-bottom: 12px;
+
+	@media(min-width: 1024px) {
+		font-size: 16px;
+	}
+}
+
+.select__option_selected {
+	background-color: #E3F2E0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+// .select__option_selected::after {
+// 	content: '';
+// 	width: 0.75rem;
+// 	height: 0.75rem;
+// 	color: #0277bd;
+// 	background-size: cover;
+// 	background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" height="100" width="100" class="svg-inline--fa fa-check fa-w-16" data-icon="check" data-prefix="fas" aria-hidden="true"%3E%3Cpath d="M33.964 85.547l-32.5-32.251a4.935 4.935 0 010-7.017l7.071-7.017a5.027 5.027 0 017.071 0L37.5 60.987l46.894-46.534a5.028 5.028 0 017.07 0l7.072 7.017a4.935 4.935 0 010 7.017l-57.5 57.06a5.027 5.027 0 01-7.072 0z" fill="%230277bd"/%3E%3C/svg%3E');
+// }
+
+.select__option:hover {
+	background-color: #f5f5f5;
+	cursor: pointer;
+	transition: 0.2s background-color ease-in-out;
+}

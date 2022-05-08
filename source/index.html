@@ -7,7 +7,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<link rel="stylesheet" href="css/style.css">
-</head>
 
 <body class="index-page">
 	<header class="header header--desktop index-page__header">
@@ -205,7 +204,7 @@
 						<a href="" class="header__social-link">
 							<img src="img/icons/instagram.svg" alt="instagram" width="42" height="42" class="header__social-icon">
 						</a>
-						<a href="" class="header__social-link">
+						<a href="https://vk.com/karel.express" class="header__social-link">
 							<img src="img/icons/vk.svg" alt="vk" width="42" height="42" class="header__social-icon">
 						</a>
 					</li>
@@ -214,11 +213,128 @@
 		</div>
 	</header>
 	<main>
+		<section class="promo">
+			<div class="container">
+				<div class="promo__wrapper--info">
+					<h2 class="section__title promo__title">Вибирая нас, вы заботитесь о качестве</h2>
+					<p class="section__description promo__description">Квартирные, офисные переезды под ключ и любые виды погрузочно- разгрузочных работ по Карелии и не только!</p>
+					<p class="promo__action promo__action--desktop">Расчитайте стоимоть перевозки</p>
+				</div>
+				<div class="promo__wrapper--img">
+					<picture>
+						<source srcset="img/content-images/promo-img-desktop.svg" media="(min-width: 1024px)">
+						<img src="img/content-images/promo-img.svg" alt="Illustration of delivery" class="promo__img">
+					</picture>
+				</div>
+				<p class="promo__action promo__action--mobile">Расчитайте стоимоть перевозки</p>
+			</div>
+		</section>
+		<div class="container">
+			<div class="promo-form">
+				<button class="promo-form__clean">
+					Очистить
+				</button>
+				<form method="POST" action="" name="form">
+					<div class="promo-form__way">
+						<h3 class="promo-form__title promo-form__title--way">Укажите маршрут</h3>
+						<div class="promo-form__stops">
+							<div class="promo-form__start">
+								<input type="text" class="promo-form__input promo-form__input--preconnect" name="start-street" placeholder="Улица">
+								<input type="text" class="promo-form__input promo-form__input--connect" name="start-house" placeholder="Дом">
+							</div>
+							<div class="promo-form__end">
+								<input type="text" class="promo-form__input promo-form__input--preconnect" name="end-street" placeholder="Улица">
+								<input type="text" class="promo-form__input promo-form__input--connect" name="end-house" placeholder="Дом">
+							</div>
+						</div>
+						<button class="link promo-form__add-adress">Дополнительный адрес</button>
+						<input type="text" class="promo-form__input promo-form__input--name promo-form__input--hidden" name="name" placeholder="Ваше имя">
+						<input class="tel promo-form__input promo-form__input--phone promo-form__input--hidden" id="phone" name="phone" placeholder="+7 (9xx) - xxx - xx - xx">
+						<h3 class="promo-form__title promo-form__title--car">Укажите маршрут</h3>
+						<label class="promo-form__label" for="select-1">
+							Вес
+							<div id="select-1" class="promo-form__select"></div>
+						</label>
+						<label class="promo-form__label" for="length">
+							Длина
+							<div id="select-2" class="promo-form__select"></div>
+						</label>
+						<label class="promo-form__label" for="heigth">
+							Высота
+							<div id="select-3" class="promo-form__select"></div>
+						</label>
+						<div class="promo-form__block">
+							<label class="promo-form__label" for="passengers">
+								Пассажиры
+								<div id="select-4" class="promo-form__select--short"></div>
+							</label>
+							<label class="promo-form__label" for="movers">
+								Грузчики
+								<div id="select-5" class="promo-form__select--short"></div>
+							</label>
+						</div>
+					</div>
+					<div class="promo-form__block">
+						<div class="promo-form__car">
+							<div>
+								<p class="promo-form__actual-title">Вам подходит</p>
+								<p class="promo-form__actual-car">ГАЗЕЛЬ-ТЕНТ</p>
+								<p class="promo-form__actual-link">Выбрать из списка</p>
+							</div>
+							<img src="img/icons/gaz-tent-big.svg" alt="ГАЗЕЛЬ-ТЕНТ 3 метра" class="promo-form__actual-img">
+							<div class="select" id="select-6">
+								<button type="button" class="select__toggle" name="car" value="ford" data-select="toggle" data-index="1">Выбрать из списка</button>
+								<div class="select__dropdown">
+									<ul class="select__options">
+										<li class="select__option" data-select="option" data-value="gaz-tent" data-index="0">ГАЗЕЛЬ-ТЕНТ 3 метра <img src="img/icons/gaz-tent-small.svg" alt="Газель Тент 3 метра" class="promo-form__img"> </li>
+										<li class="select__option select__option_selected" data-select="option" data-value="gaz-tent" data-index="1">ГАЗЕЛЬ-ТЕНТ 3 метра <img src="img/icons/gaz-tent-small.svg" alt="Газель Тент 3 метра" class="promo-form__img"> </li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="promo-form__time">
+						<h3 class="promo-form__title promo-form__title--time">Время и длительность</h3>
+						<label for="select-7" class="promo-form__label">
+							Срочность
+							<div id="select-7" class="promo-form__select"></div>
+						</label>
+						<div class="promo-form__line">
+							<label for="time" class="promo-form__label">
+								Время
+								<input type="text" class="promo-form__input" name="time" id="time" placeholder="">
+							</label>
+							<label for="date" class="promo-form__label">
+								Дата
+								<input type="text" id="date" name="date" class="promo-form__input">
+							</label>
+						</div>
+
+						<label for="duration" class="promo-form__label">
+							Длительность заказа
+							<div id="select-8" class="select promo-form__select--short"></div>
+						</label>
+						<label class="promo-form__label promo-form__label--comment" for="comment">
+							Комментарий к заказу:
+							<textarea class="promo-form__input promo-form__input--textarea" name="comment" id="comment" cols="30" rows="10">
+
+								</textarea>
+						</label>
+					</div>
+					<button type="submit" class="promo-form__button">Заказать грузоперевозку</button>
+					<p class="promo-form__agreement">Нажимая кнопку «Заказать грузоперевозку», вы соглашаетесь на обработку
+						<span>
+							Ваших персональных данных
+						</span>
+					</p>
+				</form>
+			</div>
+		</div>
 	</main>
 	<footer></footer>
+	<script src="js/air-datepicker.js"></script>
+	<script src="js/imask.js"></script>
 	<script src="js/script.js"></script>
-	<script>
-	</script>
 </body>
 
 </html>
