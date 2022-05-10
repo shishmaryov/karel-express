@@ -1708,27 +1708,29 @@ img {
         margin-bottom: 0; } }
 
 .promo-form {
+  position: relative;
+  max-height: 282px;
   padding-top: 10px;
   padding-right: 15px;
   padding-bottom: 24px;
   padding-left: 15px;
   border: 1px solid #4aab3c;
   border-radius: 30px;
-  background: #fff;
-  position: relative;
-  max-height: 282px; }
+  background: #fff; }
+  .promo-form .just-validate-error-label {
+    font-family: 'Exo 2', sans-serif; }
   @media (min-width: 1024px) {
     .promo-form--active {
       max-height: none; }
       .promo-form--active::after {
-        content: '';
         position: absolute;
+        right: 74px;
         bottom: 150px;
         left: 74px;
-        right: 74px;
-        height: 2px;
         width: calc(100% - 148px);
-        background: #F8F8F8; } }
+        height: 2px;
+        content: '';
+        background: #f8f8f8; } }
   .promo-form__block {
     display: none; }
     .promo-form__block--active {
@@ -1757,6 +1759,10 @@ img {
       width: 13px;
       height: 13px;
       content: url("../img/icons/arrow-again.svg"); }
+  .promo-form__stops .just-validate-error-label {
+    position: absolute;
+    top: 35px;
+    left: 25px; }
   .promo-form__input {
     font-size: 14px;
     font-weight: 300;
@@ -1911,6 +1917,23 @@ img {
       width: 16px;
       height: 72px;
       content: url("../img/icons/way-start.svg"); }
+    .promo-form__way--no-icon .just-validate-error-label {
+      position: absolute;
+      top: 0;
+      left: 0; }
+    .promo-form__way--no-icon .is-invalid {
+      color: #b81111;
+      border: 1px solid #b81111; }
+      .promo-form__way--no-icon .is-invalid::-webkit-input-placeholder {
+        color: #b81111; }
+      .promo-form__way--no-icon .is-invalid::-moz-placeholder {
+        color: #b81111; }
+      .promo-form__way--no-icon .is-invalid:-ms-input-placeholder {
+        color: #b81111; }
+      .promo-form__way--no-icon .is-invalid::-ms-input-placeholder {
+        color: #b81111; }
+      .promo-form__way--no-icon .is-invalid::placeholder {
+        color: #b81111; }
     .promo-form__way--no-icon::before {
       position: absolute;
       top: 0;
@@ -1918,6 +1941,8 @@ img {
       width: 0;
       height: 0;
       content: ''; }
+  .promo-form__error-label {
+    position: relative; }
   .promo-form__actual-title {
     font-size: 12px;
     font-weight: 300;
@@ -2039,8 +2064,8 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding-left: 24px;
-    margin-bottom: 12px; }
+    margin-bottom: 12px;
+    padding-left: 24px; }
     .promo-form__middle::before {
       position: absolute;
       top: 12px;
@@ -2127,3 +2152,7 @@ img {
     color: #8c8c8c; }
     .promo-form__agreement span {
       color: #4AAB3C; }
+
+.is-invalid {
+  color: #b81111;
+  border: 1px solid #b81111; }
