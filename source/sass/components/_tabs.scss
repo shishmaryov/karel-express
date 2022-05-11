@@ -1,0 +1,201 @@
+.tabs
+{
+    position: relative;
+
+    display: flex;
+    flex-direction: row-reverse;
+
+    padding-bottom: 460px;
+}
+
+.tabs__list
+{
+    position: absolute;
+    z-index: 1;
+    left: 0;
+
+    margin-top: 0;
+    margin-top: 3px;
+    margin-bottom: 0;
+    padding-left: 0;
+
+    list-style: none;
+}
+
+.tabs__item
+{
+    width: 100%;
+}
+
+
+
+.tabs__btn
+{
+    font-size: 18px;
+    line-height: 22px;
+
+    position: relative;
+
+    max-width: 380px;
+    height: 119px;
+    padding-top: 35px;
+    padding-right: 45px;
+    padding-bottom: 35px;
+    padding-left: 150px;
+
+    text-align: left;
+
+    border: none;
+    background: #f2f2f2;
+
+    &::before
+    {
+        position: absolute;
+        top: 32px;
+        left: 32px;
+
+        width: 91px;
+        height: 58px;
+
+        content: '';
+    }
+
+    &--first
+    {
+        border-radius: 20px 0 0 0;
+    }
+
+    &--apartment-with-movers
+    {
+        &::before
+        {
+            content: url('../img/icons/apartaments-with-movers-nav.svg');
+        }
+    }
+
+    &--apartment
+    {
+        &::before
+        {
+            content: url('../img/icons/apartaments-nav.svg');
+        }
+    }
+
+    &--office
+    {
+        &::before
+        {
+            content: url('../img/icons/country-house-nav.svg');
+        }
+    }
+
+    &--country-house
+    {
+        &::before
+        {
+            content: url('../img/icons/office-nav.svg');
+        }
+    }
+}
+
+
+
+.tabs__btn--active
+{
+    position: relative;
+
+    color: #fff;
+    background: $accent;
+}
+
+.tabs__content
+{
+    position: absolute;
+    z-index: 2;
+    right: 0;
+
+    display: none;
+
+    width: 600px;
+    height: 420px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 90px;
+
+    color: #fff;
+
+    @media(min-width: 1140px)
+    {
+        width: 730px;
+    }
+}
+
+.tabs__content--active
+{
+    display: block;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content
+{
+    &--apartment-with-movers
+    {
+        background-image: url('../img/content-images/apartaments-with-movers-tab.svg');
+    }
+
+    &--apartment
+    {
+        background-image: url('../img/content-images/apartament.svg');
+    }
+
+    &--office
+    {
+        background-image: url('../img/content-images/office.svg');
+    }
+
+    &--country-house
+    {
+        background-image: url('../img/content-images/country-house.svg');
+    }
+}
+
+
+
+.tab__title
+{
+    font-size: 30px;
+
+    max-width: 500px;
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+
+.tab__description
+{
+    font-size: 18px;
+    font-weight: 400;
+
+    max-width: 440px;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.tab__button
+{
+    font-size: 18px;
+    font-weight: 500;
+
+    display: flex;
+    flex-direction: row;
+
+    padding: 13px 32px;
+
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(266.46deg, #f9c84b 3.46%, #f2cb77 111.49%);
+
+    justify-content: center;
+    align-items: center;
+}

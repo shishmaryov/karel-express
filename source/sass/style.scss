@@ -5,6 +5,8 @@
 //Components
 @import "components/select";
 @import "components/air-datepicker";
+@import "components/tabs";
+@import "components/accordion";
 
 // Vendor
 @import "vendor/normalize";
@@ -22,3 +24,4 @@
 @import "blocks/section";
 @import "blocks/promo.scss";
 @import "blocks/promo-form";
+@import "blocks/services";

@@ -1,13 +1,32 @@
 .promo {
 	overflow: hidden;
 
-	.container {
+	&__container {
 		position: relative;
 
 		@media(min-width: 1024px) {
 			display: flex;
 			justify-content: space-between;
 			align-items: top;
+		}
+	}
+
+	&-form__wrapper {
+		position: absolute;
+		top: 630px;
+		left: 0;
+		right: 0;
+
+		@media(min-width: 488px) {
+			top: 620px;
+		}
+
+		@media(min-width: 520px) {
+			top: 590px;
+		}
+
+		@media(min-width: 1024px) {
+			top: 650px;
 		}
 	}
 

@@ -1,0 +1,74 @@
+.accordion__header {
+	background: #F2F2F2;
+	padding: 17px 22px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.accordion__title {
+	font-weight: 400;
+	font-size: 16px;
+	color: #000;
+	padding-left: 96px;
+	position: relative;
+	margin: 0;
+	padding-top: 22.5px;
+	padding-bottom: 22.5px;
+
+	&::before {
+		position: absolute;
+		left: 0;
+		top: 10px;
+	}
+}
+
+.accordion__title--apartaments-with-movers {
+	&::before {
+	content: url('../img/icons/apartaments-with-movers-accordion.svg');
+}}
+
+.accordion__title--apartaments {
+	&::before {
+	content: url('../img/icons/apartaments-accordion.svg');
+}}
+
+.accordion__title--office {
+	&::before {
+	content: url('../img/icons/office-accordion.svg');
+}}
+
+.accordion__title--country-house {
+	&::before {
+	content: url('../img/icons/country-house-accordion.svg');
+}
+}
+
+.accordion__img {
+
+	&-wrapper {
+
+	}
+}
+
+.accordion__body {
+}
+
+.accordion__body--apartaments-with-movers {
+}
+
+.accordion__text {
+}
+
+.accordion__button {
+}
+
+.accordion__body--apartaments {
+}
+
+.accordion__body--office {
+}
+
+.accordion__body--country-house {
+}
+

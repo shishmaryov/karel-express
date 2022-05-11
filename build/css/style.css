@@ -849,6 +849,171 @@
   -webkit-transition: opacity var(--adp-overlay-transition-duration) var(--adp-overlay-transition-ease), height 0s, width 0s;
   transition: opacity var(--adp-overlay-transition-duration) var(--adp-overlay-transition-ease), height 0s, width 0s; }
 
+.tabs {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  padding-bottom: 460px; }
+
+.tabs__list {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  margin-top: 0;
+  margin-top: 3px;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none; }
+
+.tabs__item {
+  width: 100%; }
+
+.tabs__btn {
+  font-size: 18px;
+  line-height: 22px;
+  position: relative;
+  max-width: 380px;
+  height: 119px;
+  padding-top: 35px;
+  padding-right: 45px;
+  padding-bottom: 35px;
+  padding-left: 150px;
+  text-align: left;
+  border: none;
+  background: #f2f2f2; }
+  .tabs__btn::before {
+    position: absolute;
+    top: 32px;
+    left: 32px;
+    width: 91px;
+    height: 58px;
+    content: ''; }
+  .tabs__btn--first {
+    border-radius: 20px 0 0 0; }
+  .tabs__btn--apartment-with-movers::before {
+    content: url("../img/icons/apartaments-with-movers-nav.svg"); }
+  .tabs__btn--apartment::before {
+    content: url("../img/icons/apartaments-nav.svg"); }
+  .tabs__btn--office::before {
+    content: url("../img/icons/country-house-nav.svg"); }
+  .tabs__btn--country-house::before {
+    content: url("../img/icons/office-nav.svg"); }
+
+.tabs__btn--active {
+  position: relative;
+  color: #fff;
+  background: #4AAB3C; }
+
+.tabs__content {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  display: none;
+  width: 600px;
+  height: 420px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 90px;
+  color: #fff; }
+  @media (min-width: 1140px) {
+    .tabs__content {
+      width: 730px; } }
+
+.tabs__content--active {
+  display: block;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.content--apartment-with-movers {
+  background-image: url("../img/content-images/apartaments-with-movers-tab.svg"); }
+
+.content--apartment {
+  background-image: url("../img/content-images/apartament.svg"); }
+
+.content--office {
+  background-image: url("../img/content-images/office.svg"); }
+
+.content--country-house {
+  background-image: url("../img/content-images/country-house.svg"); }
+
+.tab__title {
+  font-size: 30px;
+  max-width: 500px;
+  margin-top: 0;
+  margin-bottom: 24px; }
+
+.tab__description {
+  font-size: 18px;
+  font-weight: 400;
+  max-width: 440px;
+  margin-top: 0;
+  margin-bottom: 30px; }
+
+.tab__button {
+  font-size: 18px;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 13px 32px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(266.46deg, #f9c84b 3.46%, #f2cb77 111.49%);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.accordion__header {
+  background: #F2F2F2;
+  padding: 17px 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.accordion__title {
+  font-weight: 400;
+  font-size: 16px;
+  color: #000;
+  padding-left: 96px;
+  position: relative;
+  margin: 0;
+  padding-top: 22.5px;
+  padding-bottom: 22.5px; }
+  .accordion__title::before {
+    position: absolute;
+    left: 0;
+    top: 10px; }
+
+.accordion__title--apartaments-with-movers::before {
+  content: url("../img/icons/apartaments-with-movers-accordion.svg"); }
+
+.accordion__title--apartaments::before {
+  content: url("../img/icons/apartaments-accordion.svg"); }
+
+.accordion__title--office::before {
+  content: url("../img/icons/office-accordion.svg"); }
+
+.accordion__title--country-house::before {
+  content: url("../img/icons/country-house-accordion.svg"); }
+
 /* stylelint-disable */
 /* ==========================================================================
    Normalize.scss settings
@@ -1624,10 +1789,10 @@ img {
 
 .promo {
   overflow: hidden; }
-  .promo .container {
+  .promo__container {
     position: relative; }
     @media (min-width: 1024px) {
-      .promo .container {
+      .promo__container {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -1637,6 +1802,20 @@ img {
         -webkit-box-align: top;
             -ms-flex-align: top;
                 align-items: top; } }
+  .promo-form__wrapper {
+    position: absolute;
+    top: 630px;
+    left: 0;
+    right: 0; }
+    @media (min-width: 488px) {
+      .promo-form__wrapper {
+        top: 620px; } }
+    @media (min-width: 520px) {
+      .promo-form__wrapper {
+        top: 590px; } }
+    @media (min-width: 1024px) {
+      .promo-form__wrapper {
+        top: 650px; } }
   @media (min-width: 1024px) {
     .promo__wrapper--info {
       max-width: 769px; } }
@@ -1708,8 +1887,8 @@ img {
         margin-bottom: 0; } }
 
 .promo-form {
+  z-index: 2;
   position: relative;
-  max-height: 282px;
   padding-top: 10px;
   padding-right: 15px;
   padding-bottom: 24px;
@@ -1717,6 +1896,9 @@ img {
   border: 1px solid #4aab3c;
   border-radius: 30px;
   background: #fff; }
+  @media (min-width: 1024px) {
+    .promo-form {
+      max-height: 282px; } }
   .promo-form .just-validate-error-label {
     font-family: 'Exo 2', sans-serif; }
   @media (min-width: 1024px) {
@@ -2156,3 +2338,42 @@ img {
 .is-invalid {
   color: #b81111;
   border: 1px solid #b81111; }
+
+.services {
+  position: relative;
+  margin-top: 430px;
+  padding-top: 390px;
+  background: #faeecc; }
+  @media (min-width: 1024px) {
+    .services {
+      margin-top: 170px;
+      padding-top: 150px; } }
+  .services::after {
+    position: absolute;
+    top: 200px;
+    right: 0;
+    width: 141px;
+    height: 325px;
+    content: url("../img/icons/rhombus-mobile.svg"); }
+    @media (min-width: 1024px) {
+      .services::after {
+        top: 0;
+        width: 333px;
+        height: 444px;
+        content: url("../img/icons/rhombus-desktop.svg"); } }
+  .services__title {
+    margin-top: 40px;
+    text-align: center; }
+    @media (min-width: 1024px) {
+      .services__title {
+        margin-top: 80px; } }
+  .services__tabs {
+    padding-bottom: 530px; }
+    .services__tabs--desktop {
+      display: none; }
+      @media (min-width: 1024px) {
+        .services__tabs--desktop {
+          display: block; } }
+  @media (min-width: 1024px) {
+    .services__accordion {
+      display: none; } }

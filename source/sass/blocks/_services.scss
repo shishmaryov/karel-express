@@ -1,0 +1,71 @@
+.services
+{
+    position: relative;
+
+    margin-top: 430px;
+    padding-top: 390px;
+
+    background: #faeecc;
+
+    @media(min-width: 1024px)
+    {
+        margin-top: 170px;
+        padding-top: 150px;
+    }
+
+    &::after
+    {
+        position: absolute;
+        top: 200px;
+        right: 0;
+
+        width: 141px;
+        height: 325px;
+
+        content: url('../img/icons/rhombus-mobile.svg');
+
+        @media(min-width: 1024px)
+        {
+            top: 0;
+
+            width: 333px;
+            height: 444px;
+
+            content: url('../img/icons/rhombus-desktop.svg');
+        }
+    }
+
+    &__title
+    {
+        margin-top: 40px;
+
+        text-align: center;
+
+        @media(min-width: 1024px)
+        {
+            margin-top: 80px;
+        }
+    }
+
+    &__tabs
+    {
+        padding-bottom: 530px;
+
+        &--desktop
+        {
+            display: none;
+
+            @media(min-width: 1024px)
+            {
+                display: block;
+            }
+        }
+    }
+
+    &__accordion {
+
+    	@media(min-width: 1024px) {
+    		display: none;
+    	}
+    }
+}
