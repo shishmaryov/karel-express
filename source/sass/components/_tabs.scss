@@ -60,6 +60,17 @@
         content: '';
     }
 
+    &::after {
+		position: absolute;
+		bottom: 0;
+		left: 30px;
+		right: 40px;
+		width: calc(100% - 70px);
+		height: 1px;
+		content: '';
+		background: #BDBDBD;
+	}
+
     &--first
     {
         border-radius: 20px 0 0 0;
@@ -95,6 +106,13 @@
         {
             content: url('../img/icons/office-nav.svg');
         }
+
+        &::after {
+			content: none;
+		width: 0px;
+		height: 0px;
+		background: transparent;
+		}
     }
 }
 
@@ -102,10 +120,16 @@
 
 .tabs__btn--active
 {
+	color: #fff;
     position: relative;
-
-    color: #fff;
     background: $accent;
+
+    &::after {
+			content: none;
+		width: 0px;
+		height: 0px;
+		background: transparent;
+		}
 }
 
 .tabs__content
@@ -185,12 +209,16 @@
 .tab__button
 {
     font-size: 18px;
+    max-width: 177px;
     font-weight: 500;
+    color: #fff;
+    text-decoration: none;
 
     display: flex;
     flex-direction: row;
 
-    padding: 13px 32px;
+    padding-top: 13px;
+    padding-bottom: 13px;
 
     border: none;
     border-radius: 5px;

@@ -4,6 +4,73 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	position: relative;
+
+	&::after {
+		position: absolute;
+		bottom: 0;
+		left: 22px;
+		right: 22px;
+		width: calc(100% - 44px);
+		height: 1px;
+		content: '';
+		background: #BDBDBD;
+	}
+
+
+	&--active {
+		background: $accent;
+
+		.accordion__title {
+			color: #fff;
+		}
+
+		&::after {
+			content: none;
+		width: 0px;
+		height: 0px;
+		background: transparent;
+		}
+	}
+
+	&--apartaments-with-movers {
+		border-radius: 10px 10px 0px 0px;
+	}
+
+	&--apartaments {
+
+	}
+
+	&--office {
+
+	}
+
+	&--country-house {
+		border-radius: 0px 0px 10px 10px;
+	&::after {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		width: 0;
+		height: 0;
+		content: '';
+		background: transparent;
+	}
+	}
+
+
+}
+
+.accordion__arrow {
+
+	&--active {
+		transform: rotate(180deg);
+		path {
+			stroke: #fff;
+
+		}
+	}
 }
 
 .accordion__title {
@@ -52,15 +119,44 @@
 }
 
 .accordion__body {
+	display: none;
+	background: $accent;
+	color: #fff;
+	font-size: 14px;
+	padding-left: 24px;
+	padding-right: 24px;
+	padding-top: 15px;
+	margin-top: -5px;
+	padding-bottom: 34px;
+
+	&--active {
+		display: block;
+	}
+
 }
 
 .accordion__body--apartaments-with-movers {
 }
 
 .accordion__text {
+	font-size: 14px;
+	margin: 0;
 }
 
 .accordion__button {
+	font-size: 16px;
+   font-weight: 500;
+    width: 100%;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    background: linear-gradient(266.46deg, #F9C84B 3.46%, #F2CB77 111.49%);
+    margin-top: 16px;
+    text-decoration: none;
+    color: #fff;
+    display: block;
 }
 
 .accordion__body--apartaments {

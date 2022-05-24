@@ -62,10 +62,13 @@
         }
     }
 
-    &__accordion {
+    &__accordion
+    {
+        padding-bottom: 24px;
 
-    	@media(min-width: 1024px) {
-    		display: none;
-    	}
+        @media(min-width: 1024px)
+        {
+            display: none;
+        }
     }
 }

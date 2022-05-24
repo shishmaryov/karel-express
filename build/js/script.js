@@ -1,5 +1,47 @@
 window.addEventListener("DOMContentLoaded", function() {
 
+	let div1 = document.createElement('div');
+        div1.innerHTML = document.querySelector('#promo-form__name-phone').innerHTML;
+        div1.classList.add('promo-form__way');
+        div1.classList.add('promo-form__way--no-icon');
+
+
+       let div2 = document.createElement('div');
+       div2.innerHTML = document.querySelector('#promo-form__car-insert').innerHTML;
+       div2.classList.add('promo-form__block');
+
+
+	if (window.screen.availWidth < 1023) {
+		document.querySelector('#promo-form').insertBefore(div1, document.querySelector('#promo-form').children[3]);
+		document.querySelector('#promo-form').insertBefore(div2, document.querySelector('#promo-form').children[5]);
+	} else {
+		document.querySelector('#promo-form').insertBefore(div1, document.querySelector('#promo-form').children[5]);
+		document.querySelector('#promo-form').insertBefore(div2, document.querySelector('#promo-form').children[6]);
+	}
+
+
+
+    var anchors = [].slice.call(document.querySelectorAll('a[href*="#"]')),
+        animationTime = 500,
+        framesCount = 60;
+
+    anchors.forEach(function(item) {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            var coordY = document.querySelector(item.getAttribute('href')).getBoundingClientRect().top + window.pageYOffset;
+            var scroller = setInterval(function() {
+                var scrollBy = coordY / framesCount;
+                if (scrollBy > window.pageYOffset - coordY && window.innerHeight + window.pageYOffset < document.body.offsetHeight) {
+                    window.scrollBy(0, scrollBy);
+                } else {
+                    window.scrollTo(0, coordY);
+                    clearInterval(scroller);
+                }
+            }, animationTime / framesCount);
+        });
+    });
+
+
     const CLASS_NAME_SELECT = 'select';
     const CLASS_NAME_ACTIVE = 'select_show';
     const CLASS_NAME_SELECTED = 'select__option_selected';
@@ -276,6 +318,11 @@ window.addEventListener("DOMContentLoaded", function() {
             mask: '+{7} (000) 000 - 00 - 00'
         });
 
+    var phoneMask = IMask(
+        document.getElementById('consultation__phone'), {
+            mask: '+{7} (000) 000 - 00 - 00'
+        });
+
     document.getElementById('time').addEventListener('click', function() {
         var numberMask = IMask(document.getElementById('time'), {
             mask: '00{:}00',
@@ -305,6 +352,10 @@ window.addEventListener("DOMContentLoaded", function() {
         errorFieldCssClass: 'is-invalid'
     });
 
+    const validation2 = new JustValidate('#consultation__form', {
+        errorFieldCssClass: 'is-invalid'
+    });
+
     let hiddenInputs = document.querySelectorAll('.promo-form__input--hidden');
     let form = document.querySelector('.promo-form');
     let cleanButton = document.querySelector('.promo-form__clean');
@@ -314,6 +365,13 @@ window.addEventListener("DOMContentLoaded", function() {
     for (let i = 0; i < inputs.length; i++) {
         inputs[i].addEventListener('click', function() {
             form.classList.add('promo-form--active');
+
+            if (window.screen.availWidth < 1023) {
+                document.querySelector('.services').style.paddingTop = '970px';
+            } else {
+            	document.querySelector('.services').style.paddingTop = '453px';
+            }
+
             for (let i = 0; i < hiddenInputs.length; i++) {
                 hiddenInputs[i].classList.add('promo-form__input--active');
             }
@@ -325,6 +383,11 @@ window.addEventListener("DOMContentLoaded", function() {
     }
 
     cleanButton.addEventListener('click', function() {
+        if (window.screen.availWidth < 1023) {
+            document.querySelector('.services').style.paddingTop = '390px';
+        } else {
+        	document.querySelector('.services').style.paddingTop = '150px';
+        }
         form.classList.remove('promo-form--active');
         document.querySelector('#promo-form').reset()
 
@@ -362,11 +425,19 @@ window.addEventListener("DOMContentLoaded", function() {
 
     }
 
+    validation2
+    .addField('#consultation__phone', [{
+        		rule: 'required',
+        		errorMessage: ' '
+        }, ])
+
+
     validation
         .addField('#name', [{
             rule: 'required',
             errorMessage: ' '
         }])
+
         .addField('#phone', [{
             rule: 'required',
             errorMessage: ' '
@@ -439,6 +510,35 @@ window.addEventListener("DOMContentLoaded", function() {
         });
         document.querySelector(`[data-tabs-target="${path}"]`).classList.add('tabs__content--active');
     };
+
+    function accordion(uniq) {
+        let header = document.querySelector(`.accordion__header--${uniq}`);
+        let body = document.querySelector(`.accordion__body--${uniq}`);
+        let arrow = document.querySelector(`.accordion__header--${uniq} .accordion__arrow`);
+
+        header.addEventListener('click', function() {
+            header.classList.toggle('accordion__header--active');
+            body.classList.toggle('accordion__body--active');
+            arrow.classList.toggle('accordion__arrow--active');
+        });
+    }
+
+    accordion('apartaments-with-movers');
+    accordion('apartaments');
+    accordion('office');
+    accordion('country-house');
+
+    document.querySelector('#consultation__phone').addEventListener('change', () => {
+    	document.querySelector('.consultation__phone-wrapper').classList.add('consultation__phone-wrapper--active');
+
+    });
+
+    document.querySelector('.consultation__button').addEventListener('click', () => {
+    	if ((document.querySelector('#consultation__phone').classList.contains('is-invalid')) == true) {
+    		document.querySelector('.consultation__phone-wrapper').classList.remove('consultation__phone-wrapper--active');
+                document.querySelector('#consultation__phone').placeholder = 'Введите телефон';
+            }
+         });
 
 
 
