@@ -1,23 +1,51 @@
 window.addEventListener("DOMContentLoaded", function() {
 
-	let div1 = document.createElement('div');
-        div1.innerHTML = document.querySelector('#promo-form__name-phone').innerHTML;
-        div1.classList.add('promo-form__way');
-        div1.classList.add('promo-form__way--no-icon');
+    let div1 = document.createElement('div');
+    div1.innerHTML = document.querySelector('#promo-form__name-phone').innerHTML;
+    div1.classList.add('promo-form__way');
+    div1.classList.add('promo-form__way--no-icon');
 
 
-       let div2 = document.createElement('div');
-       div2.innerHTML = document.querySelector('#promo-form__car-insert').innerHTML;
-       div2.classList.add('promo-form__block');
+    let div2 = document.createElement('div');
+    div2.innerHTML = document.querySelector('#promo-form__car-insert').innerHTML;
+    div2.classList.add('promo-form__block');
 
 
-	if (window.screen.availWidth < 1023) {
-		document.querySelector('#promo-form').insertBefore(div1, document.querySelector('#promo-form').children[3]);
-		document.querySelector('#promo-form').insertBefore(div2, document.querySelector('#promo-form').children[5]);
-	} else {
-		document.querySelector('#promo-form').insertBefore(div1, document.querySelector('#promo-form').children[5]);
-		document.querySelector('#promo-form').insertBefore(div2, document.querySelector('#promo-form').children[6]);
-	}
+    if (window.screen.availWidth < 1023) {
+        document.querySelector('#promo-form').insertBefore(div1, document.querySelector('#promo-form').children[3]);
+        document.querySelector('#promo-form').insertBefore(div2, document.querySelector('#promo-form').children[5]);
+
+
+    } else {
+        document.querySelector('#promo-form').insertBefore(div1, document.querySelector('#promo-form').children[5]);
+        document.querySelector('#promo-form').insertBefore(div2, document.querySelector('#promo-form').children[6]);
+
+    }
+
+    if (window.screen.availWidth < 1139) {
+    	const swiper = new Swiper('.reviews__slider', {
+            slidesPerView: 1,
+            direction: 'horizontal',
+            loop: true,
+            allowTouchMove: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    } else {
+    	const swiper = new Swiper('.reviews__slider', {
+            slidesPerView: 2,
+            spaceBetween: 30,
+            direction: 'horizontal',
+            loop: true,
+            allowTouchMove: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    }
 
 
 
@@ -369,7 +397,7 @@ window.addEventListener("DOMContentLoaded", function() {
             if (window.screen.availWidth < 1023) {
                 document.querySelector('.services').style.paddingTop = '970px';
             } else {
-            	document.querySelector('.services').style.paddingTop = '453px';
+                document.querySelector('.services').style.paddingTop = '453px';
             }
 
             for (let i = 0; i < hiddenInputs.length; i++) {
@@ -386,7 +414,7 @@ window.addEventListener("DOMContentLoaded", function() {
         if (window.screen.availWidth < 1023) {
             document.querySelector('.services').style.paddingTop = '390px';
         } else {
-        	document.querySelector('.services').style.paddingTop = '150px';
+            document.querySelector('.services').style.paddingTop = '150px';
         }
         form.classList.remove('promo-form--active');
         document.querySelector('#promo-form').reset()
@@ -426,9 +454,9 @@ window.addEventListener("DOMContentLoaded", function() {
     }
 
     validation2
-    .addField('#consultation__phone', [{
-        		rule: 'required',
-        		errorMessage: ' '
+        .addField('#consultation__phone', [{
+            rule: 'required',
+            errorMessage: ' '
         }, ])
 
 
@@ -438,7 +466,7 @@ window.addEventListener("DOMContentLoaded", function() {
             errorMessage: ' '
         }])
 
-        .addField('#phone', [{
+    .addField('#phone', [{
             rule: 'required',
             errorMessage: ' '
         }, ])
@@ -529,16 +557,18 @@ window.addEventListener("DOMContentLoaded", function() {
     accordion('country-house');
 
     document.querySelector('#consultation__phone').addEventListener('change', () => {
-    	document.querySelector('.consultation__phone-wrapper').classList.add('consultation__phone-wrapper--active');
+        document.querySelector('.consultation__phone-wrapper').classList.add('consultation__phone-wrapper--active');
 
     });
 
     document.querySelector('.consultation__button').addEventListener('click', () => {
-    	if ((document.querySelector('#consultation__phone').classList.contains('is-invalid')) == true) {
-    		document.querySelector('.consultation__phone-wrapper').classList.remove('consultation__phone-wrapper--active');
-                document.querySelector('#consultation__phone').placeholder = 'Введите телефон';
-            }
-         });
+        if ((document.querySelector('#consultation__phone').classList.contains('is-invalid')) == true) {
+            document.querySelector('.consultation__phone-wrapper').classList.remove('consultation__phone-wrapper--active');
+            document.querySelector('#consultation__phone').placeholder = 'Введите телефон';
+        }
+    });
+
+
 
 
 

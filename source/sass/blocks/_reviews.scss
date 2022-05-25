@@ -1,0 +1,262 @@
+.reviews
+{
+    position: relative;
+
+    margin-top: 120px;
+
+    &::after
+    {
+        @media(max-width: 1024px)
+        {
+            position: absolute;
+            top: 210px;
+            left: 5%;
+
+            content: url('../img/icons/reviews-after-mobile.svg');
+        }
+    }
+
+    @media(min-width: 1024px)
+    {
+        &::after
+        {
+            position: absolute;
+            top: -45px;
+            right: 0;
+
+            content: url('../img/icons/reviews-after.svg');
+        }
+    }
+
+    .container
+    {
+        &::before
+        {
+            position: absolute;
+            top: -50px;
+            left: 0;
+
+            content: url('../img/icons/reviews-before-mobile.svg');
+        }
+
+
+        @media(min-width: 1024px)
+        {
+            position: relative;
+
+            display: flex;
+
+            &::before
+            {
+                position: absolute;
+                top: -90px;
+                left: -90px;
+
+                width: 221px;
+                height: 219px;
+
+                content: url('../img/icons/reviews-before.svg');
+            }
+        }
+    }
+
+    &__text
+    {
+        @media(min-width: 1024px)
+        {
+            max-width: 285px;
+            margin-right: 30px;
+            padding-top: 108px;
+        }
+    }
+    &__title
+    {
+        font-size: 24px;
+
+        margin: 0;
+        margin-bottom: 18px;
+
+        text-align: center;
+
+        @media(min-width: 1024px)
+        {
+            font-size: 32px;
+
+            position: absolute;
+            top: 0;
+
+            max-width: 285px;
+            margin-bottom: 32px;
+
+            text-align: left;
+        }
+    }
+    &__description
+    {
+        font-size: 18px;
+
+        margin-top: 0;
+        margin-bottom: 18px;
+
+        text-align: center;
+
+        @media(min-width: 1024px)
+        {
+            text-align: left;
+        }
+    }
+    &__action
+    {
+        font-size: 16px;
+
+        margin-bottom: 24px;
+
+        text-align: center;
+
+        color: #828282;
+
+        @media(min-width: 1024px)
+        {
+            margin-bottom: 0;
+
+            text-align: left;
+        }
+    }
+    &__link
+    {
+        text-decoration: none;
+
+        color: $accent;
+    }
+    &__slider
+    {
+        padding-top: 50px;
+    }
+    &__header
+    {
+        display: flex;
+
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__slide
+    {
+        width: 280px;
+        margin-left: calc(50% - 156px);
+        padding: 14px 32px;
+
+        background-image: url('../img/icons/review-bg-mobile.svg');
+        background-repeat: no-repeat;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-size: 328px 100%;
+
+        @media(min-width: 450px)
+        {
+            width: 321px;
+            margin-left: calc(50% - 192.5px);
+
+            background-image: url('../img/icons/review-bg.svg');
+            background-size: 381px 100%;
+        }
+
+        @media(min-width: 1024px)
+        {
+            margin-left: 0;
+        }
+    }
+}
+
+
+
+
+
+
+
+.review
+{
+    max-width: 321px;
+    padding: 14px 32px;
+
+    &__author
+    {
+        position: relative;
+
+        padding-left: 60px;
+
+        &::before
+        {
+            font-family: 'Exo 2';
+            font-size: 20px;
+            font-weight: 500;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            display: flex;
+
+            width: 44px;
+            height: 44px;
+
+            content: 'В';
+            text-align: center;
+
+            color: $accent;
+            border-radius: 100%;
+            background: #ecfaea;
+
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &__name
+    {
+        font-size: 16px;
+        font-weight: 300;
+
+        margin: 0;
+
+        color: $accent;
+    }
+    &__status
+    {
+        font-size: 13px;
+        font-weight: 300;
+
+        margin: 0;
+
+        color: #bdbdbd;
+    }
+
+
+    &__text
+    {
+        font-size: 16px;
+
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+    &__company
+    {
+        font-size: 14px;
+
+        margin: 0;
+
+        color: $accent;
+    }
+}
+.swiper-button-prev
+{
+    position: absolute;
+    top: 10px;
+    right: 0;
+    left: calc(100% - 79px);
+}
+.swiper-button-next
+{
+    position: absolute;
+    top: 10px;
+    left: calc(100% - 28px);
+}

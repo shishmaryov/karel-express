@@ -53,7 +53,8 @@
   "dependencies": {
     "csscomb": "^4.3.0",
     "deep-extend": "^0.6.0",
-    "editorconfig-cli": "^0.3.0"
+    "editorconfig-cli": "^0.3.0",
+    "swiper": "^8.1.6"
   },
   "repository": {
     "type": "git",
