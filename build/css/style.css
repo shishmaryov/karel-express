@@ -1875,7 +1875,7 @@ img {
 
 .section__description {
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 130%;
   color: #4f4f4f; }
   @media (min-width: 1024px) {
@@ -2758,19 +2758,14 @@ img {
     width: 100%;
     margin-bottom: 8px;
     padding-top: 14px;
-    padding-right: 0;
     padding-bottom: 14px;
-    padding-left: 0;
+    padding-left: calc(50% - 92px);
+    padding-right: calc(50% - 92px);
     text-align: center;
     color: #fff;
     border: none;
     border-radius: 5px;
     background: linear-gradient(268.55deg, #52cb3f 0.27%, rgba(79, 198, 60, 0.7) 116.81%); }
-    @media (min-width: 768px) {
-      .consultation__button {
-        width: auto;
-        padding-right: 60px;
-        padding-left: 60px; } }
     @media (min-width: 1024px) {
       .consultation__button {
         font-size: 18px;
@@ -2785,5 +2780,122 @@ img {
     font-size: 12px;
     line-height: 130%;
     margin-top: 0;
-    margin-bottom: 0;
-    color: #828282; }
+    color: #828282;
+    margin-bottom: 24px; }
+    @media (min-width: 1024px) {
+      .consultation__agreement {
+        margin-bottom: 0; } }
+  @media (min-width: 1024px) {
+    .consultation {
+      margin-bottom: 80px; } }
+
+.why {
+  background: rgba(237, 198, 86, 0.3);
+  border-radius: 10% 0px 0px 0px;
+  position: relative;
+  overflow: hidden; }
+  @media (max-width: 1024px) {
+    .why::before {
+      position: absolute;
+      top: 5px;
+      right: -61px;
+      width: 140px;
+      height: 325px;
+      content: url(../img/icons/rhombus-mobile.svg); } }
+  @media (min-width: 1024px) {
+    .why {
+      border-radius: 110px 0px 0px 0px; }
+      .why::after {
+        position: absolute;
+        left: 0;
+        content: '';
+        border: 2px dashed #BDBDBD;
+        width: 100%;
+        height: 0px;
+        bottom: 102px;
+        z-index: 1; }
+      .why::before {
+        position: absolute;
+        top: 10px;
+        right: -175px;
+        width: 333px;
+        height: 444px;
+        content: url("../img/icons/rhombus-desktop.svg"); } }
+  .why__title {
+    margin: 0;
+    padding-top: 24px;
+    text-align: center;
+    margin-bottom: 24px; }
+    @media (min-width: 1024px) {
+      .why__title {
+        padding-top: 50px;
+        margin-bottom: 32px; } }
+  .why__description {
+    margin-top: 0;
+    margin-bottom: 32px;
+    text-align: center; }
+    @media (min-width: 1204px) {
+      .why__description {
+        max-width: 810px;
+        margin-bottom: 90px;
+        margin-left: calc(50% - 405px); } }
+  .why__list {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 24px;
+    position: relative; }
+    @media (min-width: 1024px) {
+      .why__list {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: top;
+            -ms-flex-align: top;
+                align-items: top;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between; } }
+  .why__img {
+    margin-left: calc(50% - 33px); }
+    @media (min-width: 1024px) {
+      .why__img {
+        margin-left: 0; } }
+
+@media (min-width: 1024px) {
+  .advantage {
+    max-width: 200px;
+    text-align: center; } }
+
+.advantage__text {
+  font-size: 14px;
+  margin: 0;
+  padding-top: 32px;
+  margin-top: 28px;
+  position: relative;
+  text-align: center;
+  border-top: 2px dashed #BDBDBD; }
+  @media (min-width: 1024px) {
+    .advantage__text {
+      border: none;
+      font-size: 18px;
+      padding-top: 48px; } }
+  .advantage__text::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    border-radius: 100%;
+    left: calc(50% - 5px);
+    width: 10px;
+    height: 10px;
+    background: #4AAB3C;
+    z-index: 2; }
+    @media (min-width: 1024px) {
+      .advantage__text::before {
+        width: 20px;
+        height: 20px;
+        left: calc(50% - 10px);
+        top: 0; } }

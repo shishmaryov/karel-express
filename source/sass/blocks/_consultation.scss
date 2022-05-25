@@ -182,23 +182,15 @@
         width: 100%;
         margin-bottom: 8px;
         padding-top: 14px;
-        padding-right: 0;
         padding-bottom: 14px;
-        padding-left: 0;
-
+        padding-left: calc(50% - 92px);
+        padding-right: calc(50% - 92px);
         text-align: center;
 
         color: #fff;
         border: none;
         border-radius: 5px;
         background: linear-gradient(268.55deg, #52cb3f .27%, rgba(79, 198, 60, .7) 116.81%);
-
-        @media(min-width: 768px)
-        {
-            width: auto;
-            padding-right: 60px;
-            padding-left: 60px;
-        }
 
 
         @media(min-width: 1024px)
@@ -221,8 +213,17 @@
         line-height: 130%;
 
         margin-top: 0;
-        margin-bottom: 0;
+
 
         color: #828282;
+        margin-bottom: 24px;
+
+        @media(min-width: 1024px) {
+        	margin-bottom: 0;
+        }
+    }
+
+    @media(min-width: 1024px) {
+    	margin-bottom: 80px;
     }
 }
