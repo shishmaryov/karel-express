@@ -298,6 +298,16 @@ window.addEventListener("DOMContentLoaded", function() {
 
 	submenu(('.header--mobile .submenu__title--geo'), ('.header--mobile .submenu--geo'));
 	submenu(('.header--mobile .submenu__title--services'), ('.header--mobile .submenu--services'));
+
+	let geoTitle = ('.footer .submenu__title--geo');
+	let geoList = ('.footer .submenu--geo');
+	document.querySelector(geoTitle).addEventListener('click', function() {
+		document.querySelector(geoList + '> .footer__sublist').classList.toggle('footer__sublist--active');
+		document.querySelector(geoTitle).classList.toggle('submenu__title--active');
+		document.querySelector(geoList + '> .menu__link').classList.toggle('menu__link--active');
+	})
+
+
 	let sublistElse = document.querySelector('.header--mobile  .header__sublist--else'),
 		elseImg = document.querySelector('.header--mobile .submenu--else img');
 	document.querySelector('.header--mobile .header__else').addEventListener('click', function() {
@@ -351,6 +361,11 @@ window.addEventListener("DOMContentLoaded", function() {
 			mask: '+{7} (000) 000 - 00 - 00'
 		});
 
+	var phoneMask = IMask(
+		document.getElementById('questions__phone'), {
+			mask: '+{7} (000) 000 - 00 - 00'
+		});
+
 	document.getElementById('time').addEventListener('click', function() {
 		var numberMask = IMask(document.getElementById('time'), {
 			mask: '00{:}00',
@@ -381,6 +396,10 @@ window.addEventListener("DOMContentLoaded", function() {
 	});
 
 	const validation2 = new JustValidate('#consultation__form', {
+		errorFieldCssClass: 'is-invalid'
+	});
+
+	const validation3 = new JustValidate('#questions__form', {
 		errorFieldCssClass: 'is-invalid'
 	});
 
@@ -458,6 +477,19 @@ window.addEventListener("DOMContentLoaded", function() {
 			rule: 'required',
 			errorMessage: ' '
 		}, ])
+		.onSuccess((event) => {
+			submitHandler(document.querySelector('#consultation__form'));
+		});
+
+	validation3
+		.addField('#questions__phone', [{
+			rule: 'required',
+			errorMessage: ' '
+		}, ])
+		.onSuccess((event) => {
+			submitHandler(document.querySelector('#questions__form'));
+		});
+
 
 
 	validation
@@ -472,7 +504,7 @@ window.addEventListener("DOMContentLoaded", function() {
 		}, ])
 		.addRequiredGroup(
 			'.promo-form__stops',
-			'Введите адрес'
+			' '
 
 		)
 		.onSuccess((event) => {
@@ -514,6 +546,14 @@ window.addEventListener("DOMContentLoaded", function() {
 		let div = document.createElement('div');
 		div.innerHTML = document.querySelector('#middleStop').innerHTML;
 		document.querySelector('.promo-form__stops').insertBefore(div, document.querySelector('.promo-form__stops').children[1]);
+		$(".promo-form__input--address").suggestions({
+        token: "3b5a250afeed87ba3c5782b639296f750d220161",
+        type: "ADDRESS",
+        /* Вызывается, когда пользователь выбирает одну из подсказок */
+        onSelect: function(suggestion) {
+            console.log(suggestion);
+        }
+    });
 	});
 
 
@@ -561,6 +601,11 @@ window.addEventListener("DOMContentLoaded", function() {
 
 	});
 
+	document.querySelector('#questions__phone').addEventListener('change', () => {
+		document.querySelector('.questions__phone-wrapper').classList.add('questions__phone-wrapper--active');
+
+	});
+
 	document.querySelector('.consultation__button').addEventListener('click', () => {
 		if ((document.querySelector('#consultation__phone').classList.contains('is-invalid')) == true) {
 			document.querySelector('.consultation__phone-wrapper').classList.remove('consultation__phone-wrapper--active');
@@ -568,6 +613,21 @@ window.addEventListener("DOMContentLoaded", function() {
 		}
 	});
 
+	document.querySelector('.questions__button').addEventListener('click', () => {
+		if ((document.querySelector('#questions__phone').classList.contains('is-invalid')) == true) {
+			document.querySelector('.questions__phone-wrapper').classList.remove('questions__phone-wrapper--active');
+			document.querySelector('#questions__phone').placeholder = 'Введите телефон';
+		}
+	});
+
+$(".promo-form__input--address").suggestions({
+        token: "3b5a250afeed87ba3c5782b639296f750d220161",
+        type: "ADDRESS",
+        /* Вызывается, когда пользователь выбирает одну из подсказок */
+        onSelect: function(suggestion) {
+            console.log(suggestion);
+        }
+    });
 
 
 

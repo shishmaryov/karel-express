@@ -1,0 +1,193 @@
+.park {
+	margin-bottom: 60px;
+	position: relative;
+
+	@media(min-width: 1024px) {
+		margin-bottom: 120px;
+	}
+
+	.container {
+		&::before {
+		position: absolute;
+		content: url('../img/icons/park-before-mobile.svg');
+		top: -195px;
+		right: 0;
+		z-index: -2;
+
+		@media(min-width: 1024px) {
+			content: url('../img/icons/park-before-desktop.svg');
+		}
+	}
+
+	&::after {
+		position: absolute;
+		content: url('../img/icons/park-after-mobile.svg');
+		bottom: -60px;
+		left: 0;
+		z-index: -2;
+
+		@media(min-width: 1024px) {
+			content: url('../img/icons/park-after-desktop.svg');
+		}
+	}
+	}
+
+
+	&__title {
+		text-align: center;
+		margin-top: 24px;
+		margin-bottom: 24px;
+
+		@media(min-width: 1024px) {
+			margin-top: 80px;
+			margin-bottom: 32px;
+		}
+	}
+	&__columns {
+		@media(min-width: 1024px) {
+			display: flex;
+			justify-content: space-between;
+		}
+
+	}
+	&__item {
+		position: relative;
+
+		@media(min-width: 430px) {
+			    margin-left: calc(50% - 200px);
+		}
+
+		@media(min-width: 768px) {
+			margin-left: 0;
+		}
+
+		&--first {
+			margin-bottom: 24px;
+
+			@media(min-width: 1024px) {
+				margin-bottom: 0;
+			}
+		}
+	}
+	&__text-block {
+		border-radius: 10px;
+		background: #fff;
+		position: absolute;
+
+		padding-top: 10px;
+		padding-bottom: 15px;
+		padding-left: 10px;
+		padding-right: 10px;
+		box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+
+		@media(min-width: 1024px) {
+			display: block;
+			left: -5%;
+			top: 60px;
+			width: 263px;
+			padding-bottom: 25px;
+			padding-left: 18px;
+			padding-top: 20px;
+		}
+
+		@media(min-width: 1368px) {
+			left: -85px;
+		}
+	}
+	&__table {
+		width: 100%;
+		margin-bottom: 16px;
+
+		@media(min-width: 1024px) {
+			margin-bottom: 24px;
+		}
+	}
+	&__subtitle {
+		font-size: 16px;
+		font-weight: 500;
+		margin-top: 0;
+		margin-bottom: 16px;
+		text-align: left;
+
+		@media(min-width: 1024px) {
+			font-size: 18px;
+			margin-bottom: 24px;
+		}
+	}
+	&__characteristic {
+		display: block;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		font-size: 16px;
+		margin-bottom: 8px;
+
+		@media(min-width: 768px) {
+			display: flex;
+		}
+
+		@media(min-width: 1024px) {
+			margin-bottom: 6px;
+		}
+	}
+	&__key {
+		font-size: 14px;
+		font-weight: 400;
+		color: #BDBDBD;
+		text-align: left;
+		display: block;
+
+		@media(min-width: 768px) {
+			display: flex;
+		}
+
+		@media(min-width: 1024px) {
+			font-size: 16px;
+		}
+
+	}
+	&__value {
+		font-weight: 600;
+	}
+	&__link {
+		font-size: 14px;
+		font-weight: 500;
+		position: relative;
+		text-decoration: none;
+		color: #000;
+		padding-right: 23px;
+
+
+		@media(min-width: 1024px) {
+			padding-right: 29px;
+			font-weight: 600;
+		font-size: 16px;
+		}
+
+		&::after {
+			position: absolute;
+			top: 0;
+			right: 0;
+			content: url('../img/icons/park-link-after-mobile.svg');
+
+			@media(min-width: 1024px) {
+				content: url('../img/icons/park-link-after.svg');
+			}
+
+		}
+	}
+	&__img {
+		height: 290px;
+		width: auto;
+		object-fit: cover;
+		border-radius: 20px;
+
+		@media(min-width: 768px) {
+			width: 100%;
+			height: auto;
+		}
+
+		@media(min-width: 1024px) {
+			width: auto;
+		}
+	}
+}

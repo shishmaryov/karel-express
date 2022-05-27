@@ -1,0 +1,212 @@
+.questions
+{
+	overflow: hidden;
+	padding-top: 24px;
+	padding-bottom: 24px;
+	background-color: #FAEECC;
+	border-radius: 15% 0px 0px 0px;
+
+	@media(min-width: 1024px) {
+		padding-top: 40px;
+		padding-bottom: 40px;
+		background-image: url('../img/icons/questions-bg.svg');
+		background-size: cover;
+		background-position-x: 135px;
+		background-repeat: no-repeat;
+		border-radius: 0px 0px 0px 0px;
+		background-color: transparent;
+	}
+
+
+
+	.container {
+		position: relative;
+
+		&::after {
+		position: absolute;
+		right: 20%;
+		top: -20px;
+		width: 54px;
+		height: 61px;
+		content: url('../img/icons/questions-after-mobile.svg');
+
+		@media(min-width: 1024px) {
+				right: -90px;
+	top: -35px;
+			content: url('../img/icons/questions-after.svg');
+			width: 132px;
+		height: 158px;
+		}
+
+		}
+
+		@media(min-width: 1024px) {
+			display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	}
+
+	}
+
+	&__text {
+		text-align: center;
+		@media(min-width: 1024px) {
+			max-width: 300px;
+			margin-left: 185px;
+			margin-right: 40px;
+			text-align: left;
+		}
+	}
+
+	&__title {
+		margin-top: 0;
+		font-size: 24px;
+		margin-bottom: 18px;
+		font-weight: 500;
+
+		@media(min-width: 1024px) {
+font-size: 32px;
+margin-bottom: 24px;
+		}
+
+	}
+
+	&__description {
+		color: #333333;
+		font-size: 16px;
+		margin-bottom: 32px;
+
+
+@media(min-width: 1024px) {
+	margin: 0;
+		}
+	}
+
+	&__form
+	{
+		@media(min-width: 1024px)
+		{
+		display: flex;
+		align-items: center;
+			max-width: 640px;
+		}
+	}
+
+	&__phone
+	{
+		font-size: 14px;
+		font-weight: 500;
+		font-weight: 300;
+		line-height: 17px;
+
+		width: calc(100% - 22px);
+		margin-bottom: 18px;
+		padding-top: 16px;
+			padding-bottom: 16px;
+		padding-left: 20px;
+
+		color: #BDBDBD;
+		border: none;
+		border-radius: 5px;
+		background: #fff;
+
+		@media(min-width: 1024px)
+		{
+			font-size: 16px;
+			line-height: 19px;
+
+			width: calc(100% - 150px);
+			padding-top: 16px;
+			padding-right: 130px;
+			padding-bottom: 16px;
+			margin-bottom: 0;
+			margin-right: 40px;
+			color: #BDBDBD;
+		}
+
+		&-wrapper
+		{
+			position: relative;
+
+			&::after
+			{
+				position: absolute;
+				top: 14px;
+				right: 20px;
+
+				width: 24px;
+				height: 24px;
+
+				content: url('../img/icons/consult-phone.svg');
+
+				@media(min-width: 1024px)
+				{
+					top: 14px;
+				}
+			}
+
+			&--active
+			{
+					&::after
+				{
+					content: url('../img/icons/consult-phone-active.svg');
+				}
+
+
+				.questions__phone
+				{
+					border: 1px solid $accent;
+					color: $accent;
+				}
+			}
+		}
+	}
+
+	&__button
+	{
+		font-size: 16px;
+		font-weight: 500;
+
+		width: 100%;
+		margin-bottom: 8px;
+		padding-right: calc(50% - 92px);
+		padding-top: 14.5px;
+padding-bottom: 14.5px;
+		padding-left: calc(50% - 92px);
+
+		text-align: center;
+
+		color: #fff;
+		border: none;
+		border-radius: 5px;
+		background: linear-gradient(268.55deg, #52CB3F 0.27%, rgba(79, 198, 60, 0.7) 116.81%);
+
+
+		@media(min-width: 1024px)
+		{
+			font-size: 18px;
+
+			width: 300px;
+			margin-bottom: 0px;
+			padding-top: 14.5px;
+			padding-right: 0px;
+			padding-bottom: 14.5px;
+			padding-left: 0px;
+			margin-left: 40px;
+
+			background: linear-gradient(268.55deg, #4caa3c .27%, rgba(76, 170, 60, .6) 116.81%);
+		}
+	}
+
+	.is-invalid
+	{
+		color: #b81111;
+		border: 1px solid #b81111;
+
+		&::placeholder
+		{
+			color: #b81111;
+		}
+	}
+}

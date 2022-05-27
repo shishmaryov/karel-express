@@ -1,0 +1,129 @@
+.suggestions-nowrap {
+  white-space: nowrap;
+}
+/**
+ * Основной INPUT
+ */
+.suggestions-input {
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 300;
+}
+.suggestions-input::-ms-clear {
+  display: none;
+}
+.suggestions-wrapper {
+  position: absolute;
+  top: 39px;
+  left: 24px;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+  -webkit-text-size-adjust: 100%;
+}
+/**
+ * Выпадающий блок с найденными подсказками
+ */
+.suggestions-suggestions {
+  background: #F2F2F2;
+  border: 1px solid #BDBDBD;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: default;
+  left: 0;
+  min-width: 100%;
+  position: absolute;
+  z-index: 9999;
+  -webkit-text-size-adjust: 100%;
+  border-radius: 5px;
+}
+.suggestions-suggestions strong {
+  font-weight: normal;
+  color: #3399ff;
+}
+.suggestions-suggestions.suggestions-mobile {
+  border-style: none;
+}
+.suggestions-suggestions.suggestions-mobile .suggestions-suggestion {
+  border-bottom: 1px solid #ddd;
+}
+/**
+ * Контейнер для одной подсказки
+ */
+.suggestions-suggestion {
+  padding: 16px 12px;
+  overflow: hidden;
+}
+.suggestions-suggestion:hover {
+  background: #E3F2E0;
+}
+/**
+ * Выбранная (активная) подсказка
+ */
+.suggestions-selected {
+  background: #f0f0f0;
+}
+.suggestions-selected:hover {
+  background: #f0f0f0;
+}
+/**
+ * Информационный блок в верхней части выпадашки с подсказками
+ */
+.suggestions-hint {
+  padding: 4px 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #777;
+  font-size: 85%;
+  line-height: 20px;
+}
+/**
+ * Дополнительный текст в подсказке, который идет второй строкой
+ */
+.suggestions-subtext {
+  color: #777;
+}
+/**
+ * Размещает дополнительный текст в одну строку с основным текстом подсказки
+ */
+.suggestions-subtext_inline {
+  display: inline-block;
+  min-width: 6em;
+  vertical-align: bottom;
+  margin: 0 0.5em 0 0;
+}
+/**
+ * Разделитель нескольких дополнительных текстов
+ */
+.suggestions-subtext-delimiter {
+  display: inline-block;
+  width: 2px;
+}
+/**
+ * Выделяет подсказку
+ */
+.suggestions-subtext_label {
+  margin: 0 0 0 0.25em;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 0 3px;
+  background: #f5f5f5;
+}
+.suggestions-value[data-suggestion-status="LIQUIDATED"] {
+  position: relative;
+}
+.suggestions-value[data-suggestion-status="LIQUIDATED"]:after {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  border-top: 1px solid rgba(0, 0, 0, 0.4);
+  content: "";
+}
