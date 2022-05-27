@@ -3,6 +3,7 @@
 	padding-top: 24px;
 	padding-bottom: 24px;
 
+
 	&__columns {
 		display: flex;
 		flex-direction: column;
@@ -361,6 +362,16 @@
 	&__social-icon {
 		width: 39px;
 		height: 39px;
+	}
+
+	&__company {
+		margin-top: 32px;
+		margin-left: calc(50% - 30px);
+
+		@media(min-width: 1024px) {
+			margin-top: 24px;
+		margin-left: calc(50% - 40px);
+		}
 	}
 
 }

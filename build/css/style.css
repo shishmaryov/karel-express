@@ -4506,3 +4506,10 @@ img {
   .footer__social-icon {
     width: 39px;
     height: 39px; }
+  .footer__company {
+    margin-top: 32px;
+    margin-left: calc(50% - 30px); }
+    @media (min-width: 1024px) {
+      .footer__company {
+        margin-top: 24px;
+        margin-left: calc(50% - 40px); } }
