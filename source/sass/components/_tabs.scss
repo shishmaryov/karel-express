@@ -1,66 +1,66 @@
 .tabs
 {
-    position: relative;
+	position: relative;
 
-    display: flex;
-    flex-direction: row-reverse;
+	display: flex;
+	flex-direction: row-reverse;
 
-    padding-bottom: 460px;
+	padding-bottom: 460px;
 }
 
 .tabs__list
 {
-    position: absolute;
-    z-index: 1;
-    left: 0;
+	position: absolute;
+	z-index: 1;
+	left: 0;
 
-    margin-top: 0;
-    margin-top: 3px;
-    margin-bottom: 0;
-    padding-left: 0;
+	margin-top: 0;
+	margin-top: 3px;
+	margin-bottom: 0;
+	padding-left: 0;
 
-    list-style: none;
+	list-style: none;
 }
 
 .tabs__item
 {
-    width: 100%;
+	width: 100%;
 }
 
 
 
 .tabs__btn
 {
-    font-size: 18px;
-    line-height: 22px;
+	font-size: 18px;
+	line-height: 22px;
 
-    position: relative;
+	position: relative;
 
-    max-width: 380px;
-    height: 119px;
-    padding-top: 35px;
-    padding-right: 45px;
-    padding-bottom: 35px;
-    padding-left: 150px;
+	max-width: 380px;
+	padding-top: 27.5px;
+	padding-right: 45px;
+	height: 106.5px;
+	padding-bottom: 27.5px;
+	padding-left: 150px;
 
-    text-align: left;
+	text-align: left;
 
-    border: none;
-    background: #f2f2f2;
+	border: none;
+	background: #f2f2f2;
 
-    &::before
-    {
-        position: absolute;
-        top: 32px;
-        left: 32px;
+	&::before
+	{
+		position: absolute;
+		top: 32px;
+		left: 32px;
 
-        width: 91px;
-        height: 58px;
+		width: 91px;
+		height: 58px;
 
-        content: '';
-    }
+		content: '';
+	}
 
-    &::after {
+	&::after {
 		position: absolute;
 		bottom: 0;
 		left: 30px;
@@ -71,49 +71,49 @@
 		background: #BDBDBD;
 	}
 
-    &--first
-    {
-        border-radius: 20px 0 0 0;
-    }
+	&--first
+	{
+		border-radius: 20px 0 0 0;
+	}
 
-    &--apartment-with-movers
-    {
-        &::before
-        {
-            content: url('../img/icons/apartaments-with-movers-nav.svg');
-        }
-    }
+	&--apartment-with-movers
+	{
+		&::before
+		{
+			content: url('../img/icons/apartaments-with-movers-nav.svg');
+		}
+	}
 
-    &--apartment
-    {
-        &::before
-        {
-            content: url('../img/icons/apartaments-nav.svg');
-        }
-    }
+	&--apartment
+	{
+		&::before
+		{
+			content: url('../img/icons/apartaments-nav.svg');
+		}
+	}
 
-    &--office
-    {
-        &::before
-        {
-            content: url('../img/icons/country-house-nav.svg');
-        }
-    }
+	&--office
+	{
+		&::before
+		{
+			content: url('../img/icons/country-house-nav.svg');
+		}
+	}
 
-    &--country-house
-    {
-        &::before
-        {
-            content: url('../img/icons/office-nav.svg');
-        }
+	&--country-house
+	{
+		&::before
+		{
+			content: url('../img/icons/office-nav.svg');
+		}
 
-        &::after {
+		&::after {
 			content: none;
 		width: 0px;
 		height: 0px;
 		background: transparent;
 		}
-    }
+	}
 }
 
 
@@ -121,10 +121,10 @@
 .tabs__btn--active
 {
 	color: #fff;
-    position: relative;
-    background: $accent;
+	position: relative;
+	background: $accent;
 
-    &::after {
+	&::after {
 			content: none;
 		width: 0px;
 		height: 0px;
@@ -134,96 +134,97 @@
 
 .tabs__content
 {
-    position: absolute;
-    z-index: 2;
-    right: 0;
+	position: absolute;
+	z-index: 2;
+	right: 0;
 
-    display: none;
+	display: none;
 
-    width: 600px;
-    height: 420px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 90px;
+	width: 600px;
+	height: 420px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	padding-left: 90px;
 
-    color: #fff;
+	color: #fff;
 
-    @media(min-width: 1140px)
-    {
-        width: 730px;
-    }
+	@media(min-width: 1140px)
+	{
+		width: 730px;
+	}
 }
 
 .tabs__content--active
 {
-    display: block;
+	display: block;
 
-    background-repeat: no-repeat;
-    background-size: cover;
+	background-repeat: no-repeat;
+	background-size: contain;
 }
 
 .content
 {
-    &--apartment-with-movers
-    {
-        background-image: url('../img/content-images/apartaments-with-movers-tab.svg');
-    }
+	&--apartment-with-movers
+	{
+		background-image: url('../img/content-images/apartaments-with-movers-tab.svg');
+	}
 
-    &--apartment
-    {
-        background-image: url('../img/content-images/apartament.svg');
-    }
+	&--apartment
+	{
+		background-image: url('../img/content-images/apartament.svg');
+	}
 
-    &--office
-    {
-        background-image: url('../img/content-images/office.svg');
-    }
+	&--office
+	{
+		background-image: url('../img/content-images/office.svg');
+	}
 
-    &--country-house
-    {
-        background-image: url('../img/content-images/country-house.svg');
-    }
+	&--country-house
+	{
+		background-image: url('../img/content-images/country-house.svg');
+	}
 }
 
 
 
 .tab__title
 {
-    font-size: 30px;
+	font-size: 30px;
+	font-weight: 400;
 
-    max-width: 500px;
-    margin-top: 0;
-    margin-bottom: 24px;
+	max-width: 500px;
+	margin-top: 0;
+	margin-bottom: 24px;
 }
 
 .tab__description
 {
-    font-size: 18px;
-    font-weight: 400;
+	font-size: 18px;
+	font-weight: 400;
 
-    max-width: 440px;
-    margin-top: 0;
-    margin-bottom: 30px;
+	max-width: 440px;
+	margin-top: 0;
+	margin-bottom: 30px;
 }
 
 .tab__button
 {
-    font-size: 18px;
-    max-width: 177px;
-    font-weight: 500;
-    color: #fff;
-    text-decoration: none;
+	font-size: 18px;
+	max-width: 177px;
+	font-weight: 500;
+	color: #fff;
+	text-decoration: none;
 
-    display: flex;
-    flex-direction: row;
+	display: flex;
+	flex-direction: row;
 
-    padding-top: 13px;
-    padding-bottom: 13px;
+	padding-top: 13px;
+	padding-bottom: 13px;
 
-    border: none;
-    border-radius: 5px;
-    background: linear-gradient(266.46deg, #f9c84b 3.46%, #f2cb77 111.49%);
+	border: none;
+	border-radius: 5px;
+	background: linear-gradient(266.46deg, #f9c84b 3.46%, #f2cb77 111.49%);
 
-    justify-content: center;
-    align-items: center;
+	justify-content: center;
+	align-items: center;
 }

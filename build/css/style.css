@@ -879,10 +879,10 @@
   line-height: 22px;
   position: relative;
   max-width: 380px;
-  height: 119px;
-  padding-top: 35px;
+  padding-top: 27.5px;
   padding-right: 45px;
-  padding-bottom: 35px;
+  height: 106.5px;
+  padding-bottom: 27.5px;
   padding-left: 150px;
   text-align: left;
   border: none;
@@ -947,7 +947,7 @@
 .tabs__content--active {
   display: block;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: contain; }
 
 .content--apartment-with-movers {
   background-image: url("../img/content-images/apartaments-with-movers-tab.svg"); }
@@ -963,6 +963,7 @@
 
 .tab__title {
   font-size: 30px;
+  font-weight: 400;
   max-width: 500px;
   margin-top: 0;
   margin-bottom: 24px; }
