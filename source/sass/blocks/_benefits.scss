@@ -91,6 +91,10 @@ width: 80px;
 
     &--clock
     {
+    	.benefit__link {
+    		margin-top: 11px;
+    	}
+
         &::after
         {
             content: url('../img/icons/benefits-clock.svg');
@@ -98,6 +102,10 @@ width: 80px;
     }
     &--mover
     {
+    	.benefit__link {
+    		margin-top: 11px;
+    	}
+
         &::after
         {
             content: url('../img/icons/benefits-mover.svg');

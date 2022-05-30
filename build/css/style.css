@@ -3286,8 +3286,12 @@ img {
       .benefits__item::after {
         top: 15px;
         right: 15px; } }
+  .benefits__item--clock .benefit__link {
+    margin-top: 11px; }
   .benefits__item--clock::after {
     content: url("../img/icons/benefits-clock.svg"); }
+  .benefits__item--mover .benefit__link {
+    margin-top: 11px; }
   .benefits__item--mover::after {
     content: url("../img/icons/benefits-mover.svg"); }
   @media (max-width: 1110px) {
