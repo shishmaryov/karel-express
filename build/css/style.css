@@ -2844,7 +2844,8 @@ img {
       padding-left: 20px; }
     .promo-form__input--textarea {
       width: calc(100% - 15px);
-      height: 75px; }
+      height: 75px;
+      margin-top: 10px; }
   .promo-form__label {
     font-size: 14px;
     font-weight: 300;
@@ -3245,7 +3246,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
-  @media (min-width: 1110px) {
+  @media (min-width: 1150px) {
     .benefits__list {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
@@ -3262,7 +3263,7 @@ img {
   margin-right: 55px;
   margin-bottom: 24px;
   border-radius: 20px; }
-  @media (min-width: 1110px) {
+  @media (min-width: 1150px) {
     .benefits__item {
       width: 385px;
       height: 200px;
@@ -3282,27 +3283,36 @@ img {
     position: absolute;
     width: 80px;
     height: 80px; }
-    @media (min-width: 1110px) {
+    @media (min-width: 1150px) {
       .benefits__item::after {
         top: 15px;
         right: 15px; } }
+  @media (max-width: 1150px) {
+    .benefits__item--clock .benefit__link {
+      margin-top: 29px; } }
+
+@media (max-width: 1150px) and (max-width: 1150px) and (min-width: 1024px) {
   .benefits__item--clock .benefit__link {
-    margin-top: 11px; }
+    margin-top: 10px; } }
   .benefits__item--clock::after {
     content: url("../img/icons/benefits-clock.svg"); }
-  .benefits__item--mover .benefit__link {
-    margin-top: 11px; }
+  @media (max-width: 1150px) {
+    .benefits__item--mover .benefit__link {
+      margin-top: 32px; } }
+  @media (max-width: 1150px) and (min-width: 1024px) {
+    .benefits__item--mover .benefit__link {
+      margin-top: 10px; } }
   .benefits__item--mover::after {
     content: url("../img/icons/benefits-mover.svg"); }
-  @media (max-width: 1110px) {
-    .benefits__item--mover .benefit__link {
-      margin-top: 7px; } }
   .benefits__item--wednesday::after {
     content: url("../img/icons/benefits-calendar.svg"); }
-  @media (min-width: 1110px) {
+  @media (min-width: 1150px) {
     .benefits__item--wednesday .benefit__link {
       margin-top: 7px;
       margin-left: calc(100% - 153px); } }
+  @media (min-width: 1150px) and (min-width: 1024px) {
+    .benefits__item--wednesday .benefit__link {
+      margin-top: 5px; } }
   .benefits__item-wrapper {
     padding-top: 18px;
     padding-left: 30px; }
@@ -3314,7 +3324,7 @@ img {
   margin-top: 0;
   margin-bottom: 18px;
   color: #000; }
-  @media (min-width: 1110px) {
+  @media (min-width: 1024px) {
     .benefit__title {
       font-size: 24px; } }
 
@@ -3323,7 +3333,7 @@ img {
   max-width: 240px;
   margin-top: 0;
   margin-bottom: 0; }
-  @media (min-width: 1110px) {
+  @media (min-width: 1024px) {
     .benefit__description {
       font-size: 18px; } }
 
@@ -3331,7 +3341,7 @@ img {
   font-size: 18px;
   font-weight: 600;
   color: #4AAB3C; }
-  @media (min-width: 1110px) {
+  @media (min-width: 1024px) {
     .benefit__description--accent {
       font-size: 22px; } }
 
@@ -3342,9 +3352,9 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 29px;
   width: 85px;
   height: 22px;
-  margin-top: 29px;
   margin-left: calc(100% - 100px);
   padding-right: 26px;
   padding-left: 20px;
@@ -3369,14 +3379,17 @@ img {
     width: 22px;
     height: 22px;
     content: url("../img/icons/benefits-arrow.svg"); }
-  @media (min-width: 1110px) {
+  @media (min-width: 1024px) {
+    .benefit__link {
+      margin-top: 6px; } }
+  @media (min-width: 1150px) {
     .benefit__link {
       margin-top: 10px;
       margin-left: calc(100% - 152px); } }
 
 .benefits__consultation {
   margin-top: 40px; }
-  @media (min-width: 1024px) {
+  @media (min-width: 1150px) {
     .benefits__consultation {
       margin-top: 75px; } }
 
@@ -3999,11 +4012,17 @@ img {
     position: relative; }
     .questions .container::after {
       position: absolute;
-      right: 20%;
+      right: 0;
       top: -20px;
       width: 54px;
       height: 61px;
       content: url("../img/icons/questions-after-mobile.svg"); }
+      @media (min-width: 410px) {
+        .questions .container::after {
+          right: 10%; } }
+      @media (min-width: 600px) {
+        .questions .container::after {
+          right: 20%; } }
       @media (min-width: 1024px) {
         .questions .container::after {
           right: -90px;

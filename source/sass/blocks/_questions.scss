@@ -24,11 +24,19 @@
 
 		&::after {
 		position: absolute;
-		right: 20%;
+		right: 0;
 		top: -20px;
 		width: 54px;
 		height: 61px;
 		content: url('../img/icons/questions-after-mobile.svg');
+
+		@media(min-width: 410px) {
+			right: 10%;
+		}
+
+		@media(min-width: 600px) {
+			right: 20%;
+		}
 
 		@media(min-width: 1024px) {
 				right: -90px;
