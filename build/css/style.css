@@ -2281,7 +2281,17 @@ img {
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
-  color: #FFFFFF; }
+  color: #FFFFFF;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  text-decoration: none; }
+  .button:hover {
+    background: linear-gradient(268.55deg, #4caa3c 0%, rgba(76, 170, 60, 0.6) 100%);
+    -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); }
+  .button:active {
+    -webkit-box-shadow: none;
+            box-shadow: none; }
 
 .index-page {
   font-family: 'Exo 2', sans-serif; }
@@ -2466,10 +2476,6 @@ img {
   height: 39px;
   margin-right: 24px;
   margin-right: 24px; }
-
-.header__button {
-  width: 156px;
-  height: 39px; }
 
 .header__bottom {
   border: 1px solid #f7f7f7;
@@ -3162,8 +3168,7 @@ img {
     text-align: center;
     color: #fff;
     border: none;
-    border-radius: 5px;
-    background: linear-gradient(268.55deg, #52cb3f 0.27%, rgba(79, 198, 60, 0.7) 116.81%); }
+    border-radius: 5px; }
     @media (min-width: 1024px) {
       .promo-form__button {
         margin-top: 0; } }
@@ -3296,23 +3301,24 @@ img {
     margin-top: 10px; } }
   .benefits__item--clock::after {
     content: url("../img/icons/benefits-clock.svg"); }
+
+@media (max-width: 1150px) and (min-width: 1024px) {
+  .benefits__item--mover {
+    margin-top: 10px; } }
   @media (max-width: 1150px) {
     .benefits__item--mover .benefit__link {
       margin-top: 32px; } }
-  @media (max-width: 1150px) and (min-width: 1024px) {
-    .benefits__item--mover .benefit__link {
-      margin-top: 10px; } }
   .benefits__item--mover::after {
     content: url("../img/icons/benefits-mover.svg"); }
   .benefits__item--wednesday::after {
     content: url("../img/icons/benefits-calendar.svg"); }
+  @media (min-width: 1024px) {
+    .benefits__item--wednesday {
+      margin-top: 5px; } }
   @media (min-width: 1150px) {
     .benefits__item--wednesday .benefit__link {
-      margin-top: 7px;
+      margin-top: 8px;
       margin-left: calc(100% - 153px); } }
-  @media (min-width: 1150px) and (min-width: 1024px) {
-    .benefits__item--wednesday .benefit__link {
-      margin-top: 5px; } }
   .benefits__item-wrapper {
     padding-top: 18px;
     padding-left: 30px; }
@@ -3384,7 +3390,7 @@ img {
       margin-top: 6px; } }
   @media (min-width: 1150px) {
     .benefit__link {
-      margin-top: 10px;
+      margin-top: 11px;
       margin-left: calc(100% - 152px); } }
 
 .benefits__consultation {
@@ -3525,8 +3531,7 @@ img {
     text-align: center;
     color: #fff;
     border: none;
-    border-radius: 5px;
-    background: linear-gradient(268.55deg, #52cb3f 0.27%, rgba(79, 198, 60, 0.7) 116.81%); }
+    border-radius: 5px; }
     @media (min-width: 1024px) {
       .consultation__button {
         font-size: 18px;
@@ -3535,8 +3540,7 @@ img {
         padding-top: 17px;
         padding-right: 60px;
         padding-bottom: 17px;
-        padding-left: 60px;
-        background: linear-gradient(268.55deg, #4caa3c 0.27%, rgba(76, 170, 60, 0.6) 116.81%); } }
+        padding-left: 60px; } }
   .consultation__agreement {
     font-size: 12px;
     line-height: 130%;
@@ -3958,32 +3962,39 @@ img {
   margin-bottom: 18px;
   padding-top: 14px;
   padding-bottom: 14px;
-  padding-left: calc(50% - 92px);
-  padding-right: calc(50% - 92px);
   text-align: center;
   border: none;
   border-radius: 5px; }
   @media (min-width: 1024px) {
     .how__button {
+      width: 50%;
       margin-bottom: 0;
       font-size: 18px;
-      width: 100%;
       margin-bottom: 12px;
       padding-top: 17px;
-      padding-right: 70px;
+      padding-right: 0px;
       padding-bottom: 17px;
-      padding-left: 70px;
+      padding-left: 0px;
       max-width: 285px; } }
   .how__button--offer {
     color: #fff;
-    background: linear-gradient(268.55deg, #52CB3F 0.27%, rgba(79, 198, 60, 0.7) 116.81%); }
+    padding-left: 0;
+    padding-right: 0; }
     @media (min-width: 1024px) {
       .how__button--offer {
         margin-right: 30px; } }
   .how__button--price {
     color: #000;
     background: transparent;
-    border: 1px solid #4AAB3C; }
+    border: 1px solid #4AAB3C;
+    -webkit-transition: 0.3s;
+    transition: 0.3s; }
+    .how__button--price:hover {
+      -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+              box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); }
+    .how__button--price:active {
+      -webkit-box-shadow: none;
+              box-shadow: none; }
     @media (min-width: 1024px) {
       .how__button--price {
         padding-left: 0;
@@ -4129,8 +4140,7 @@ img {
     text-align: center;
     color: #fff;
     border: none;
-    border-radius: 5px;
-    background: linear-gradient(268.55deg, #52CB3F 0.27%, rgba(79, 198, 60, 0.7) 116.81%); }
+    border-radius: 5px; }
     @media (min-width: 1024px) {
       .questions__button {
         font-size: 18px;
@@ -4140,8 +4150,7 @@ img {
         padding-right: 0px;
         padding-bottom: 14.5px;
         padding-left: 0px;
-        margin-left: 40px;
-        background: linear-gradient(268.55deg, #4caa3c 0.27%, rgba(76, 170, 60, 0.6) 116.81%); } }
+        margin-left: 40px; } }
   .questions .is-invalid {
     color: #b81111;
     border: 1px solid #b81111; }
@@ -4287,11 +4296,19 @@ img {
     text-decoration: none;
     color: #000;
     padding-right: 23px; }
+    .park__link:hover {
+      color: #4AAB3C;
+      -webkit-transition: 0.3s;
+      transition: 0.3s; }
+      .park__link:hover::after {
+        content: url("../img/icons/park-link-after-mobile-active.svg"); }
     @media (min-width: 1024px) {
       .park__link {
         padding-right: 29px;
         font-weight: 600;
-        font-size: 16px; } }
+        font-size: 16px; }
+        .park__link:hover::after {
+          content: url("../img/icons/park-link-after-active.svg"); } }
     .park__link::after {
       position: absolute;
       top: 0;
@@ -4408,7 +4425,6 @@ img {
     font-weight: 500;
     color: #fff;
     padding: 10px 41px;
-    background: linear-gradient(268.55deg, #52CB3F 0.27%, rgba(79, 198, 60, 0.7) 116.81%);
     border-radius: 5px;
     border: none;
     margin-top: 18px; }
