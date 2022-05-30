@@ -1,217 +1,208 @@
-.questions
-{
-	overflow: hidden;
-	padding-top: 24px;
-	padding-bottom: 24px;
-	background-color: #FAEECC;
-	border-radius: 15% 0px 0px 0px;
+.questions {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  overflow: hidden;
 
-	@media(min-width: 1024px) {
-		padding-top: 40px;
-		padding-bottom: 40px;
-		background-image: url('../img/icons/questions-bg.svg');
-		background-size: cover;
-		background-position-x: 135px;
-		background-repeat: no-repeat;
-		border-radius: 0px 0px 0px 0px;
-		background-color: transparent;
-	}
+  background-color: #faeecc;
+  border-radius: 15% 0 0 0;
 
+  @media(min-width: 1024px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
 
-
-	.container {
-		position: relative;
-
-		&::after {
-		position: absolute;
-		right: 0;
-		top: -20px;
-		width: 54px;
-		height: 61px;
-		content: url('../img/icons/questions-after-mobile.svg');
-
-		@media(min-width: 410px) {
-			right: 10%;
-		}
-
-		@media(min-width: 600px) {
-			right: 20%;
-		}
-
-		@media(min-width: 1024px) {
-				right: -90px;
-	top: -35px;
-			content: url('../img/icons/questions-after.svg');
-			width: 132px;
-		height: 158px;
-		}
-
-		}
-
-		@media(min-width: 1024px) {
-			display: flex;
-	align-items: center;
-	justify-content: space-between;
-	position: relative;
-	}
-
-	}
-
-	&__text {
-		text-align: center;
-		@media(min-width: 1024px) {
-			max-width: 300px;
-			margin-left: 185px;
-			margin-right: 40px;
-			text-align: left;
-		}
-	}
-
-	&__title {
-		margin-top: 0;
-		font-size: 24px;
-		margin-bottom: 18px;
-		font-weight: 500;
-
-		@media(min-width: 1024px) {
-font-size: 32px;
-margin-bottom: 24px;
-		}
-
-	}
-
-	&__description {
-		color: #333333;
-		font-size: 16px;
-		margin-bottom: 32px;
+    background-color: transparent;
+    background-image: url("../img/icons/questions-bg.svg");
+    background-repeat: no-repeat;
+    background-position-x: 135px;
+    background-size: cover;
+    border-radius: 0 0 0 0;
+  }
 
 
-@media(min-width: 1024px) {
-	margin: 0;
-		}
-	}
 
-	&__form
-	{
-		@media(min-width: 1024px)
-		{
-		display: flex;
-		align-items: center;
-			max-width: 640px;
-		}
-	}
+  .container {
+    position: relative;
 
-	&__phone
-	{
-		font-size: 14px;
-		font-weight: 500;
-		font-weight: 300;
-		line-height: 17px;
+    &::after {
+      content: url("../img/icons/questions-after-mobile.svg");
+      position: absolute;
+      top: -20px;
+      right: 0;
 
-		width: calc(100% - 22px);
-		margin-bottom: 18px;
-		padding-top: 16px;
-			padding-bottom: 16px;
-		padding-left: 20px;
+      width: 54px;
+      height: 61px;
 
-		color: #BDBDBD;
-		border: none;
-		border-radius: 5px;
-		background: #fff;
+      @media(min-width: 410px) {
+        right: 10%;
+      }
 
-		@media(min-width: 1024px)
-		{
-			font-size: 16px;
-			line-height: 19px;
+      @media(min-width: 600px) {
+        right: 20%;
+      }
 
-			width: calc(100% - 150px);
-			padding-top: 16px;
-			padding-right: 130px;
-			padding-bottom: 16px;
-			margin-bottom: 0;
-			margin-right: 40px;
-			color: #BDBDBD;
-		}
+      @media(min-width: 1024px) {
+        content: url("../img/icons/questions-after.svg");
+        top: -35px;
+        right: -90px;
 
-		&-wrapper
-		{
-			position: relative;
+        width: 132px;
+        height: 158px;
+      }
+    }
 
-			&::after
-			{
-				position: absolute;
-				top: 14px;
-				right: 20px;
+    @media(min-width: 1024px) {
+      position: relative;
 
-				width: 24px;
-				height: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
 
-				content: url('../img/icons/consult-phone.svg');
+  &__text {
+    text-align: center;
+    @media(min-width: 1024px) {
+      max-width: 300px;
+      margin-right: 40px;
+      margin-left: 185px;
 
-				@media(min-width: 1024px)
-				{
-					top: 14px;
-				}
-			}
+      text-align: left;
+    }
+  }
 
-			&--active
-			{
-					&::after
-				{
-					content: url('../img/icons/consult-phone-active.svg');
-				}
+  &__title {
+    margin-top: 0;
+    margin-bottom: 18px;
+
+    font-weight: 500;
+    font-size: 24px;
+
+    @media(min-width: 1024px) {
+      margin-bottom: 24px;
+
+      font-size: 32px;
+    }
+  }
+
+  &__description {
+    margin-bottom: 32px;
+
+    font-size: 16px;
+    color: #333333;
 
 
-				.questions__phone
-				{
-					border: 1px solid $accent;
-					color: $accent;
-				}
-			}
-		}
-	}
+    @media(min-width: 1024px) {
+      margin: 0;
+    }
+  }
 
-	&__button
-	{
-		font-size: 16px;
-		font-weight: 500;
+  &__form {
+    @media(min-width: 1024px) {
+      display: flex;
+      align-items: center;
+      max-width: 640px;
+    }
+  }
 
-		width: 100%;
-		margin-bottom: 8px;
-		padding-right: calc(50% - 92px);
-		padding-top: 14.5px;
-padding-bottom: 14.5px;
-		padding-left: calc(50% - 92px);
+  &__phone {
+    width: calc(100% - 22px);
+    margin-bottom: 18px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 20px;
 
-		text-align: center;
+    font-weight: 500;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: #bdbdbd;
 
-		color: #fff;
-		border: none;
-		border-radius: 5px;
+    background: #ffffff;
+    border: none;
+    border-radius: 5px;
+
+    @media(min-width: 1024px) {
+      width: calc(100% - 150px);
+      margin-right: 40px;
+      margin-bottom: 0;
+      padding-top: 16px;
+      padding-right: 130px;
+      padding-bottom: 16px;
+
+      font-size: 16px;
+      line-height: 19px;
+      color: #bdbdbd;
+    }
+
+    &-wrapper {
+      position: relative;
+
+      &::after {
+        content: url("../img/icons/consult-phone.svg");
+        position: absolute;
+        top: 14px;
+        right: 20px;
+
+        width: 24px;
+        height: 24px;
+
+        @media(min-width: 1024px) {
+          top: 14px;
+        }
+      }
+
+      &--active {
+        &::after {
+          content: url("../img/icons/consult-phone-active.svg");
+        }
 
 
-		@media(min-width: 1024px)
-		{
-			font-size: 18px;
+        .questions__phone {
+          color: $accent;
 
-			width: 300px;
-			margin-bottom: 0px;
-			padding-top: 14.5px;
-			padding-right: 0px;
-			padding-bottom: 14.5px;
-			padding-left: 0px;
-			margin-left: 40px;
-		}
-	}
+          border: 1px solid $accent;
+        }
+      }
+    }
+  }
 
-	.is-invalid
-	{
-		color: #b81111;
-		border: 1px solid #b81111;
+  &__button {
+    width: 100%;
+    margin-bottom: 8px;
+    padding-top: 14.5px;
+    padding-right: calc(50% - 92px);
+    padding-bottom: 14.5px;
+    padding-left: calc(50% - 92px);
 
-		&::placeholder
-		{
-			color: #b81111;
-		}
-	}
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 5px;
+
+
+    @media(min-width: 1024px) {
+      width: 300px;
+      margin-bottom: 0;
+      margin-left: 40px;
+      padding-top: 14.5px;
+      padding-right: 0;
+      padding-bottom: 14.5px;
+      padding-left: 0;
+
+      font-size: 18px;
+    }
+  }
+
+  .is-invalid {
+    color: #b81111;
+
+    border: 1px solid #b81111;
+
+    &::placeholder {
+      color: #b81111;
+    }
+  }
 }

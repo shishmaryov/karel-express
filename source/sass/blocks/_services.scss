@@ -1,73 +1,61 @@
-.services
-{
-    position: relative;
+.services {
+  position: relative;
 
-    margin-top: 430px;
-    padding-top: 390px;
+  margin-top: 430px;
+  padding-top: 390px;
 
-    background: #faeecc;
+  background: #faeecc;
 
-    @media(min-width: 1024px)
-    {
-        margin-top: 170px;
-        padding-top: 150px;
+  @media(min-width: 1024px) {
+    margin-top: 170px;
+    padding-top: 150px;
+  }
+
+  &::after {
+    content: url("../img/icons/rhombus-mobile.svg");
+    position: absolute;
+    top: 200px;
+    right: 0;
+
+    width: 141px;
+    height: 325px;
+
+    @media(min-width: 1024px) {
+      content: url("../img/icons/rhombus-desktop.svg");
+      top: 0;
+
+      width: 333px;
+      height: 444px;
     }
+  }
 
-    &::after
-    {
-        position: absolute;
-        top: 200px;
-        right: 0;
+  &__title {
+    margin-top: 40px;
 
-        width: 141px;
-        height: 325px;
+    text-align: center;
 
-        content: url('../img/icons/rhombus-mobile.svg');
-
-        @media(min-width: 1024px)
-        {
-            top: 0;
-
-            width: 333px;
-            height: 444px;
-
-            content: url('../img/icons/rhombus-desktop.svg');
-        }
+    @media(min-width: 1024px) {
+      margin-top: 80px;
     }
+  }
 
-    &__title
-    {
-        margin-top: 40px;
-        text-align: center;
+  &__tabs {
+    padding-bottom: 530px;
 
-        @media(min-width: 1024px)
-        {
-            margin-top: 80px;
-        }
+    &--desktop {
+      display: none;
+
+      @media(min-width: 1024px) {
+        display: block;
+      }
     }
+  }
 
-    &__tabs
-    {
-        padding-bottom: 530px;
+  &__accordion {
+    padding-bottom: 24px;
 
-        &--desktop
-        {
-            display: none;
-
-            @media(min-width: 1024px)
-            {
-                display: block;
-            }
-        }
+    @media(min-width: 1024px) {
+      display: none;
     }
-
-    &__accordion
-    {
-        padding-bottom: 24px;
-
-        @media(min-width: 1024px)
-        {
-            display: none;
-        }
-    }
+  }
 }

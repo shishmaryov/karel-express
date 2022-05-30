@@ -1,168 +1,137 @@
-.promo
-{
-    overflow: hidden;
+.promo {
+  overflow: hidden;
 
-    &__container
-    {
-        position: relative;
+  &__container {
+    position: relative;
 
-        @media(min-width: 1024px)
-        {
-            display: flex;
+    @media(min-width: 1024px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: top;
+    }
+  }
 
-            justify-content: space-between;
-            align-items: top;
-        }
+  &-form__wrapper {
+    position: absolute;
+    top: 630px;
+    right: 0;
+    left: 0;
+
+    @media(min-width: 488px) {
+      top: 620px;
     }
 
-    &-form__wrapper
-    {
+    @media(min-width: 520px) {
+      top: 590px;
+    }
+
+    @media(min-width: 1024px) {
+      top: 650px;
+    }
+  }
+
+  &__wrapper {
+    &--info {
+      @media(min-width: 1024px) {
+        max-width: 769px;
+      }
+    }
+
+    &--img {
+      display: flex;
+      justify-content: center;
+
+      @media(min-width: 1024px) {
         position: absolute;
-        top: 630px;
-        right: 0;
-        left: 0;
+        top: 0;
+        right: -240px;
+      }
 
-        @media(min-width: 488px)
-        {
-            top: 620px;
-        }
+      @media(min-width: 1140px) {
+        right: -143px;
+      }
+    }
+  }
 
-        @media(min-width: 520px)
-        {
-            top: 590px;
-        }
+  &__title {
+    margin-top: 50px;
+    margin-bottom: 24px;
 
-        @media(min-width: 1024px)
-        {
-            top: 650px;
-        }
+    @media(min-width: 1024px) {
+      margin-top: 60px;
+
+      font-size: 56px;
+    }
+  }
+
+  &__description {
+    margin-top: 0;
+    margin-bottom: 42px;
+
+    @media(min-width: 1024px) {
+      margin-bottom: 80px;
+
+      font-size: 22px;
+    }
+  }
+
+  &__action {
+    position: relative;
+
+    margin-top: 0;
+
+    font-weight: 600;
+    color: $accent;
+
+    &::after {
+      position: absolute;
+      top: 4px;
+      right: 0;
     }
 
-    &__wrapper
-    {
-        &--info
-        {
-            @media(min-width: 1024px)
-            {
-                max-width: 769px;
-            }
-        }
 
-        &--img
-        {
-            display: flex;
+    &--mobile {
+      width: 255px;
+      margin-bottom: 30px;
+      padding-right: 40px;
 
-            justify-content: center;
+      font-size: 16px;
 
-            @media(min-width: 1024px)
-            {
-                position: absolute;
-                top: 0;
-                right: -240px;
-            }
+      &::after {
+        content: url("../img/icons/arrow-promo-mobile.svg");
 
-            @media(min-width: 1140px)
-            {
-                right: -143px;
-            }
-        }
+        width: 34px;
+        height: 72px;
+      }
+
+      @media(min-width: 1024px) {
+        display: none;
+      }
     }
 
-    &__title
-    {
-        margin-top: 50px;
-        margin-bottom: 24px;
+    &--desktop {
+      display: none;
+      width: 344px;
+      margin-bottom: 107px;
 
-        @media(min-width: 1024px)
-        {
-            font-size: 56px;
+      &::after {
+        content: url("../img/icons/arrow-promo-desktop.svg");
 
-            margin-top: 60px;
-        }
+        width: 79px;
+        height: 112px;
+      }
+
+      @media(min-width: 1024px) {
+        display: block;
+      }
     }
+  }
 
-    &__description
-    {
-        margin-top: 0;
-        margin-bottom: 42px;
+  &__img {
+    margin-bottom: 50px;
 
-        @media(min-width: 1024px)
-        {
-            font-size: 22px;
-
-            margin-bottom: 80px;
-        }
+    @media(min-width: 1024px) {
+      margin-bottom: 0;
     }
-
-    &__action
-    {
-        font-weight: 600;
-
-        position: relative;
-
-        margin-top: 0;
-
-        color: $accent;
-
-        &::after
-        {
-            position: absolute;
-            top: 4px;
-            right: 0;
-        }
-
-
-        &--mobile
-        {
-            font-size: 16px;
-
-            width: 255px;
-            margin-bottom: 30px;
-            padding-right: 40px;
-
-            &::after
-            {
-                width: 34px;
-                height: 72px;
-
-                content: url('../img/icons/arrow-promo-mobile.svg');
-            }
-
-            @media(min-width: 1024px)
-            {
-                display: none;
-            }
-        }
-
-        &--desktop
-        {
-            display: none;
-
-            width: 344px;
-            margin-bottom: 107px;
-
-            &::after
-            {
-                width: 79px;
-                height: 112px;
-
-                content: url('../img/icons/arrow-promo-desktop.svg');
-            }
-
-            @media(min-width: 1024px)
-            {
-                display: block;
-            }
-        }
-    }
-
-    &__img
-    {
-        margin-bottom: 50px;
-
-        @media(min-width: 1024px)
-        {
-            margin-bottom: 0;
-        }
-    }
+  }
 }

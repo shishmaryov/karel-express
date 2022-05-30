@@ -1,200 +1,169 @@
-.why
-{
+.why {
+  position: relative;
+
+  margin-bottom: -450px;
+  padding-bottom: 450px;
+  overflow: hidden;
+
+  background: rgba(237, 198, 86, 0.3);
+  border-radius: 10% 0 0 0;
+
+  @media(min-width: 1024px) {
+    margin-bottom: -225px;
+    padding-bottom: 225px;
+  }
+
+
+
+  @media(max-width: 1024px) {
+    &::before {
+      content: url("../img/icons/rhombus-mobile.svg");
+      position: absolute;
+      top: 5px;
+      right: -61px;
+
+      width: 140px;
+      height: 325px;
+    }
+  }
+
+
+  @media(min-width: 1024px) {
+    border-radius: 110px 0 0 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 348px;
+      left: 0;
+      z-index: 1;
+
+      width: 100%;
+      height: 0;
+
+      border: 2px dashed #bdbdbd;
+    }
+
+    &::before {
+      content: url("../img/icons/rhombus-desktop.svg");
+      position: absolute;
+      top: 10px;
+      right: -175px;
+
+      width: 333px;
+      height: 444px;
+    }
+  }
+
+  @media(min-width: 1204px) {
+    &::after {
+      top: 430px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 24px;
+    padding-top: 24px;
+
+    text-align: center;
+
+    @media(min-width: 1024px) {
+      margin-bottom: 32px;
+      padding-top: 50px;
+    }
+  }
+  &__description {
+    margin-top: 0;
+    margin-bottom: 32px;
+
+    text-align: center;
+
+    @media(min-width: 1204px) {
+      max-width: 810px;
+      margin-bottom: 90px;
+      margin-left: calc(50% - 405px);
+    }
+  }
+  &__list {
     position: relative;
 
-    overflow: hidden;
+    display: grid;
+    margin: 0;
+    padding-left: 0;
 
-    margin-bottom: -450px;
-    padding-bottom: 450px;
+    list-style: none;
 
-    border-radius: 10% 0 0 0;
-    background: rgba(237, 198, 86, .3);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 24px;
 
-    @media(min-width: 1024px)
-    {
-        margin-bottom: -225px;
-        padding-bottom: 225px;
+    @media(min-width: 1024px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: top;
     }
+  }
 
 
+  &__img {
+    margin-left: calc(50% - 33px);
 
-    @media(max-width: 1024px)
-    {
-        &::before
-        {
-            position: absolute;
-            top: 5px;
-            right: -61px;
-
-            width: 140px;
-            height: 325px;
-
-            content: url('../img/icons/rhombus-mobile.svg');
-        }
+    @media(min-width: 1024px) {
+      margin-left: 0;
     }
-
-
-    @media(min-width: 1024px)
-    {
-        border-radius: 110px 0 0 0;
-
-        &::after
-        {
-            position: absolute;
-            z-index: 1;
-            top: 348px;
-            left: 0;
-
-            width: 100%;
-            height: 0;
-
-            content: '';
-
-            border: 2px dashed #bdbdbd;
-        }
-
-        &::before
-        {
-            position: absolute;
-            top: 10px;
-            right: -175px;
-
-            width: 333px;
-            height: 444px;
-
-            content: url('../img/icons/rhombus-desktop.svg');
-        }
-    }
-
-    @media(min-width: 1204px)
-    {
-        &::after
-        {
-            top: 430px;
-        }
-    }
-
-    &__title
-    {
-        margin: 0;
-        margin-bottom: 24px;
-        padding-top: 24px;
-
-        text-align: center;
-
-        @media(min-width: 1024px)
-        {
-            margin-bottom: 32px;
-            padding-top: 50px;
-        }
-    }
-    &__description
-    {
-        margin-top: 0;
-        margin-bottom: 32px;
-
-        text-align: center;
-
-        @media(min-width: 1204px)
-        {
-            max-width: 810px;
-            margin-bottom: 90px;
-            margin-left: calc(50% - 405px);
-        }
-    }
-    &__list
-    {
-        position: relative;
-
-        display: grid;
-
-        margin: 0;
-        padding-left: 0;
-
-        list-style: none;
-
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-        row-gap: 24px;
-
-        @media(min-width: 1024px)
-        {
-            display: flex;
-
-            align-items: top;
-            justify-content: space-between;
-        }
-    }
-
-
-    &__img
-    {
-        margin-left: calc(50% - 33px);
-
-        @media(min-width: 1024px)
-        {
-            margin-left: 0;
-        }
-    }
+  }
 }
 
 
-.advantage
-{
-    @media(min-width: 1024px)
-    {
-        max-width: 200px;
+.advantage {
+  @media(min-width: 1024px) {
+    max-width: 200px;
 
-        text-align: center;
+    text-align: center;
+  }
+
+
+  &__text {
+    position: relative;
+
+    margin: 0;
+    margin-top: 28px;
+    padding-top: 32px;
+
+    font-size: 14px;
+    text-align: center;
+
+    border-top: 2px dashed #bdbdbd;
+
+    @media(min-width: 1024px) {
+      padding-top: 48px;
+
+      font-size: 18px;
+
+      border: none;
     }
 
+    &::before {
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: calc(50% - 5px);
+      z-index: 2;
 
-    &__text
-    {
-        font-size: 14px;
+      width: 10px;
+      height: 10px;
 
-        position: relative;
+      background: $accent;
+      border-radius: 100%;
 
-        margin: 0;
-        margin-top: 28px;
-        padding-top: 32px;
+      @media(min-width: 1024px) {
+        top: 0;
+        left: calc(50% - 10px);
 
-        text-align: center;
-
-        border-top: 2px dashed #bdbdbd;
-
-        @media(min-width: 1024px)
-        {
-            font-size: 18px;
-
-            padding-top: 48px;
-
-            border: none;
-        }
-
-        &::before
-        {
-            position: absolute;
-            z-index: 2;
-            top: -5px;
-            left: calc(50% - 5px);
-
-            width: 10px;
-            height: 10px;
-
-            content: '';
-
-            border-radius: 100%;
-            background: $accent;
-
-            @media(min-width: 1024px)
-            {
-                top: 0;
-                left: calc(50% - 10px);
-
-                width: 20px;
-                height: 20px;
-            }
-        }
+        width: 20px;
+        height: 20px;
+      }
     }
+  }
 }
