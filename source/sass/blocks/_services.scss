@@ -1,61 +1,63 @@
 .services {
-  position: relative;
+	position: relative;
 
-  margin-top: 430px;
-  padding-top: 390px;
+	margin-top: 430px;
+	padding-top: 390px;
 
-  background: #faeecc;
+	background: #faeecc;
 
-  @media(min-width: 1024px) {
-    margin-top: 170px;
-    padding-top: 150px;
-  }
+	@media(min-width: 1024px) {
+		margin-top: 170px;
+		padding-top: 150px;
+	}
 
-  &::after {
-    content: url("../img/icons/rhombus-mobile.svg");
-    position: absolute;
-    top: 200px;
-    right: 0;
+	&::after {
+		content: url("../img/icons/rhombus-mobile.svg");
+		position: absolute;
+		top: 200px;
+		right: 0;
 
-    width: 141px;
-    height: 325px;
+		width: 141px;
+		height: 325px;
 
-    @media(min-width: 1024px) {
-      content: url("../img/icons/rhombus-desktop.svg");
-      top: 0;
+		@media(min-width: 1024px) {
+			content: url("../img/icons/rhombus-desktop.svg");
+			top: 0;
 
-      width: 333px;
-      height: 444px;
-    }
-  }
+			width: 333px;
+			height: 444px;
+		}
+	}
 
-  &__title {
-    margin-top: 40px;
+	&__title {
+		margin-top: 40px;
 
-    text-align: center;
+		text-align: center;
 
-    @media(min-width: 1024px) {
-      margin-top: 80px;
-    }
-  }
+		@media(min-width: 1024px) {
+			margin-top: 80px;
+		}
+	}
 
-  &__tabs {
-    padding-bottom: 530px;
+	&__tabs {
+		padding-bottom: 530px;
 
-    &--desktop {
-      display: none;
+		&--desktop {
+			display: none;
 
-      @media(min-width: 1024px) {
-        display: block;
-      }
-    }
-  }
+			@media(min-width: 1140px) {
+				display: block;
+			}
+		}
+	}
 
-  &__accordion {
-    padding-bottom: 24px;
+	&__accordion {
+		padding-bottom: 24px;
+		position: relative;
+		z-index: 2;
 
-    @media(min-width: 1024px) {
-      display: none;
-    }
-  }
+		@media(min-width: 1140px) {
+			display: none;
+		}
+	}
 }

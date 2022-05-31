@@ -2838,7 +2838,7 @@ img {
       width: 100%;
       max-height: 44px;
       border-radius: 5px; }
-      @media (min-width: 1150px) {
+      @media (min-width: 1024px) {
         .promo-form__input--address {
           width: 280px; } }
     .promo-form__input--name {
@@ -3216,12 +3216,14 @@ img {
     padding-bottom: 530px; }
     .services__tabs--desktop {
       display: none; }
-      @media (min-width: 1024px) {
+      @media (min-width: 1140px) {
         .services__tabs--desktop {
           display: block; } }
   .services__accordion {
-    padding-bottom: 24px; }
-    @media (min-width: 1024px) {
+    padding-bottom: 24px;
+    position: relative;
+    z-index: 2; }
+    @media (min-width: 1140px) {
       .services__accordion {
         display: none; } }
 
