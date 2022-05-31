@@ -4026,6 +4026,7 @@ img {
       position: absolute;
       top: -20px;
       right: 0;
+      z-index: 1;
       width: 54px;
       height: 61px; }
       @media (min-width: 410px) {
@@ -4140,7 +4141,8 @@ img {
     text-align: center;
     color: #ffffff;
     border: none;
-    border-radius: 5px; }
+    border-radius: 5px;
+    z-index: 2; }
     @media (min-width: 1024px) {
       .questions__button {
         width: 300px;
