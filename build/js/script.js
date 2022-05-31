@@ -1,499 +1,493 @@
 window.addEventListener('DOMContentLoaded', () => {
-    var anchors = [].slice.call(document.querySelectorAll('a[href*="#"]')),
-        animationTime = 500,
-        framesCount = 60;
+	var anchors = [].slice.call(document.querySelectorAll('a[href*="#"]')),
+		animationTime = 500,
+		framesCount = 60;
 
-    anchors.forEach(function(item) {
-        item.addEventListener('click', function(e) {
-            e.preventDefault();
-            var coordY = document.querySelector(item.getAttribute('href')).getBoundingClientRect().top + window.pageYOffset;
-            var scroller = setInterval(function() {
-                var scrollBy = coordY / framesCount;
-                if (scrollBy > window.pageYOffset - coordY && window.innerHeight + window.pageYOffset < document.body.offsetHeight) {
-                    window.scrollBy(0, scrollBy);
-                } else {
-                    window.scrollTo(0, coordY);
-                    clearInterval(scroller);
-                }
-            }, animationTime / framesCount);
-        });
-    });
+	anchors.forEach(function(item) {
+		item.addEventListener('click', function(e) {
+			e.preventDefault();
+			var coordY = document.querySelector(item.getAttribute('href')).getBoundingClientRect().top + window.pageYOffset;
+			var scroller = setInterval(function() {
+				var scrollBy = coordY / framesCount;
+				if (scrollBy > window.pageYOffset - coordY && window.innerHeight + window.pageYOffset < document.body.offsetHeight) {
+					window.scrollBy(0, scrollBy);
+				} else {
+					window.scrollTo(0, coordY);
+					clearInterval(scroller);
+				}
+			}, animationTime / framesCount);
+		});
+	});
 
-    let burger = document.querySelector('.header__burger');
-    burger.addEventListener('click', function() {
-        burger.classList.toggle('header__burger--active');
-        document.querySelector('.header--mobile .header__bottom').classList.toggle('header__bottom--active');
-    });
+	let burger = document.querySelector('.header__burger');
+	burger.addEventListener('click', function() {
+		burger.classList.toggle('header__burger--active');
+		document.querySelector('.header--mobile .header__bottom').classList.toggle('header__bottom--active');
+	});
 
-    function submenu(title, menu) {
-        document.querySelector(title).addEventListener('click', function() {
-            document.querySelector(menu + '> .header__sublist').classList.toggle('header__sublist--active');
-            document.querySelector(title).classList.toggle('submenu__title--active');
-            document.querySelector(menu + '> .menu__link').classList.toggle('menu__link--active');
-        });
-    }
+	function submenu(title, menu) {
+		document.querySelector(title).addEventListener('click', function() {
+			document.querySelector(menu + '> .header__sublist').classList.toggle('header__sublist--active');
+			document.querySelector(title).classList.toggle('submenu__title--active');
+			document.querySelector(menu + '> .menu__link').classList.toggle('menu__link--active');
+		});
+	}
 
-    submenu(('.header--mobile .submenu__title--geo'), ('.header--mobile .submenu--geo'));
-    submenu(('.header--mobile .submenu__title--services'), ('.header--mobile .submenu--services'));
+	submenu(('.header--mobile .submenu__title--geo'), ('.header--mobile .submenu--geo'));
+	submenu(('.header--mobile .submenu__title--services'), ('.header--mobile .submenu--services'));
 
-    let geoTitle = ('.footer .submenu__title--geo');
-    let geoList = ('.footer .submenu--geo');
-    document.querySelector(geoTitle).addEventListener('click', function() {
-        document.querySelector(geoList + '> .footer__sublist').classList.toggle('footer__sublist--active');
-        document.querySelector(geoTitle).classList.toggle('submenu__title--active');
-        document.querySelector(geoList + '> .menu__link').classList.toggle('menu__link--active');
-    })
-
-
-    let sublistElse = document.querySelector('.header--mobile  .header__sublist--else'),
-        elseImg = document.querySelector('.header--mobile .submenu--else img');
-    document.querySelector('.header--mobile .header__else').addEventListener('click', function() {
-        sublistElse.classList.toggle('header__sublist--active');
-        elseImg.classList.toggle('active');
-        if (elseImg.classList.contains('active')) {
-            elseImg.src = '../img/icons/else-active.svg';
-        } else {
-            elseImg.src = '../img/icons/else.svg';
-        }
-    });
-
-    let div1 = document.createElement('div');
-    div1.innerHTML = document.querySelector('#promo-form__name-phone').innerHTML;
-    div1.classList.add('promo-form__way');
-    div1.classList.add('promo-form__way--no-icon');
+	let geoTitle = ('.footer .submenu__title--geo');
+	let geoList = ('.footer .submenu--geo');
+	document.querySelector(geoTitle).addEventListener('click', function() {
+		document.querySelector(geoList + '> .footer__sublist').classList.toggle('footer__sublist--active');
+		document.querySelector(geoTitle).classList.toggle('submenu__title--active');
+		document.querySelector(geoList + '> .menu__link').classList.toggle('menu__link--active');
+	})
 
 
-    let div2 = document.createElement('div');
-    div2.innerHTML = document.querySelector('#promo-form__car-insert').innerHTML;
-    div2.classList.add('promo-form__block');
+	let sublistElse = document.querySelector('.header--mobile  .header__sublist--else'),
+		elseImg = document.querySelector('.header--mobile .submenu--else img');
+	document.querySelector('.header--mobile .header__else').addEventListener('click', function() {
+		sublistElse.classList.toggle('header__sublist--active');
+		elseImg.classList.toggle('active');
+		if (elseImg.classList.contains('active')) {
+			elseImg.src = '../img/icons/else-active.svg';
+		} else {
+			elseImg.src = '../img/icons/else.svg';
+		}
+	});
+
+	let div1 = document.createElement('div');
+	div1.innerHTML = document.querySelector('#promo-form__name-phone').innerHTML;
+	div1.classList.add('promo-form__way');
+	div1.classList.add('promo-form__way--no-icon');
 
 
-    if (window.screen.availWidth < 1023) {
-        document.querySelector('#promo-form').insertBefore(div1, document.querySelector('#promo-form').children[3]);
-        document.querySelector('#promo-form').insertBefore(div2, document.querySelector('#promo-form').children[5]);
+	let div2 = document.createElement('div');
+	div2.innerHTML = document.querySelector('#promo-form__car-insert').innerHTML;
+	div2.classList.add('promo-form__block');
 
 
-    } else {
-        document.querySelector('#promo-form').insertBefore(div1, document.querySelector('#promo-form').children[5]);
-        document.querySelector('#promo-form').insertBefore(div2, document.querySelector('#promo-form').children[6]);
+	if (window.screen.availWidth < 1023) {
+		document.querySelector('#promo-form').insertBefore(div1, document.querySelector('#promo-form').children[3]);
+		document.querySelector('#promo-form').insertBefore(div2, document.querySelector('#promo-form').children[5]);
 
-    }
 
-    const CLASS_NAME_SELECT = 'select';
-    const CLASS_NAME_ACTIVE = 'select_show';
-    const CLASS_NAME_SELECTED = 'select__option_selected';
-    const SELECTOR_ACTIVE = '.select_show';
-    const SELECTOR_DATA = '[data-select]';
-    const SELECTOR_DATA_TOGGLE = '[data-select="toggle"]';
-    const SELECTOR_OPTION_SELECTED = '.select__option_selected';
-    class CustomSelect {
-        constructor(target, params) {
-            this._elRoot = typeof target === 'string' ? document.querySelector(target) : target;
-            this._params = params || {};
-            this._onClickFn = this._onClick.bind(this);
-            if (this._params['options']) {
-                this._elRoot.classList.add(CLASS_NAME_SELECT);
-                this._elRoot.innerHTML = CustomSelect.template(this._params);
-            }
-            this._elToggle = this._elRoot.querySelector(SELECTOR_DATA_TOGGLE);
-            this._elRoot.addEventListener('click', this._onClickFn);
-        }
-        _onClick(e) {
-            const target = e.target;
-            const type = target.closest(SELECTOR_DATA).dataset.select;
-            switch (type) {
-                case 'toggle':
-                    this.toggle();
-                    break;
-                case 'option':
-                    this._changeValue(target);
-                    break;
-            }
-        }
-        _update(option) {
-            option = option.closest('.select__option');
-            const selected = this._elRoot.querySelector(SELECTOR_OPTION_SELECTED);
-            if (selected) {
-                selected.classList.remove(CLASS_NAME_SELECTED);
-            }
-            option.classList.add(CLASS_NAME_SELECTED);
-            this._elToggle.textContent = option.textContent;
-            this._elToggle.value = option.dataset['value'];
-            this._elToggle.dataset.index = option.dataset['index'];
-            this._elRoot.dispatchEvent(new CustomEvent('select.change'));
-            this._params.onSelected ? this._params.onSelected(this, option) : null;
-            return option.dataset['value'];
-        }
-        _reset() {
-            const selected = this._elRoot.querySelector(SELECTOR_OPTION_SELECTED);
-            if (selected) {
-                selected.classList.remove(CLASS_NAME_SELECTED);
-            }
-            this._elToggle.textContent = 'Выберите из списка';
-            this._elToggle.value = '';
-            this._elToggle.dataset.index = -1;
-            this._elRoot.dispatchEvent(new CustomEvent('select.change'));
-            this._params.onSelected ? this._params.onSelected(this, null) : null;
-            return '';
-        }
-        _changeValue(option) {
-            if (option.classList.contains(CLASS_NAME_SELECTED)) {
-                return;
-            }
-            this._update(option);
-            this.hide();
-        }
-        show() {
-            document.querySelectorAll(SELECTOR_ACTIVE).forEach(select => {
-                select.classList.remove(CLASS_NAME_ACTIVE);
-            });
-            this._elRoot.classList.add(CLASS_NAME_ACTIVE);
-        }
-        hide() {
-            this._elRoot.classList.remove(CLASS_NAME_ACTIVE);
-        }
-        toggle() {
-            if (this._elRoot.classList.contains(CLASS_NAME_ACTIVE)) {
-                this.hide();
-            } else {
-                this.show();
-            }
-        }
-        dispose() {
-            this._elRoot.removeEventListener('click', this._onClickFn);
-        }
-        get value() {
-            return this._elToggle.value;
-        }
-        set value(value) {
-            let isExists = false;
-            this._elRoot.querySelectorAll('.select__option').forEach((option) => {
-                if (option.dataset['value'] === value) {
-                    isExists = true;
-                    return this._update(option);
-                }
-            });
-            if (!isExists) {
-                return this._reset();
-            }
-        }
-        get selectedIndex() {
-            return this._elToggle.dataset['index'];
-        }
-        set selectedIndex(index) {
-            const option = this._elRoot.querySelector(`.select__option[data-index="${index}"]`);
-            if (option) {
-                return this._update(option);
-            }
-            return this._reset();
-        }
-    }
+	} else {
+		document.querySelector('#promo-form').insertBefore(div1, document.querySelector('#promo-form').children[5]);
+		document.querySelector('#promo-form').insertBefore(div2, document.querySelector('#promo-form').children[6]);
 
-    CustomSelect.template = params => {
-        const name = params['name'];
-        const options = params['options'];
-        const targetValue = params['targetValue'];
-        let items = [];
-        let selectedIndex = -1;
-        let selectedValue = '';
-        let selectedContent = 'Выберите из списка';
-        options.forEach((option, index) => {
-            let selectedClass = '';
-            if (option[0] === targetValue) {
-                selectedClass = ' select__option_selected';
-                selectedIndex = index;
-                selectedValue = option[0];
-                selectedContent = option[1];
-            }
-            items.push(`<li class="select__option${selectedClass}" data-select="option" data-value="${option[0]}" data-index="${index}">${option[1]}</li>`);
-        });
+	}
 
-        return `<button type="button" class="select__toggle" name="${name}" value="${selectedValue}" data-select="toggle" data-index="${selectedIndex}">${selectedContent}</button>
+	const CLASS_NAME_SELECT = 'select';
+	const CLASS_NAME_ACTIVE = 'select_show';
+	const CLASS_NAME_SELECTED = 'select__option_selected';
+	const SELECTOR_ACTIVE = '.select_show';
+	const SELECTOR_DATA = '[data-select]';
+	const SELECTOR_DATA_TOGGLE = '[data-select="toggle"]';
+	const SELECTOR_OPTION_SELECTED = '.select__option_selected';
+	class CustomSelect {
+		constructor(target, params) {
+			this._elRoot = typeof target === 'string' ? document.querySelector(target) : target;
+			this._params = params || {};
+			this._onClickFn = this._onClick.bind(this);
+			if (this._params['options']) {
+				this._elRoot.classList.add(CLASS_NAME_SELECT);
+				this._elRoot.innerHTML = CustomSelect.template(this._params);
+			}
+			this._elToggle = this._elRoot.querySelector(SELECTOR_DATA_TOGGLE);
+			this._elRoot.addEventListener('click', this._onClickFn);
+		}
+		_onClick(e) {
+			const target = e.target;
+			const type = target.closest(SELECTOR_DATA).dataset.select;
+			switch (type) {
+				case 'toggle':
+					this.toggle();
+					break;
+				case 'option':
+					this._changeValue(target);
+					break;
+			}
+		}
+		_update(option) {
+			option = option.closest('.select__option');
+			const selected = this._elRoot.querySelector(SELECTOR_OPTION_SELECTED);
+			if (selected) {
+				selected.classList.remove(CLASS_NAME_SELECTED);
+			}
+			option.classList.add(CLASS_NAME_SELECTED);
+			this._elToggle.textContent = option.textContent;
+			this._elToggle.value = option.dataset['value'];
+			this._elToggle.dataset.index = option.dataset['index'];
+			this._elRoot.dispatchEvent(new CustomEvent('select.change'));
+			this._params.onSelected ? this._params.onSelected(this, option) : null;
+			return option.dataset['value'];
+		}
+		_reset() {
+			const selected = this._elRoot.querySelector(SELECTOR_OPTION_SELECTED);
+			if (selected) {
+				selected.classList.remove(CLASS_NAME_SELECTED);
+			}
+			this._elToggle.textContent = 'Выберите из списка';
+			this._elToggle.value = '';
+			this._elToggle.dataset.index = -1;
+			this._elRoot.dispatchEvent(new CustomEvent('select.change'));
+			this._params.onSelected ? this._params.onSelected(this, null) : null;
+			return '';
+		}
+		_changeValue(option) {
+			if (option.classList.contains(CLASS_NAME_SELECTED)) {
+				return;
+			}
+			this._update(option);
+			this.hide();
+		}
+		show() {
+			document.querySelectorAll(SELECTOR_ACTIVE).forEach(select => {
+				select.classList.remove(CLASS_NAME_ACTIVE);
+			});
+			this._elRoot.classList.add(CLASS_NAME_ACTIVE);
+		}
+		hide() {
+			this._elRoot.classList.remove(CLASS_NAME_ACTIVE);
+		}
+		toggle() {
+			if (this._elRoot.classList.contains(CLASS_NAME_ACTIVE)) {
+				this.hide();
+			} else {
+				this.show();
+			}
+		}
+		dispose() {
+			this._elRoot.removeEventListener('click', this._onClickFn);
+		}
+		get value() {
+			return this._elToggle.value;
+		}
+		set value(value) {
+			let isExists = false;
+			this._elRoot.querySelectorAll('.select__option').forEach((option) => {
+				if (option.dataset['value'] === value) {
+					isExists = true;
+					return this._update(option);
+				}
+			});
+			if (!isExists) {
+				return this._reset();
+			}
+		}
+		get selectedIndex() {
+			return this._elToggle.dataset['index'];
+		}
+		set selectedIndex(index) {
+			const option = this._elRoot.querySelector(`.select__option[data-index="${index}"]`);
+			if (option) {
+				return this._update(option);
+			}
+			return this._reset();
+		}
+	}
+
+	CustomSelect.template = params => {
+		const name = params['name'];
+		const options = params['options'];
+		const targetValue = params['targetValue'];
+		let items = [];
+		let selectedIndex = -1;
+		let selectedValue = '';
+		let selectedContent = 'Выберите из списка';
+		options.forEach((option, index) => {
+			let selectedClass = '';
+			if (option[0] === targetValue) {
+				selectedClass = ' select__option_selected';
+				selectedIndex = index;
+				selectedValue = option[0];
+				selectedContent = option[1];
+			}
+			items.push(`<li class="select__option${selectedClass}" data-select="option" data-value="${option[0]}" data-index="${index}">${option[1]}</li>`);
+		});
+
+		return `<button type="button" class="select__toggle" name="${name}" value="${selectedValue}" data-select="toggle" data-index="${selectedIndex}">${selectedContent}</button>
 	<div class="select__dropdown">
 	<ul class="select__options">${items.join('')}</ul>
 </div>`;
-    };
+	};
 
-    document.addEventListener('click', (e) => {
-        if (!e.target.closest('.select')) {
-            document.querySelectorAll(SELECTOR_ACTIVE).forEach(select => {
-                select.classList.remove(CLASS_NAME_ACTIVE);
-            });
-        }
-    });
+	document.addEventListener('click', (e) => {
+		if (!e.target.closest('.select')) {
+			document.querySelectorAll(SELECTOR_ACTIVE).forEach(select => {
+				select.classList.remove(CLASS_NAME_ACTIVE);
+			});
+		}
+	});
 
-    const select1 = new CustomSelect('#select-1', {
-        name: 'weight', // значение атрибута name у кнопки
-        targetValue: '1,5 tons', // значение по умолчанию
-        options: [
-            ['1,5 tons', 'До 1,5 тонн'],
-            ['2 tons', 'До 2 тонн'],
-            ['5 tons', 'До 5 тонн']
-        ], // опции
-    });
+	const select1 = new CustomSelect('#select-1', {
+		name: 'weight', // значение атрибута name у кнопки
+		targetValue: '1,5 tons', // значение по умолчанию
+		options: [
+			['1,5 tons', 'До 1,5 тонн'],
+			['2 tons', 'До 2 тонн'],
+			['5 tons', 'До 5 тонн']
+		], // опции
+	});
 
-    const select2 = new CustomSelect('#select-2', {
-        name: 'length', // значение атрибута name у кнопки
-        targetValue: '3 m', // значение по умолчанию
-        options: [
-            ['3 m', '3 m'],
-            ['4 m', '4 m']
-        ], // опции
-    });
+	const select2 = new CustomSelect('#select-2', {
+		name: 'length', // значение атрибута name у кнопки
+		targetValue: '3 m', // значение по умолчанию
+		options: [
+			['3 m', '3 m'],
+			['4 m', '4 m']
+		], // опции
+	});
 
-    const select3 = new CustomSelect('#select-3', {
-        name: 'heigth', // значение атрибута name у кнопки
-        targetValue: '1,6 m', // значение по умолчанию
-        options: [
-            ['1,6 m', '1,6 m'],
-            ['1,8 m', '1,8 m'],
-            ['2,2 m', '2,2 m']
-        ], // опции
-    });
+	const select3 = new CustomSelect('#select-3', {
+		name: 'heigth', // значение атрибута name у кнопки
+		targetValue: '1,6 m', // значение по умолчанию
+		options: [
+			['1,6 m', '1,6 m'],
+			['1,8 m', '1,8 m'],
+			['2,2 m', '2,2 m']
+		], // опции
+	});
 
-    const select4 = new CustomSelect('#select-4', {
-        name: 'passengers', // значение атрибута name у кнопки
-        targetValue: '0', // значение по умолчанию
-        options: [
-            ['0', 'Нет'],
-            ['1', '1'],
-            ['2', '2']
-        ], // опции
-    });
+	const select4 = new CustomSelect('#select-4', {
+		name: 'passengers', // значение атрибута name у кнопки
+		targetValue: '0', // значение по умолчанию
+		options: [
+			['0', 'Нет'],
+			['1', '1'],
+			['2', '2']
+		], // опции
+	});
 
-    const select5 = new CustomSelect('#select-5', {
-        name: 'movers', // значение атрибута name у кнопки
-        targetValue: '0', // значение по умолчанию
-        options: [
-            ['0', 'Нет'],
-            ['1', '1'],
-            ['2', '2']
-        ], // опции
-    });
+	const select5 = new CustomSelect('#select-5', {
+		name: 'movers', // значение атрибута name у кнопки
+		targetValue: '0', // значение по умолчанию
+		options: [
+			['0', 'Нет'],
+			['1', '1'],
+			['2', '2']
+		], // опции
+	});
 
-    const select6 = new CustomSelect('#select-6');
-    document.querySelector('.submenu--else').addEventListener('mouseover', function() {
-        document.querySelector('.header__else > img').src = 'img/icons/else-active.svg';
-    });
+	const select6 = new CustomSelect('#select-6');
+	document.querySelector('.submenu--else').addEventListener('mouseover', function() {
+		document.querySelector('.header__else > img').src = 'img/icons/else-active.svg';
+	});
 
-    document.querySelector('.submenu--else').addEventListener('mouseout', function() {
-        document.querySelector('.header__else > img').src = 'img/icons/else.svg';
-    });
+	document.querySelector('.submenu--else').addEventListener('mouseout', function() {
+		document.querySelector('.header__else > img').src = 'img/icons/else.svg';
+	});
 
-    const select7 = new CustomSelect('#select-7', {
-        name: 'urgency', // значение атрибута name у кнопки
-        targetValue: '20 min', // значение по умолчанию
-        options: [
-            ['20 min', 'От 20 минут'],
-            ['1 hour', '1 час'],
-            ['2 hours', '2 часа'],
-            ['other', 'Другое']
-        ], // опции
-    });
+	const select7 = new CustomSelect('#select-7', {
+		name: 'urgency', // значение атрибута name у кнопки
+		targetValue: '20 min', // значение по умолчанию
+		options: [
+			['20 min', 'От 20 минут'],
+			['1 hour', '1 час'],
+			['2 hours', '2 часа'],
+			['other', 'Другое']
+		], // опции
+	});
 
-    const select8 = new CustomSelect('#select-8', {
-        name: 'duration', // значение атрибута name у кнопки
-        targetValue: '1 hour', // значение по умолчанию
-        options: [
-            ['1 hour', '1 час'],
-            ['2 hours', '2 часа'],
-            ['3 hours', '3 часа']
-        ],
-    });
-
-
-    document.querySelector('.promo-form__actual-link').addEventListener('click', function() {
-        document.querySelector('#select-6').classList.toggle('select--active');
-        document.querySelector('.promo-form__actual-link').classList.toggle('promo-form__actual-link--absolute');
-        if (document.querySelector('#select-6').classList.contains('select--active')) {
-            document.querySelector('.promo-form__actual-link').textContent = 'Вернуться';
-        } else {
-            document.querySelector('.promo-form__actual-link').textContent = 'Выбрать из списка';
-        }
-    });
-
-    document.querySelector('#select-6 .select__toggle').addEventListener('click', function() {
-        document.querySelector('.promo-form__actual-link').classList.toggle('promo-form__actual-link--absolute');
-    });
-
-    document.querySelector('#time').placeholder = new Date().toLocaleTimeString('en-US', {
-        hour12: false,
-        hour: "numeric",
-        minute: "numeric"
-    });
+	const select8 = new CustomSelect('#select-8', {
+		name: 'duration', // значение атрибута name у кнопки
+		targetValue: '1 hour', // значение по умолчанию
+		options: [
+			['1 hour', '1 час'],
+			['2 hours', '2 часа'],
+			['3 hours', '3 часа']
+		],
+	});
 
 
+	document.querySelector('.promo-form__actual-link').addEventListener('click', function() {
+		document.querySelector('#select-6').classList.toggle('select--active');
+		document.querySelector('.promo-form__actual-link').classList.toggle('promo-form__actual-link--absolute');
+		if (document.querySelector('#select-6').classList.contains('select--active')) {
+			document.querySelector('.promo-form__actual-link').textContent = 'Вернуться';
+		} else {
+			document.querySelector('.promo-form__actual-link').textContent = 'Выбрать из списка';
+		}
+	});
 
-    var today = new Date();
-    var dd = String(today.getDate()).padStart(2, '0');
-    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-    var yyyy = today.getFullYear();
-    today = mm + '.' + dd + '.' + yyyy;
-    document.querySelector('#date').placeholder = today;
+	document.querySelector('#select-6 .select__toggle').addEventListener('click', function() {
+		document.querySelector('.promo-form__actual-link').classList.toggle('promo-form__actual-link--absolute');
+	});
 
-    var phoneMask = IMask(
-        document.getElementById('phone'), {
-            mask: '+{7} (000) 000 - 00 - 00'
-        });
-
-    let hiddenInputs = document.querySelectorAll('.promo-form__input--hidden');
-    let form = document.querySelector('.promo-form');
-    let cleanButton = document.querySelector('.promo-form__clean');
-    let inputs = document.querySelectorAll('.promo-form div');
-    let hiddenBlocks = document.querySelectorAll('.promo-form__block');
-
-    for (let i = 0; i < inputs.length; i++) {
-        inputs[i].addEventListener('click', function() {
-            form.classList.add('promo-form--active');
-
-            if (window.screen.availWidth < 1023) {
-                document.querySelector('.services').style.paddingTop = '970px';
-            } else {
-                document.querySelector('.services').style.paddingTop = '453px';
-            }
-
-            for (let i = 0; i < hiddenInputs.length; i++) {
-                hiddenInputs[i].classList.add('promo-form__input--active');
-            }
-
-            for (let i = 0; i < hiddenBlocks.length; i++) {
-                hiddenBlocks[i].classList.add('promo-form__block--active');
-            }
-        });
-    }
-
-    cleanButton.addEventListener('click', function() {
-        if (window.screen.availWidth < 1023) {
-            document.querySelector('.services').style.paddingTop = '390px';
-        } else {
-            document.querySelector('.services').style.paddingTop = '150px';
-        }
-        form.classList.remove('promo-form--active');
-        document.querySelector('#promo-form').reset()
-
-        for (let i = 0; i < hiddenInputs.length; i++) {
-            hiddenInputs[i].classList.remove('promo-form__input--active');
-        }
-
-        for (let i = 0; i < hiddenBlocks.length; i++) {
-            hiddenBlocks[i].classList.remove('promo-form__block--active');
-        }
-
-        validation.refresh();
+	document.querySelector('#time').placeholder = new Date().toLocaleTimeString('en-US', {
+		hour12: false,
+		hour: "numeric",
+		minute: "numeric"
+	});
 
 
-    });
 
-    function submitHandler(thisForm) {
-        let formData = new FormData(thisForm);
+	var today = new Date();
+	var dd = String(today.getDate()).padStart(2, '0');
+	var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+	var yyyy = today.getFullYear();
+	today = mm + '.' + dd + '.' + yyyy;
+	document.querySelector('#date').placeholder = today;
 
-        let xhr = new XMLHttpRequest();
+	var phoneMask = IMask(
+		document.getElementById('phone'), {
+			mask: '+{7} (000) 000 - 00 - 00'
+		});
 
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState === 4) {
-                if (xhr.status === 200) {
-                    console.log('Отправлено');
-                }
-            }
-        }
+	let hiddenInputs = document.querySelectorAll('.promo-form__input--hidden');
+	let form = document.querySelector('.promo-form');
+	let cleanButton = document.querySelector('.promo-form__clean');
+	let inputs = document.querySelectorAll('.promo-form div');
+	let hiddenBlocks = document.querySelectorAll('.promo-form__block');
 
-        xhr.open('POST', '../mail.php', true);
-        xhr.send(formData);
-        document.querySelector('#promo-form').reset();
-        validation.refresh();
+	for (let i = 0; i < inputs.length; i++) {
+		inputs[i].addEventListener('click', function() {
+			form.classList.add('promo-form--active');
 
-    }
+			for (let i = 0; i < hiddenInputs.length; i++) {
+				hiddenInputs[i].classList.add('promo-form__input--active');
+			}
 
-    document.getElementById('time').addEventListener('click', function() {
-        var numberMask = IMask(document.getElementById('time'), {
-            mask: '00{:}00',
-            lazy: false,
-        });
-    });
+			for (let i = 0; i < hiddenBlocks.length; i++) {
+				hiddenBlocks[i].classList.add('promo-form__block--active');
+			}
+		});
+	}
 
-    if (window.screen.availWidth < 1023) {
-        new AirDatepicker('#date', {
-            isMobile: true,
-        });
-    } else {
-        new AirDatepicker('#date');
-    }
+	cleanButton.addEventListener('click', function() {
+		if (window.screen.availWidth < 1023) {
+			document.querySelector('.services').style.paddingTop = '390px';
+		} else {
+			document.querySelector('.services').style.paddingTop = '150px';
+		}
+		form.classList.remove('promo-form--active');
+		document.querySelector('#promo-form').reset()
 
-    const validation = new JustValidate('#promo-form', {
-        errorFieldCssClass: 'is-invalid'
-    });
+		for (let i = 0; i < hiddenInputs.length; i++) {
+			hiddenInputs[i].classList.remove('promo-form__input--active');
+		}
 
-    validation
-        .addField('#name', [{
-            rule: 'required',
-            errorMessage: ' '
-        }])
+		for (let i = 0; i < hiddenBlocks.length; i++) {
+			hiddenBlocks[i].classList.remove('promo-form__block--active');
+		}
 
-    .addField('#phone', [{
-            rule: 'required',
-            errorMessage: ' '
-        }, ])
-        .addRequiredGroup(
-            '.promo-form__stops',
-            ' '
-
-        )
-        .onSuccess((event) => {
-            submitHandler(document.querySelector('#promo-form'));
-
-            form.classList.remove('promo-form--active');
-            document.querySelector('#promo-form').reset()
-
-            for (let i = 0; i < hiddenInputs.length; i++) {
-                hiddenInputs[i].classList.remove('promo-form__input--active');
-            }
-
-            for (let i = 0; i < hiddenBlocks.length; i++) {
-                hiddenBlocks[i].classList.remove('promo-form__block--active');
-            }
-
-            validation.refresh();
-        });
-
-    for (let i = 0; i < document.querySelectorAll('.promo-form__stops input').length; i++) {
-        document.querySelectorAll('.promo-form__stops input')[i].addEventListener('change', function() {
-            validation.removeGroup('.promo-form__stops');
-        });
-    }
-
-    document.querySelector('.promo-form__button').addEventListener('click', function() {
-        setTimeout(function() {
-            if ((document.querySelector('#name').classList.contains('is-invalid')) == true) {
-                document.querySelector('#name').placeholder = 'Введите имя';
-            }
-
-            if ((document.querySelector('#phone').classList.contains('is-invalid')) == true) {
-                document.querySelector('#phone').placeholder = 'Введите телефон';
-            }
-        }, 500);
-    });
-
-    document.querySelector('.promo-form__add-adress').addEventListener('click', function() {
-        let div = document.createElement('div');
-        div.innerHTML = document.querySelector('#middleStop').innerHTML;
-        document.querySelector('.promo-form__stops').insertBefore(div, document.querySelector('.promo-form__stops').children[1]);
-        $(".promo-form__input--address").suggestions({
-            token: "3b5a250afeed87ba3c5782b639296f750d220161",
-            type: "ADDRESS",
-            /* Вызывается, когда пользователь выбирает одну из подсказок */
-            onSelect: function(suggestion) {
-                console.log(suggestion);
-            }
-        });
-    });
+		validation.refresh();
 
 
-    $(".promo-form__input--address").suggestions({
-        token: "3b5a250afeed87ba3c5782b639296f750d220161",
-        type: "ADDRESS",
-        /* Вызывается, когда пользователь выбирает одну из подсказок */
-        onSelect: function(suggestion) {
-            console.log(suggestion);
-        }
-    });
+	});
+
+	function submitHandler(thisForm) {
+		let formData = new FormData(thisForm);
+
+		let xhr = new XMLHttpRequest();
+
+		xhr.onreadystatechange = function() {
+			if (xhr.readyState === 4) {
+				if (xhr.status === 200) {
+					console.log('Отправлено');
+				}
+			}
+		}
+
+		xhr.open('POST', '../mail.php', true);
+		xhr.send(formData);
+		document.querySelector('#promo-form').reset();
+		validation.refresh();
+
+	}
+
+	document.getElementById('time').addEventListener('click', function() {
+		var numberMask = IMask(document.getElementById('time'), {
+			mask: '00{:}00',
+			lazy: false,
+		});
+	});
+
+	if (window.screen.availWidth < 1023) {
+		new AirDatepicker('#date', {
+			isMobile: true,
+		});
+	} else {
+		new AirDatepicker('#date');
+	}
+
+	const validation = new JustValidate('#promo-form', {
+		errorFieldCssClass: 'is-invalid'
+	});
+
+	validation
+		.addField('#name', [{
+			rule: 'required',
+			errorMessage: ' '
+		}])
+
+	.addField('#phone', [{
+			rule: 'required',
+			errorMessage: ' '
+		}, ])
+		.addRequiredGroup(
+			'.promo-form__stops',
+			' '
+
+		)
+		.onSuccess((event) => {
+			submitHandler(document.querySelector('#promo-form'));
+
+			form.classList.remove('promo-form--active');
+			document.querySelector('#promo-form').reset()
+
+			for (let i = 0; i < hiddenInputs.length; i++) {
+				hiddenInputs[i].classList.remove('promo-form__input--active');
+			}
+
+			for (let i = 0; i < hiddenBlocks.length; i++) {
+				hiddenBlocks[i].classList.remove('promo-form__block--active');
+			}
+
+			validation.refresh();
+		});
+
+	for (let i = 0; i < document.querySelectorAll('.promo-form__stops input').length; i++) {
+		document.querySelectorAll('.promo-form__stops input')[i].addEventListener('change', function() {
+			validation.removeGroup('.promo-form__stops');
+		});
+	}
+
+	document.querySelector('.promo-form__button').addEventListener('click', function() {
+		setTimeout(function() {
+			if ((document.querySelector('#name').classList.contains('is-invalid')) == true) {
+				document.querySelector('#name').placeholder = 'Введите имя';
+			}
+
+			if ((document.querySelector('#phone').classList.contains('is-invalid')) == true) {
+				document.querySelector('#phone').placeholder = 'Введите телефон';
+			}
+		}, 500);
+	});
+
+	document.querySelector('.promo-form__add-adress').addEventListener('click', function() {
+		let div = document.createElement('div');
+		div.innerHTML = document.querySelector('#middleStop').innerHTML;
+		document.querySelector('.promo-form__stops').insertBefore(div, document.querySelector('.promo-form__stops').children[1]);
+		$(".promo-form__input--address").suggestions({
+			token: "3b5a250afeed87ba3c5782b639296f750d220161",
+			type: "ADDRESS",
+			/* Вызывается, когда пользователь выбирает одну из подсказок */
+			onSelect: function(suggestion) {
+				console.log(suggestion);
+			}
+		});
+	});
+
+
+	$(".promo-form__input--address").suggestions({
+		token: "3b5a250afeed87ba3c5782b639296f750d220161",
+		type: "ADDRESS",
+		/* Вызывается, когда пользователь выбирает одну из подсказок */
+		onSelect: function(suggestion) {
+			console.log(suggestion);
+		}
+	});
 });

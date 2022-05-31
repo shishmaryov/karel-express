@@ -11,25 +11,6 @@
     }
   }
 
-  &-form__wrapper {
-    position: absolute;
-    top: 630px;
-    right: 0;
-    left: 0;
-
-    @media(min-width: 488px) {
-      top: 620px;
-    }
-
-    @media(min-width: 520px) {
-      top: 590px;
-    }
-
-    @media(min-width: 1024px) {
-      top: 650px;
-    }
-  }
-
   &__wrapper {
     &--info {
       @media(min-width: 1024px) {

@@ -1,0 +1,11 @@
+.prices-page {
+	font-family: 'Exo 2', sans-serif;
+
+	&__promo {
+		margin-bottom: 60px;
+
+		@media(min-width: 1024px) {
+			margin-bottom: 120px;
+		}
+	}
+}

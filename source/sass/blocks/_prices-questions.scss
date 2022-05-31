@@ -1,0 +1,114 @@
+.prices-questions {
+	margin-bottom: 40px;
+
+	@media(min-width: 1024px) {
+		margin-bottom: 80px;
+	}
+
+	.container {
+
+
+		@media(min-width: 1024px) {
+			display: flex;
+		}
+
+		&--nb {
+			@media(max-width: 1024px) {
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+	}
+
+
+	&__description {
+		margin-top: 0;
+		margin-bottom: 25px;
+
+		@media(min-width: 1024px) {
+			max-width: 420px;
+			margin-bottom: 0;
+		}
+	}
+	&__columns {
+		background: #FAEECC;
+		padding: 24px 16px;
+		border-radius: 50px 0px 0px 0px;
+
+
+		@media(min-width: 1024px) {
+			padding-top: 37px;
+			padding-bottom: 37px;
+			padding-left: 65px;
+			display: grid;
+			grid-template-columns: 1fr 300px;
+			gap: 10px;
+			background: url('../img/icons/prices-questions-bg-desktop.svg');
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+	}
+	&__column {
+	}
+	&__title {
+		text-align: center;
+		margin-top: 0;
+		margin-bottom: 18px;
+		font-size: 24px;
+		color: #000;
+
+		@media(min-width: 1024px) {
+			text-align: left;
+			margin-bottom: 24px;
+			font-size: 32px;
+		}
+	}
+
+.prices-question {
+	&__text {
+		margin-top: 0;
+		margin-bottom: 32px;
+		text-align: center;
+		font-size: 16px;
+		color: #333333;
+
+		@media(min-width: 1024px) {
+			text-align: left;
+			margin-bottom: 0;
+		}
+	}
+}
+.consultation {
+	max-width: 50%;
+	&__phone-wrapper {
+	}
+	&__phone {
+		@media(min-width: 1024px) {
+			margin-bottom: 18px;
+		}
+	}
+	&__button {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+.tel {
+}
+.form {
+	&__control {
+	}
+	&__input {
+	}
+}
+}
+
+
+.is-invalid {
+    color: rgb(184, 17, 17);
+
+    border: 1px solid rgb(184, 17, 17);
+
+    &::placeholder {
+      color: rgb(184, 17, 17);
+    }
+  }

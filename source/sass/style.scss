@@ -18,12 +18,15 @@
 @import "common/fonts";
 
 // Pages
-@import "pages//index";
+@import "pages/index";
+@import "pages/prices";
 
 // Blocks
 @import "blocks/container";
 @import "blocks/header";
 @import "blocks/section";
+
+
 @import "blocks/promo.scss";
 @import "blocks/promo-form";
 @import "blocks/services";
@@ -34,4 +37,11 @@
 @import "blocks/how";
 @import "blocks/questions";
 @import "blocks/park";
+
+
+@import "blocks/prices-promo";
+@import "blocks/prices-table";
+@import "blocks/prices-questions";
+
+
 @import "blocks/footer";

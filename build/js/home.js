@@ -180,4 +180,31 @@ window.addEventListener("DOMContentLoaded", function() {
             document.querySelector('#questions__phone').placeholder = 'Введите телефон';
         }
     });
+
+    let hiddenInputs = document.querySelectorAll('.promo-form__input--hidden');
+	let form = document.querySelector('.promo-form');
+	let cleanButton = document.querySelector('.promo-form__clean');
+	let inputs = document.querySelectorAll('.promo-form div');
+	let hiddenBlocks = document.querySelectorAll('.promo-form__block');
+
+	for (let i = 0; i < inputs.length; i++) {
+		inputs[i].addEventListener('click', function() {
+			form.classList.add('promo-form--active');
+
+			if (window.screen.availWidth < 1023) {
+				document.querySelector('.services').style.paddingTop = '970px';
+			} else {
+				document.querySelector('.services').style.paddingTop = '453px';
+			}
+
+			for (let i = 0; i < hiddenInputs.length; i++) {
+				hiddenInputs[i].classList.add('promo-form__input--active');
+			}
+
+			for (let i = 0; i < hiddenBlocks.length; i++) {
+				hiddenBlocks[i].classList.add('promo-form__block--active');
+			}
+		});
+	}
+
 });

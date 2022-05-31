@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Karel express</title>
+		<link rel="stylesheet" href="css/style.min.css">
+		<link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+		<link rel="manifest" href="img/favicons/site.webmanifest">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+		<body class="prices-page">
+			<header class="header header--desktop index-page__header">
+				<div class="container">
+					<div class="header__top">
+						<div class="header__top--left">
+							<div class="logo header__logo">
+								<img src="img/logotypes/karel-express-logo.svg" alt="Карел экспресс" width="165" height="58" class="logo__img">
+							</div>
+							<p class="header__description">Грузоперевозки в Петрозаводске для физических и юридических лиц</p>
+						</div>
+						<div class="header__top--right">
+							<a href="tel:+79814026011" class="header__phone">8(981)402-60-11</a>
+							<div class="header__whatsapp">
+								<a href="https://wa.clck.bar/79814026011" class="whatsapp-link">
+									<img src="img/icons/whatsapp.svg" alt="whatsapp" width="39" height="39" class="whasapp__img">
+								</a>
+							</div>
+							<a href="#consultation" class="button header__button">Заказать звонок</a>
+						</div>
+					</div>
+				</div>
+				<div class="header__bottom">
+					<div class="container">
+						<menu class="header__menu">
+						<li class="menu__geo submenu__title submenu__title--geo submenu submenu--geo">
+							<a href="#" class="menu__link">Петрозаводск</a>
+							<ul class="header__sublist header__sublist--geo">
+								<li class="header__subitem">
+									<a href="#" class="menu__link">Медвежьегорск</a>
+								</li>
+								<li class="header__subitem">
+									<a href="#" class="menu__link">Кондопога</a>
+								</li>
+								<li class="header__subitem">
+									<a href="#" class="menu__link">Сегежа</a>
+								</li>
+								<li class="header__subitem">
+									<a href="#" class="menu__link">Костомукша</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<ul class="header__list">
+								<li class="header__item header__services submenu__title submenu__title--services submenu submenu--services">
+									<a href="#" class="menu__link">Услуги</a>
+									<ul class="header__sublist header__sublist--services">
+										<li class="header__subitem">
+											<a href="#" class="menu__link">Квартирный переезд</a>
+										</li>
+										<li class="header__subitem">
+											<a href="#" class="menu__link">Квартирный переезд c грузчиками</a>
+										</li>
+										<li class="header__subitem">
+											<a href="#" class="menu__link">Офисный переезд</a>
+										</li>
+										<li class="header__subitem">
+											<a href="#" class="menu__link">Перевозка стройматериалов</a>
+										</li>
+										<li class="header__subitem">
+											<a href="#" class="menu__link">Дачный переезд</a>
+										</li>
+										<li class="header__subitem">
+											<a href="#" class="menu__link">Пригород</a>
+										</li>
+									</ul>
+								</li>
+								<li class="header__item">
+									<a href="prices.html" class="menu__link menu__link--active">Цены</a>
+								</li>
+								<li class="header__item">
+									<a href="#" class="menu__link">Акции</a>
+								</li>
+								<li class="header__item">
+									<a href="#" class="menu__link">Автопарк</a>
+								</li>
+								<li class="header__item header__else submenu submenu--else">
+									<img src="img/icons/else.svg" alt="Другое" width="25" height="25">
+									<div class="header__submenu header__submenu--else">
+										<ul class="header__sublist header__sublist--else">
+											<li class="header__subitem">
+												<a href="#" class="menu__link">О компании</a>
+											</li>
+											<li class="header__subitem">
+												<a href="#" class="menu__link">Полезная информация</a>
+											</li>
+											<li class="header__subitem">
+												<a href="#" class="menu__link">Отзывы</a>
+											</li>
+											<li class="header__subitem">
+												<a href="#" class="menu__link">Частые вопросы</a>
+											</li>
+											<li class="header__subitem">
+												<a href="#" class="menu__link">Новости</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</li>
+						<li class="header__log-in log-in">
+							<a href="#" class="menu__link log-in__link">Личный кабинет</a>
+						</li>
+						</menu>
+					</div>
+				</div>
+			</header>
+			<header class="header header--mobile index-page__header">
+				<div class="container">
+					<div class="header__top">
+						<div class="logo header__logo">
+							<img src="img/logotypes/karel-express-logo-mobile.svg" alt="Карел экспресс" width="115" height="41" class="logo__img">
+						</div>
+						<a href="tel:+79814026011" class="header__phone">8(981)402-60-11</a>
+						<span class="header__burger"></span>
+					</div>
+					<div class="header__bottom">
+						<ul class="header__menu">
+							<li class="menu__geo submenu__title submenu__title--geo submenu submenu--geo">
+								<a href="#" class="menu__link">Петрозаводск</a>
+								<ul class="header__sublist header__sublist--geo">
+									<li class="header__subitem">
+										<a href="#" class="menu__link">Медвежьегорск</a>
+									</li>
+									<li class="header__subitem">
+										<a href="#" class="menu__link">Кондопога</a>
+									</li>
+									<li class="header__subitem">
+										<a href="#" class="menu__link">Сегежа</a>
+									</li>
+									<li class="header__subitem">
+										<a href="#" class="menu__link">Костомукша</a>
+									</li>
+								</ul>
+							</li>
+							<li class="header__item header__services submenu__title submenu__title--services submenu submenu--services">
+								<a href="" class="menu__link">Услуги</a>
+								<ul class="header__sublist header__sublist--services">
+									<li class="header__subitem">
+										<a href="#" class="menu__link">Квартирный переезд</a>
+									</li>
+									<li class="header__subitem">
+										<a href="#" class="menu__link">Квартирный переезд c грузчиками</a>
+									</li>
+									<li class="header__subitem">
+										<a href="#" class="menu__link">Офисный переезд</a>
+									</li>
+									<li class="header__subitem">
+										<a href="#" class="menu__link">Перевозка стройматериалов</a>
+									</li>
+									<li class="header__subitem">
+										<a href="#" class="menu__link">Дачный переезд</a>
+									</li>
+									<li class="header__subitem">
+										<a href="#" class="menu__link">Пригород</a>
+									</li>
+								</ul>
+							</li>
+							<li class="header__item">
+								<a href="prices.html" class="menu__link menu__link--active">Цены</a>
+							</li>
+							<li class="header__item">
+								<a href="#" class="menu__link">Акции</a>
+							</li>
+							<li class="header__item">
+								<a href="#" class="menu__link">Автопарк</a>
+							</li>
+							<li class="header__item header__else submenu submenu--else">
+								<img src="img/icons/else.svg" alt="Другое" width="25" height="25">
+								<div class="header__submenu header__submenu--else">
+									<ul class="header__sublist header__sublist--else">
+										<li class="header__subitem">
+											<a href="#" class="menu__link">О компании</a>
+										</li>
+										<li class="header__subitem">
+											<a href="#" class="menu__link">Полезная информация</a>
+										</li>
+										<li class="header__subitem">
+											<a href="#" class="menu__link">Отзывы</a>
+										</li>
+										<li class="header__subitem">
+											<a href="#" class="menu__link">Частые вопросы</a>
+										</li>
+										<li class="header__subitem">
+											<a href="#" class="menu__link">Новости</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="header__item header__log-in log-in">
+								<a href="#" class="menu__link log-in__link">Личный кабинет</a>
+							</li>
+							<li class="header__item header__social-links">
+								<a href="https://wa.clck.bar/79814026011" class="header__social-link">
+									<img src="img/icons/whatsapp.svg" alt="whatsapp" width="42" height="42" class="header__social-icon">
+								</a>
+								<a href="#" class="header__social-link">
+									<img src="img/icons/instagram.svg" alt="instagram" width="42" height="42" class="header__social-icon">
+								</a>
+								<a href="https://vk.com/karel.express" class="header__social-link">
+									<img src="img/icons/vk.svg" alt="vk" width="42" height="42" class="header__social-icon">
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</header>
+			<main>
+				<section class="prices-promo">
+					<div class="container">
+						<div class="prices-promo__text">
+							<h1 class="section__title prices-promo__title">Цены</h1>
+							<p class="section__description prices-promo__description">Карел экспресс является непосредственным исполнителем работ, не привлекая посредников и сторонних специалистов. Это становится гарантией того, что стоимоть грузоперевозок будет оптимальной, без дополнительных наценок.</p>
+						</div>
+						<picture>
+							<source srcset="img/content-images/prices-promo-img-desktop.svg" media="(min-width: 1024px)">
+							<img src="img/content-images/prices-promo-img.svg" alt="Illustration of delivery" class="prices-promo__img">
+						</picture>
+					</div>
+				</section>
+				<section class="prices-table">
+					<div class="container">
+						<div class="prices-table__table">
+							<div class="prices-table__string prices-table__string--green">
+								<p class="prices-table__key">Грузовая машина</p>
+								<p class="prices-table__value">800 ₽/ час</p>
+								<button class="prices-table__button">Заказать</button>
+							</div>
+							<div class="prices-table__string">
+								<p class="prices-table__key">Грузовая машина + 2 адреса погрузки/выгрузки</p>
+								<p class="prices-table__value">1100 ₽/ час</p>
+								<button class="prices-table__button">Заказать</button>
+							</div>
+							<div class="prices-table__string prices-table__string--green">
+								<p class="prices-table__key">Грузовая машина + 1 грузчик</p>
+								<p class="prices-table__value">1300 ₽/ час</p>
+								<button class="prices-table__button">Заказать</button>
+							</div>
+							<div class="prices-table__string" prices-table__string--green>
+								<p class="prices-table__key">Грузовая машина + 2 грузчика</p>
+								<p class="prices-table__value">1800 ₽/ час</p>
+								<button class="prices-table__button">Заказать</button>
+							</div>
+							<div class="prices-table__string prices-table__string--green">
+								<p class="prices-table__key">Пригород</p>
+								<p class="prices-table__value">24 ₽/ км</p>
+								<button class="prices-table__button">Заказать</button>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="prices-questions">
+					<div class="container">
+						<p class="prices-questions__description">Транспортные средства в Карел экспресс проходят техническое обслуживание, с выходом на маршрут сложностей не возникнет.
+						Бригады грузчиков сформированы из ответственных и аккуратных сотрудников.</p>
+
+					<div class="container--nb">
+						<div class="prices-questions__columns">
+							<div class="prices-questions__column">
+								<h2 class="prices-questions__title">Остались вопросы?</h2>
+								<p class="prices-question__text">Оставьте свой номер и наш специались свяжется с вами в течении 5 минут!</p>
+							</div>
+							<form method="POST" action="../mail.php" name="order" id="consultation__form" class="prices-questions__column">
+								<input type="hidden" name="admin_email[]" value="shishmaryovkonstantin@gmail.com">
+						<input type="hidden" name="form_subject" value="Karel express">
+								<div class="consultation__phone-wrapper">
+									<input type="text" name="phone" placeholder="+7 (9xx) - xxx - xx - xx" id="consultation__phone" class="tel form__control form__input consultation__phone">
+								</div>
+								<button type="submit" class="button consultation__button">Получить консультацию</button>
+							</form>
+						</div>
+					</div>
+
+</div>
+				</section>
+				<section class="promo prices-page__promo">
+					<div class="container promo-form__wrapper">
+						<p class="prices-promo-form__text">Рассчитать стоимость</p>
+						<div class="promo-form">
+							<button class="promo-form__clean">
+							Очистить
+							</button>
+							<form method="POST" action="../mail.php" name="order" id="promo-form" class="form">
+								<input type="hidden" name="admin_email[]" value="shishmaryovkonstantin@gmail.com">
+								<input type="hidden" name="form_subject" value="Karel express">
+								<div class="promo-form__way">
+									<h3 class="promo-form__title promo-form__title--way">Укажите маршрут</h3>
+									<div class="promo-form__stops">
+										<div class="promo-form__start">
+											<input type="text" class="form__input form-control promo-form__input promo-form__input--address" id="start-address" data-validate-field="address" name="start-address" placeholder="Введите адрес">
+										</div>
+										<div class="promo-form__end">
+											<input type="text" class="form__input form-control promo-form__input promo-form__input--address" id="end-address" data-validate-field="address" name="end-address" placeholder="Введите адрес">
+										</div>
+									</div>
+									<button type="button" class="link promo-form__add-adress">Дополнительный адрес</button>
+								</div>
+								<div class="">
+									<h3 class="promo-form__title promo-form__title--car">Укажите маршрут</h3>
+									<div class="promo-form__label">
+										Вес
+										<div id="select-1" class="promo-form__select"></div>
+									</div>
+									<div class="promo-form__label">
+										Длина
+										<div id="select-2" class="promo-form__select"></div>
+									</div>
+									<div class="promo-form__label">
+										Высота
+										<div id="select-3" class="promo-form__select"></div>
+									</div>
+									<div class="promo-form__block">
+										<div class="promo-form__label">
+											Пассажиры
+											<div id="select-4" class="promo-form__select--short"></div>
+										</div>
+										<div class="promo-form__label">
+											Грузчики
+											<div id="select-5" class="promo-form__select--short"></div>
+										</div>
+									</div>
+								</div>
+								<div class="promo-form__time">
+									<h3 class="promo-form__title promo-form__title--time">Время и длительность</h3>
+									<div class="promo-form__label">
+										Срочность
+										<div id="select-7" class="promo-form__select"></div>
+									</div>
+									<div class="promo-form__line">
+										<div class="promo-form__label">
+											Время
+											<input type="text" class="promo-form__input" name="time" id="time" placeholder="">
+										</div>
+										<div class="promo-form__label promo-form__label--date">
+											Дата
+											<input type="text" id="date" name="date" class="promo-form__input">
+										</div>
+									</div>
+									<div class="promo-form__label">
+										Длительность заказа
+										<div id="select-8" class="select promo-form__select--short"></div>
+									</div>
+									<div class="promo-form__block">
+										<div class="promo-form__label promo-form__label--comment">
+											Комментарий к заказу:
+											<textarea class="promo-form__input promo-form__input--textarea" name="comment" id="comment" cols="30" rows="10">
+											</textarea>
+										</div>
+									</div>
+								</div>
+								<div class="promo-form__block promo-form__time">
+									<button type="submit" class="button promo-form__button">Заказать грузоперевозку</button>
+									<p class="promo-form__agreement">Нажимая кнопку «Заказать грузоперевозку», вы соглашаетесь на обработку
+										<span>
+											Ваших персональных данных
+										</span>
+									</p>
+								</div>
+							</form>
+						</div>
+					</div>
+				</section>
+			</main>
+			<footer class="footer">
+				<div class="container">
+					<picture>
+						<source srcset="img/logotypes/footer-logo-desktop.svg" media="(min-width: 1024px)">
+						<img src="img/logotypes/footer-logo-mobile.svg" alt="Karel express" class="footer__logo">
+					</picture>
+					<div class="footer__columns">
+						<div class="footer__actions actions">
+							<ul class="actions__list">
+								<li class="actions__item actions__item--phone">
+									<a href="tel:+79814026011" class="actions__link">8(981)402-60-11</a>
+								</li>
+								<li class="menu__geo submenu__title submenu__title--geo submenu submenu--geo">
+									<a href="#" class="menu__link">Петрозаводск</a>
+									<ul class="footer__sublist footer__sublist--geo">
+										<li class="footer__subitem">
+											<a href="#" class="menu__link">Медвежьегорск</a>
+										</li>
+										<li class="footer__subitem">
+											<a href="#" class="menu__link">Кондопога</a>
+										</li>
+										<li class="footer__subitem">
+											<a href="#" class="menu__link">Сегежа</a>
+										</li>
+										<li class="footer__subitem">
+											<a href="#" class="menu__link">Костомукша</a>
+										</li>
+									</ul>
+								</li>
+								<li class="actions__item actions__item--review">
+									<a href="#" class="actions__link">Оставить отзыв</a>
+								</li>
+								<a href="tel:+79814026011" class="button actions__button">Позвонить</a>
+							</ul>
+						</div>
+						<nav class="footer__nav">
+							<a href="#" class="footer__link">
+								Услуги
+							</a>
+							<a href="prices.html" class="footer__link footer__link--active">
+								Цены
+							</a>
+							<a href="#" class="footer__link">
+								Акции
+							</a>
+							<a href="#" class="footer__link">
+								Автопарк
+							</a>
+							<a href="#" class="footer__link">
+								О компании
+							</a>
+							<a href="#" class="footer__link">
+								Контакты
+							</a>
+						</nav>
+						<div class="footer__links">
+							<a href="" class="footer__link footer__link--middle">Политика конфиденциальности</a>
+							<a href="" class="footer__link footer__link--middle">Пользовательское соглашение</a>
+							<div class="footer__social">
+								<a href="https://wa.clck.bar/79814026011" class="footer__social-link">
+									<img src="img/icons/footer-whatsapp.svg" alt="whatsapp" class="footer__social-icon">
+								</a>
+								<a href="#" class="footer__social-link">
+									<img src="img/icons/footer-instagram.svg" alt="instagram" class="footer__social-icon">
+								</a>
+								<a href="https://vk.com/karel.express" class="footer__social-link">
+									<img src="img/icons/footer-vk.svg" alt="vk" class="footer__social-icon">
+								</a>
+							</div>
+						</div>
+					</div>
+					<picture>
+						<source srcset="img/logotypes/cidgital-desktop.svg" media="(min-width: 1024px)">
+						<img src="img/logotypes/cidgital-mobile.svg" alt="cidgital" class="footer__company">
+					</picture>
+				</div>
+			</footer>
+			<script src="js/air-datepicker.js"></script>
+			<script src="js/imask.js"></script>
+			<script src="js/just-validate.min.js" async></script>
+			<script id="middleStop" type="text/html">
+				<div class="promo-form__middle">
+						<input type="text" class="form__input form-control promo-form__input promo-form__input--address" id="middle-address" data-validate-field="address" name="middle-address" placeholder="Введите адрес">
+				</div>
+			</script>
+			<script id="promo-form__name-phone" type="text/html">
+				<label class="promo-form__error-label" for="name">
+						<input type="text" class="promo-form__input form__input promo-form__input--name promo-form__input--hidden form-control" id="name" name="name" placeholder="Ваше имя">
+				</label>
+				<label class="promo-form__error-label" for="phone">
+						<input class="tel promo-form__input form__input promo-form__input--phone promo-form__input--hidden form-control" id="phone" name="phone" placeholder="+7 (9xx) - xxx - xx - xx">
+				</label>
+			</script>
+			<script id="promo-form__car-insert" type="text/html">
+				<div class="promo-form__car">
+						<div>
+								<p class="promo-form__actual-title">Вам подходит</p>
+								<p class="promo-form__actual-car">ГАЗЕЛЬ-ТЕНТ</p>
+								<p class="promo-form__actual-link">Выбрать из списка</p>
+						</div>
+						<img src="img/icons/gaz-tent-big.svg" alt="ГАЗЕЛЬ-ТЕНТ 3 метра" class="promo-form__actual-img">
+						<div class="select" id="select-6">
+								<button type="button" class="select__toggle" name="car" value="ford" data-select="toggle" data-index="1">Выбрать из списка</button>
+								<div class="select__dropdown">
+										<ul class="select__options">
+												<li class="select__option" data-select="option" data-value="gaz-tent" data-index="0">ГАЗЕЛЬ-ТЕНТ 3 метра <img src="img/icons/gaz-tent-small.svg" alt="Газель Тент 3 метра" class="promo-form__img"> </li>
+												<li class="select__option select__option_selected" data-select="option" data-value="gaz-tent" data-index="1">ГАЗЕЛЬ-ТЕНТ 3 метра <img src="img/icons/gaz-tent-small.svg" alt="Газель Тент 3 метра" class="promo-form__img"> </li>
+										</ul>
+								</div>
+						</div>
+				</div>
+			</script>
+			<script src="js/just-validate.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/suggestions-jquery@21.12.0/dist/js/jquery.suggestions.min.js"></script>
+			<script src="js/script.js"></script>
+			<script src="js/prices.js"></script>
+			<script>
+			</script>
+		</body>
+	</html>
