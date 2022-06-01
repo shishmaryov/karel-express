@@ -4568,7 +4568,16 @@ img {
         gap: 10px;
         background: url("../img/icons/prices-questions-bg-desktop.svg");
         background-size: cover;
-        background-repeat: no-repeat; } }
+        background-repeat: no-repeat; }
+        .prices-questions__columns::after {
+          position: absolute;
+          right: 0;
+          top: 0;
+          background: #FAEECC;
+          content: '';
+          width: 50%;
+          height: 100%;
+          z-index: -2; } }
   .prices-questions__title {
     text-align: center;
     margin-top: 0;
