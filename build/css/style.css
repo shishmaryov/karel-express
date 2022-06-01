@@ -2293,6 +2293,9 @@ img {
     -webkit-box-shadow: none;
             box-shadow: none; }
 
+.undecorated-link {
+  text-decoration: none; }
+
 .index-page {
   font-family: 'Exo 2', sans-serif; }
   .index-page .promo-form__wrapper {
