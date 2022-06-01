@@ -1,3 +1,9 @@
+document.addEventListener('DOMContentLoaded', () => {
+    var phoneMask = IMask(
+        document.getElementById('consultation__phone'), {
+            mask: '+{7} (000) 000 - 00 - 00'
+        });
+
     function submitHandler(thisForm) {
         let formData = new FormData(thisForm);
 
@@ -13,25 +19,11 @@
 
         xhr.open('POST', '../mail.php', true);
         xhr.send(formData);
-
-        document.querySelector('#promo-form').reset();
-        validation.refresh();
-
     }
-
-    var phoneMask = IMask(
-        document.getElementById('consultation__phone'), {
-            mask: '+{7} (000) 000 - 00 - 00'
-        });
-
-
 
     const validation2 = new JustValidate('#consultation__form', {
         errorFieldCssClass: 'is-invalid'
     });
-
-
-
     validation2
         .addField('#consultation__phone', [{
             rule: 'required',
@@ -41,26 +33,14 @@
             submitHandler(document.querySelector('#consultation__form'));
         });
 
+    document.querySelector('#consultation__phone').addEventListener('change', () => {
+        document.querySelector('.consultation__phone-wrapper').classList.add('consultation__phone-wrapper--active');
 
-
-
-
-    let hiddenInputs = document.querySelectorAll('.promo-form__input--hidden');
-	let form = document.querySelector('.promo-form');
-	let cleanButton = document.querySelector('.promo-form__clean');
-	let inputs = document.querySelectorAll('.promo-form div');
-	let hiddenBlocks = document.querySelectorAll('.promo-form__block');
-
-	for (let i = 0; i < inputs.length; i++) {
-		inputs[i].addEventListener('click', function() {
-			form.classList.add('promo-form--active');
-
-			for (let i = 0; i < hiddenInputs.length; i++) {
-				hiddenInputs[i].classList.add('promo-form__input--active');
-			}
-
-			for (let i = 0; i < hiddenBlocks.length; i++) {
-				hiddenBlocks[i].classList.add('promo-form__block--active');
-			}
-		});
-	}
+    });
+    document.querySelector('.consultation__button').addEventListener('click', () => {
+        if ((document.querySelector('#consultation__phone').classList.contains('is-invalid')) == true) {
+            document.querySelector('.consultation__phone-wrapper').classList.remove('consultation__phone-wrapper--active');
+            document.querySelector('#consultation__phone').placeholder = 'Введите телефон';
+        }
+    });
+});

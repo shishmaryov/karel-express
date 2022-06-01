@@ -2313,10 +2313,24 @@ img {
 .prices-page {
   font-family: 'Exo 2', sans-serif; }
   .prices-page__promo {
-    margin-bottom: 60px; }
+    margin-bottom: 60px;
+    position: relative; }
+    .prices-page__promo::after {
+      content: url("../img/icons/prices-promo-form-after-mobile.svg");
+      position: absolute;
+      bottom: -55px;
+      left: 0; }
+      @media (min-width: 1024px) {
+        .prices-page__promo::after {
+          content: url("../img/icons/prices-promo-form-after-desktop.svg");
+          width: 230px;
+          height: 168px;
+          bottom: -100px; } }
     @media (min-width: 1024px) {
       .prices-page__promo {
         margin-bottom: 120px; } }
+  .prices-page .promo {
+    overflow: visible; }
 
 .container {
   margin-right: auto;
@@ -4408,7 +4422,8 @@ img {
     font-size: 16px;
     font-weight: 600;
     color: #000;
-    margin-bottom: 32px; }
+    margin-bottom: 32px;
+    margin-top: 0; }
     @media (min-width: 1024px) {
       .prices-promo-form__text {
         font-size: 32px;
@@ -4504,7 +4519,19 @@ img {
         padding: 10px 43.5px; } }
 
 .prices-questions {
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  position: relative; }
+  .prices-questions::after {
+    content: url("../img/icons/prices-promo-form-before-mobile.svg");
+    position: absolute;
+    bottom: -130px;
+    right: 0; }
+    @media (min-width: 1024px) {
+      .prices-questions::after {
+        bottom: -210px;
+        width: 215px;
+        height: 173px;
+        content: url("../img/icons/prices-promo-form-before-desktop.svg"); } }
   @media (min-width: 1024px) {
     .prices-questions {
       margin-bottom: 80px; } }
@@ -4687,31 +4714,41 @@ img {
     border: none;
     border-radius: 5px; }
   .footer__sublist {
-    position: absolute;
-    top: 45px;
-    left: 0;
-    z-index: 2;
+    position: static;
     display: none;
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    list-style-type: none;
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
-    background: #ffffff;
-    -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
-    -webkit-transition: all 5s ease 5s;
-    transition: all 5s ease 5s;
-    gap: 16px;
-    grid-template-columns: 1fr 1fr; }
+    color: #4f4f4f;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    gap: 24px;
+    grid-template-columns: 1fr;
+    list-style-type: none;
+    padding-top: 10px;
+    padding-left: 0;
+    padding-bottom: 10px; }
+    @media (min-width: 1024px) {
+      .footer__sublist {
+        position: absolute;
+        top: 45px;
+        left: 0;
+        z-index: 2;
+        padding-right: 10px;
+        padding-left: 10px;
+        display: none;
+        width: -webkit-max-content;
+        width: -moz-max-content;
+        width: max-content;
+        margin-top: 0;
+        margin-bottom: 0;
+        background: #ffffff;
+        -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+        -webkit-transition: all 5s ease 5s;
+        transition: all 5s ease 5s;
+        gap: 16px;
+        grid-template-columns: 1fr 1fr; } }
     .footer__sublist--active {
       display: grid; }
   .footer .menu__geo {
@@ -4812,13 +4849,13 @@ img {
     .footer__social-link:active {
       -webkit-box-shadow: none;
               box-shadow: none; }
-    .footer__social-link__social-icon {
-      width: 39px;
-      height: 39px; }
-    .footer__social-link__company {
-      margin-top: 32px;
-      margin-left: calc(50% - 30px); }
-      @media (min-width: 1024px) {
-        .footer__social-link__company {
-          margin-top: 24px;
-          margin-left: calc(50% - 40px); } }
+  .footer__social-icon {
+    width: 39px;
+    height: 39px; }
+  .footer__company {
+    margin-top: 32px;
+    margin-left: calc(50% - 30px); }
+    @media (min-width: 1024px) {
+      .footer__company {
+        margin-top: 24px;
+        margin-left: calc(50% - 40px); } }
