@@ -2549,11 +2549,17 @@ img {
 
 .header .menu__link {
   color: #3b3b31;
-  text-decoration: none; }
+  text-decoration: none;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s; }
   @media (min-width: 1024px) {
     .header .menu__link:hover {
+      -webkit-transition-duration: 0.3s;
+              transition-duration: 0.3s;
       color: #4AAB3C; } }
   .header .menu__link--active {
+    -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
     color: #4AAB3C; }
 
 .header__list {
@@ -2612,6 +2618,8 @@ img {
 
 .header .log-in {
   position: relative;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
   padding-top: 14px;
   padding-bottom: 14px;
   padding-left: 31px; }
@@ -2628,7 +2636,9 @@ img {
     width: 21px;
     height: 21px; }
   .header .log-in:hover .log-in__link {
-    color: #4AAB3C; }
+    color: #4AAB3C;
+    -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s; }
   .header .log-in:hover::before {
     content: url("../img/icons/log-in-active.svg"); }
 
