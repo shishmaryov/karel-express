@@ -163,6 +163,7 @@
     font-size: 14px;
     color: #000000;
     text-decoration: none;
+    transition-duration: 0.3s;
 
 
     @media(min-width: 1024px) {
@@ -181,7 +182,7 @@
     &:hover {
       color: $accent;
 
-      transition: 0.3s;
+      transition-duration: 0.3s;
 
       &::after {
         content: url("../img/icons/park-link-after-mobile-active.svg");

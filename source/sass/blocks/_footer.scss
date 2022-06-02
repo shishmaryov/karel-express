@@ -110,10 +110,11 @@
 		&__link {
 			color: #000000;
 			text-decoration: none;
-			transition: 0.3s;
+			transition-duration: 0.3s;
 
 			&:hover {
 				color: $accent;
+				transition-duration: 0.3s;
 			}
 
 			&--middle {
@@ -210,11 +211,12 @@ padding-left: 10px;
 		&__link {
 			color: #3b3b31;
 			text-decoration: none;
-			transition: 0.3s;
+			transition-duration: 0.3s;
 
 			&:hover {
 				@media(min-width: 1024px) {
 					color: $accent;
+					transition-duration: 0.3s;
 				}
 			}
 
@@ -298,7 +300,7 @@ padding-left: 10px;
 		font-size: 14px;
 		color: #000000;
 		text-decoration: none;
-		transition: 0.3s;
+		transition-duration: 0.3s;
 
 		@media(min-width: 1024px) {
 			font-weight: 600;
@@ -307,6 +309,7 @@ padding-left: 10px;
 
 		&:hover {
 			color: $accent;
+			transition-duration: 0.3s;
 		}
 
 		&--middle {
@@ -349,7 +352,7 @@ padding-left: 10px;
 
 	&__social-link {
 		text-decoration: none;
-		transition: 0.3s;
+		transition-duration: 0.3s;
 
 	&:active {
 		box-shadow: none;
