@@ -53,6 +53,7 @@
         position: static;
 
         display: none;
+        grid-template-columns: 1fr;
 
         font-weight: 300;
         font-size: 14px;
@@ -62,7 +63,6 @@
         box-shadow: none;
 
         gap: 24px;
-        grid-template-columns: 1fr;
 
         &--services {
           margin-left: calc(50% - 113px);
@@ -281,6 +281,7 @@
     z-index: 2;
 
     display: none;
+    grid-template-columns: 1fr 1fr;
     width: max-content;
     margin-top: 0;
     margin-bottom: 0;
@@ -300,7 +301,6 @@
     transition: all 5s ease 5s;
 
     gap: 16px;
-    grid-template-columns: 1fr 1fr;
   }
 
 
@@ -321,10 +321,10 @@
 
   &__list {
     display: grid;
-
-    gap: 65px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
+
+    gap: 65px;
   }
 
 
@@ -384,10 +384,10 @@
     &-links {
       display: grid;
       align-items: center;
-
-      gap: 24px;
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: 1fr;
+
+      gap: 24px;
     }
 
     &-link {
@@ -400,6 +400,18 @@
 }
 
 .submenu {
+
+  @media(min-width: 1024px) {
+    &:hover {
+      .header__sublist {
+        display: grid;
+      }
+
+      .submenu__title::after {
+        content: url("../img/icons/arrow-up.svg");
+      }
+    }
+  }
   &__title {
     position: relative;
     z-index: 1;
@@ -408,28 +420,11 @@
     padding-right: 19px;
     padding-bottom: 14px;
 
-    &::after {
-      content: url("../img/icons/arrow-down.svg");
-      position: absolute;
-      top: 18px;
-      right: 0;
-
-      width: 14px;
-      height: 17px;
-    }
-
     @media(min-width: 1024px) {
       &:hover {
         &::after {
           content: url("../img/icons/arrow-up.svg");
         }
-      }
-    }
-
-
-    &--active {
-      &::after {
-        content: url("../img/icons/arrow-up.svg");
       }
     }
 
@@ -442,15 +437,20 @@
         width: 51px;
       }
     }
-  }
 
-  @media(min-width: 1024px) {
-    &:hover {
-      .header__sublist {
-        display: grid;
-      }
+    &::after {
+      content: url("../img/icons/arrow-down.svg");
+      position: absolute;
+      top: 18px;
+      right: 0;
 
-      .submenu__title::after {
+      width: 14px;
+      height: 17px;
+    }
+
+
+    &--active {
+      &::after {
         content: url("../img/icons/arrow-up.svg");
       }
     }

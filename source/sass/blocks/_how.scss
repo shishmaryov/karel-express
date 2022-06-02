@@ -186,17 +186,17 @@
 
       transition: 0.3s;
 
+      @media(min-width: 1024px) {
+        padding-right: 0;
+        padding-left: 0;
+      }
+
       &:hover {
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
       }
 
       &:active {
         box-shadow: none;
-      }
-
-      @media(min-width: 1024px) {
-        padding-right: 0;
-        padding-left: 0;
       }
     }
   }

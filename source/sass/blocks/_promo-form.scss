@@ -226,6 +226,22 @@
     line-height: 19px;
     color: #000000;
 
+    @media(min-width: 1024px) {
+      padding-top: 7px;
+      padding-bottom: 7px;
+      padding-left: 50px;
+
+      font-size: 18px;
+      line-height: 22px;
+
+      &::after {
+        width: 38px;
+        height: 38px;
+
+        font-size: 20px;
+      }
+    }
+
     &::after {
       content: "1";
       position: absolute;
@@ -243,22 +259,6 @@
 
       background: $accent;
       border-radius: 50%;
-    }
-
-    @media(min-width: 1024px) {
-      padding-top: 7px;
-      padding-bottom: 7px;
-      padding-left: 50px;
-
-      font-size: 18px;
-      line-height: 22px;
-
-      &::after {
-        width: 38px;
-        height: 38px;
-
-        font-size: 20px;
-      }
     }
 
 
@@ -519,9 +519,9 @@
 
   &__line {
     display: grid;
+    grid-template-columns: 1fr 1fr;
 
     gap: calc(60% - 200px);
-    grid-template-columns: 1fr 1fr;
 
     @media(min-width: 1024px) {
       width: 341px;

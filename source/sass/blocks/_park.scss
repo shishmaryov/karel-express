@@ -164,16 +164,6 @@
     color: #000000;
     text-decoration: none;
 
-    &:hover {
-      color: $accent;
-
-      transition: 0.3s;
-
-      &::after {
-        content: url("../img/icons/park-link-after-mobile-active.svg");
-      }
-    }
-
 
     @media(min-width: 1024px) {
       padding-right: 29px;
@@ -185,6 +175,16 @@
         &::after {
           content: url("../img/icons/park-link-after-active.svg");
         }
+      }
+    }
+
+    &:hover {
+      color: $accent;
+
+      transition: 0.3s;
+
+      &::after {
+        content: url("../img/icons/park-link-after-mobile-active.svg");
       }
     }
 

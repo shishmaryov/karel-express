@@ -3,15 +3,6 @@
 
   margin-top: 120px;
 
-  &::after {
-    @media(max-width: 1024px) {
-      content: url("../img/icons/reviews-after-mobile.svg");
-      position: absolute;
-      top: 210px;
-      left: 5%;
-    }
-  }
-
   @media(min-width: 1024px) {
     &::after {
       content: url("../img/icons/reviews-after.svg");
@@ -21,13 +12,16 @@
     }
   }
 
-  .container {
-    &::before {
-      content: url("../img/icons/reviews-before-mobile.svg");
+  &::after {
+    @media(max-width: 1024px) {
+      content: url("../img/icons/reviews-after-mobile.svg");
       position: absolute;
-      top: -50px;
-      left: 0;
+      top: 210px;
+      left: 5%;
     }
+  }
+
+  .container {
 
 
     @media(min-width: 1024px) {
@@ -44,6 +38,12 @@
         width: 221px;
         height: 219px;
       }
+    }
+    &::before {
+      content: url("../img/icons/reviews-before-mobile.svg");
+      position: absolute;
+      top: -50px;
+      left: 0;
     }
   }
 

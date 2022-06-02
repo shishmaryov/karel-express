@@ -8,6 +8,10 @@
     flex-direction: row;
   }
 
+  @media(min-width: 1024px) {
+    margin-bottom: 80px;
+  }
+
   &__img {
     &--mobile {
       margin-bottom: 34px;
@@ -186,9 +190,5 @@
 
       text-align: left;
     }
-  }
-
-  @media(min-width: 1024px) {
-    margin-bottom: 80px;
   }
 }

@@ -1,7 +1,7 @@
 .prices-promo {
+	position: relative;
 	margin-top: 35px;
 	margin-bottom: 35px;
-	position: relative;
 
 	@media(min-width: 1024px) {
 		margin-top: 24px;
@@ -19,27 +19,27 @@
 			position: relative;
 		}
 
+		@media(min-width: 1024px) {
+			display: flex;
+		justify-content: space-between;
+		align-items: center;
+		}
+
 		&::after {
-			position: absolute;
-			bottom: -59px;
-			right: 0;
 			content: url('../img/icons/prices-promo-after-mobile.svg');
+			position: absolute;
+			right: 0;
+			bottom: -59px;
 
 			@media(min-width: 1024px) {
-				left: 0px;
-				top: 230px;
 				content: url('../img/icons/prices-promo-after-desktop.svg');
+				top: 230px;
+				left: 0px;
 			}
 
 			@media(min-width: 1400px) {
 			left: -75px;
 		}
-		}
-
-		@media(min-width: 1024px) {
-			display: flex;
-		justify-content: space-between;
-		align-items: center;
 		}
 	}
 
@@ -52,9 +52,9 @@
 
 
 	&__title {
-		font-size: 24px;
 		margin-top: 0;
 		margin-bottom: 24px;
+		font-size: 24px;
 
 		@media(min-width: 1024px) {
 			font-size: 56px;
@@ -84,15 +84,15 @@
 
 	&-form {
 		&__text {
-			font-size: 16px;
-			font-weight: 600;
-			color: #000;
-			margin-bottom: 32px;
 			margin-top: 0;
+			margin-bottom: 32px;
+			font-weight: 600;
+			font-size: 16px;
+			color: #000;
 
 			@media(min-width: 1024px) {
+				font-weight: 500;
 				font-size: 32px;
-				font-weight: 500
 			}
 		}
 	}

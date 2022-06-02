@@ -52,9 +52,9 @@
 	}
 
 	&__accordion {
-		padding-bottom: 24px;
 		position: relative;
 		z-index: 2;
+		padding-bottom: 24px;
 
 		@media(min-width: 1140px) {
 			display: none;

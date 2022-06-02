@@ -1,24 +1,24 @@
 .prices-questions {
-	margin-bottom: 40px;
 	position: relative;
-
-	&::after {
-			content: url('../img/icons/prices-promo-form-before-mobile.svg');
-			position: absolute;
-			bottom: -130px;
-			right: 0;
-
-			@media(min-width: 1024px) {
-				bottom: -210px;
-				width: 215px;
-				height: 173px;
-				content: url('../img/icons/prices-promo-form-before-desktop.svg');
-			}
-		}
+	margin-bottom: 40px;
 
 	@media(min-width: 1024px) {
 		margin-bottom: 80px;
 	}
+
+	&::after {
+			content: url('../img/icons/prices-promo-form-before-mobile.svg');
+			position: absolute;
+			right: 0;
+			bottom: -130px;
+
+			@media(min-width: 1024px) {
+				content: url('../img/icons/prices-promo-form-before-desktop.svg');
+				bottom: -210px;
+				width: 215px;
+				height: 173px;
+			}
+		}
 
 	.container {
 
@@ -29,8 +29,8 @@
 
 		&--nb {
 			@media(max-width: 1024px) {
-				padding-left: 0;
 				padding-right: 0;
+				padding-left: 0;
 			}
 		}
 	}
@@ -46,47 +46,47 @@
 		}
 	}
 	&__columns {
-		background: #FAEECC;
 		padding: 24px 16px;
+		background: #FAEECC;
 		border-radius: 50px 0px 0px 0px;
 
 
 		@media(min-width: 1024px) {
+			display: grid;
+			grid-template-columns: 1fr 300px;
 			padding-top: 37px;
 			padding-bottom: 37px;
 			padding-left: 65px;
-			display: grid;
-			grid-template-columns: 1fr 300px;
-			gap: 10px;
 			background: url('../img/icons/prices-questions-bg-desktop.svg');
-			background-size: cover;
 			background-repeat: no-repeat;
+			background-size: cover;
+			gap: 10px;
 
 			&::after {
-				position: absolute;
-				right: 0;
-				top: 0;
-				background: #FAEECC;
 				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				z-index: -2;
 				width: 50%;
 				height: 100%;
-				z-index: -2;
+				background: #FAEECC;
 			}
 		}
 	}
 	&__column {
 	}
 	&__title {
-		text-align: center;
 		margin-top: 0;
 		margin-bottom: 18px;
 		font-size: 24px;
+		text-align: center;
 		color: #000;
 
 		@media(min-width: 1024px) {
-			text-align: left;
 			margin-bottom: 24px;
 			font-size: 32px;
+			text-align: left;
 		}
 	}
 
@@ -94,13 +94,13 @@
 	&__text {
 		margin-top: 0;
 		margin-bottom: 32px;
-		text-align: center;
 		font-size: 16px;
+		text-align: center;
 		color: #333333;
 
 		@media(min-width: 1024px) {
-			text-align: left;
 			margin-bottom: 0;
+			text-align: left;
 		}
 	}
 }
@@ -114,8 +114,8 @@
 		}
 	}
 	&__button {
-		padding-left: 0;
 		padding-right: 0;
+		padding-left: 0;
 	}
 }
 .tel {

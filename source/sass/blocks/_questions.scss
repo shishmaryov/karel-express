@@ -23,6 +23,14 @@
 	.container {
 		position: relative;
 
+		@media(min-width: 1024px) {
+			position: relative;
+
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
 		&::after {
 			content: url("../img/icons/questions-after-mobile.svg");
 			position: absolute;
@@ -49,14 +57,6 @@
 				width: 132px;
 				height: 158px;
 			}
-		}
-
-		@media(min-width: 1024px) {
-			position: relative;
-
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
 		}
 	}
 
@@ -168,6 +168,7 @@
 	}
 
 	&__button {
+		z-index: 2;
 		width: 100%;
 		margin-bottom: 8px;
 		padding-top: 14.5px;
@@ -182,7 +183,6 @@
 
 		border: none;
 		border-radius: 5px;
-		z-index: 2;
 
 
 		@media(min-width: 1024px) {

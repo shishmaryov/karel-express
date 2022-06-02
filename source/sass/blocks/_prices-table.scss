@@ -1,6 +1,6 @@
 .prices-table {
-	margin-bottom: 40px;
 	position: relative;
+	margin-bottom: 40px;
 
 	@media(min-width: 1024px) {
 		margin-bottom: 80px;
@@ -13,10 +13,10 @@
 
 	@media(min-width: 1024px) {
 		&::after {
+			content: url('../img/icons/prices-table-after-desktop.svg');
 			position: absolute;
 			top: 150px;
 			right: 0;
-			content: url('../img/icons/prices-table-after-desktop.svg');
 
 			@media(min-width: 1400px) {
 				right: -75px;
@@ -33,64 +33,69 @@
 		width: 100%;
 
 		@media(min-width: 1024px) {
-			margin-left: 100px;
-			margin-right: 100px;
 			width: calc(100% - 200px);
+			margin-right: 100px;
+			margin-left: 100px;
 		}
 	}
 
 	&__string {
 		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-		justify-items: center;
 		align-items: center;
-		border-radius: 10px;
+		grid-template-columns: 1fr 1fr 1fr;
 		padding: 16px;
+		border-radius: 10px;
+		justify-items: center;
+
+		@media(min-width: 1024px) {
+			grid-template-columns: 1fr 180px 1fr;
+			padding-top: 24px;
+			padding-right: 117.5px;
+			padding-bottom: 24px;
+			padding-left: 117.5px;
+		}
 
 		&--green {
 			background: #EDF7EC;
 		}
-
-		@media(min-width: 1024px) {
-			grid-template-columns: 1fr 180px 1fr;
-			padding-left: 117.5px;
-			padding-right: 117.5px;
-			padding-top: 24px;
-			padding-bottom: 24px;
-		}
 	}
 	&__key {
-		font-weight: 500;
-		color: #000;
-		font-size: 16px;
 		justify-self: baseline;
 		margin-top: 0;
 		margin-bottom: 0;
+		font-weight: 500;
+		font-size: 16px;
+		color: #000;
 
 		@media(min-width: 1024px) {
 			font-size: 18px;
 		}
 	}
 	&__value {
-		font-weight: 700;
-		color: $accent;
-		font-size: 18px;
 		margin-top: 0;
 		margin-bottom: 0;
+		font-weight: 700;
+		font-size: 18px;
+		color: $accent;
 
 		@media(min-width: 1024px) {
 			font-size: 22px;
 		}
 	}
 	&__button {
-		font-size: 16px;
 		width: max-content;
-		border: 1px solid $accent;
-		font-weight: 400;
 		padding: 9.5px 15.5px;
+		font-weight: 400;
+		font-size: 16px;
 		background: transparent;
+		border: 1px solid $accent;
 		border-radius: 5px;
 		transition: 0.3s;
+
+		@media(min-width: 1024px) {
+			padding: 10px 43.5px;
+			font-size: 18px;
+		}
 
 		&:hover {
 		border: 1px solid rgba(76, 170, 60, .6);
@@ -100,10 +105,5 @@
 	&:active {
 		box-shadow: none;
 	}
-
-		@media(min-width: 1024px) {
-			font-size: 18px;
-			padding: 10px 43.5px;
-		}
 	}
 }
