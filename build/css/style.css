@@ -661,7 +661,8 @@
   transition: opacity var(--adp-transition-duration) var(--adp-transition-ease), -webkit-transform var(--adp-transition-duration) var(--adp-transition-ease);
   transition: opacity var(--adp-transition-duration) var(--adp-transition-ease), transform var(--adp-transition-duration) var(--adp-transition-ease);
   transition: opacity var(--adp-transition-duration) var(--adp-transition-ease), transform var(--adp-transition-duration) var(--adp-transition-ease), -webkit-transform var(--adp-transition-duration) var(--adp-transition-ease);
-  z-index: var(--adp-z-index); }
+  z-index: var(--adp-z-index);
+  right: 0; }
 
 .air-datepicker:not(.-custom-position-) {
   opacity: 0; }
@@ -736,7 +737,7 @@
 
 .air-datepicker-global-container {
   position: absolute;
-  left: 0;
+  right: 0;
   top: 0;
   font-family: "Nunito Sans", sans-serif; }
 
@@ -1874,6 +1875,12 @@ button.swiper-pagination-bullet {
   top: 50%;
   border-top: 1px solid rgba(0, 0, 0, 0.4);
   content: ""; }
+
+.suggestions-promo {
+  display: none; }
+
+.suggestions-promo a {
+  display: none; }
 
 /* stylelint-disable */
 /* ==========================================================================

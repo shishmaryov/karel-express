@@ -410,7 +410,9 @@ window.addEventListener('DOMContentLoaded', () => {
 			isMobile: true,
 		});
 	} else {
-		new AirDatepicker('#date');
+		new AirDatepicker('#date', {
+			position: "bottom right"
+		});
 	}
 
 	const validation = new JustValidate('#promo-form', {

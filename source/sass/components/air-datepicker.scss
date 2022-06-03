@@ -584,6 +584,7 @@
 	position: absolute;
 	transition: opacity var(--adp-transition-duration) var(--adp-transition-ease),transform var(--adp-transition-duration) var(--adp-transition-ease);
 	z-index: var(--adp-z-index);
+	right: 0;
 }
 
 .air-datepicker:not(.-custom-position-) {
@@ -663,7 +664,7 @@
 
 .air-datepicker-global-container {
 	position: absolute;
-	left: 0;
+	right: 0;
 	top: 0;
 	font-family: "Nunito Sans", sans-serif;
 }
