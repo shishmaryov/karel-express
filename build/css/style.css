@@ -4550,7 +4550,8 @@ img {
 
 .prices-questions {
   position: relative;
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  overflow: hidden; }
   @media (min-width: 1024px) {
     .prices-questions {
       margin-bottom: 80px; } }
