@@ -1,0 +1,58 @@
+.park-page {
+font-family: 'Exo 2', sans-serif;
+
+	&__promo {
+		margin-bottom: 60px;
+		position: relative;
+
+		&::after {
+			content: url('../img/icons/prices-promo-form-after-mobile.svg');
+			position: absolute;
+			bottom: -55px;
+			left: 0;
+
+			@media(min-width: 1024px) {
+				content: url('../img/icons/prices-promo-form-after-desktop.svg');
+				width: 230px;
+				height: 168px;
+				bottom: -100px;
+			}
+		}
+
+		@media(min-width: 1024px) {
+			margin-bottom: 120px;
+		}
+	}
+
+	.promo {
+		overflow: visible;
+		margin-bottom: 0;
+	}
+
+	.how__buttons--desktop {
+		margin-bottom: 0;
+	}
+
+	.how__button {
+		@media(min-width: 1024px) {
+			margin-bottom: 0;
+		}
+
+	}
+
+	&__oh {
+		overflow: hidden;
+	}
+
+	&__bg {
+		background: #FAEECC;
+		padding-top: 24px;
+		padding-bottom: 60px;
+
+
+		@media(min-width: 1024px) {
+			padding-top: 1px;
+			padding-bottom: 152px;
+		}
+	}
+}

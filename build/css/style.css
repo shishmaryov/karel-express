@@ -2342,6 +2342,44 @@ img {
   .prices-page .promo {
     overflow: visible; }
 
+.park-page {
+  font-family: 'Exo 2', sans-serif; }
+  .park-page__promo {
+    margin-bottom: 60px;
+    position: relative; }
+    .park-page__promo::after {
+      content: url("../img/icons/prices-promo-form-after-mobile.svg");
+      position: absolute;
+      bottom: -55px;
+      left: 0; }
+      @media (min-width: 1024px) {
+        .park-page__promo::after {
+          content: url("../img/icons/prices-promo-form-after-desktop.svg");
+          width: 230px;
+          height: 168px;
+          bottom: -100px; } }
+    @media (min-width: 1024px) {
+      .park-page__promo {
+        margin-bottom: 120px; } }
+  .park-page .promo {
+    overflow: visible;
+    margin-bottom: 0; }
+  .park-page .how__buttons--desktop {
+    margin-bottom: 0; }
+  @media (min-width: 1024px) {
+    .park-page .how__button {
+      margin-bottom: 0; } }
+  .park-page__oh {
+    overflow: hidden; }
+  .park-page__bg {
+    background: #FAEECC;
+    padding-top: 24px;
+    padding-bottom: 60px; }
+    @media (min-width: 1024px) {
+      .park-page__bg {
+        padding-top: 1px;
+        padding-bottom: 152px; } }
+
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -4041,7 +4079,8 @@ img {
       -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
               box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
       -webkit-transition-duration: 0.3s;
-              transition-duration: 0.3s; }
+              transition-duration: 0.3s;
+      color: #4AAB3C; }
     .how__button--price:active {
       -webkit-box-shadow: none;
               box-shadow: none;
@@ -4649,6 +4688,252 @@ img {
     color: #b81111; }
   .is-invalid::placeholder {
     color: #b81111; }
+
+.product {
+  margin-bottom: 40px; }
+  @media (min-width: 1024px) {
+    .product {
+      margin-top: -375px;
+      margin-bottom: 45px; } }
+  .product .container {
+    position: relative; }
+    @media (min-width: 1024px) {
+      .product .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 30px; }
+        .product .container::after {
+          position: absolute;
+          right: -85px;
+          bottom: -240px;
+          width: 333px;
+          height: 444px;
+          content: url("../img/icons/rhombus-dark-desktop.svg"); } }
+  .product__item {
+    z-index: 2;
+    width: 330px;
+    margin-bottom: 24px;
+    margin-left: calc(50% - 165px);
+    border-radius: 10px;
+    background: #fff;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); }
+    @media (min-width: 1024px) {
+      .product__item {
+        display: block;
+        width: auto;
+        margin-bottom: 0; } }
+  .product__img {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    height: 374px;
+    border-radius: 10px 10px 0 0; }
+  .product .image-switch {
+    position: absolute;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 100%; }
+  .product .image-switch__item {
+    cursor: pointer;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
+  .product .image-switch__img {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    pointer-events: none;
+    opacity: 0;
+    background-color: #fff;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .product .image-switch__img img {
+    display: block;
+    max-width: 100%;
+    height: 374px;
+    -o-object-fit: cover;
+       object-fit: cover; }
+  .product .image-switch__item:first-child .image-switch__img {
+    z-index: -1;
+    opacity: 1; }
+  .product .image-switch__item:hover .image-switch__img {
+    z-index: -1;
+    opacity: 1; }
+  .product .image-pagination {
+    position: absolute;
+    z-index: 30;
+    right: 0;
+    bottom: -5px;
+    left: 10px;
+    display: grid;
+    width: calc(100% - 20px);
+    padding-left: 0;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 7px; }
+  .product .image-pagination__item {
+    display: block;
+    width: 100%;
+    height: 2px;
+    border-radius: 100%;
+    background-color: #f2f2f2; }
+  .product .image-pagination__item--active {
+    background-color: #4AAB3C; }
+  .product__characteristics {
+    margin-top: 20px;
+    padding-top: 0;
+    padding-right: 10px;
+    padding-bottom: 15px;
+    padding-left: 10px; }
+    @media (min-width: 1024px) {
+      .product__characteristics {
+        padding-right: 25px;
+        padding-bottom: 20px;
+        padding-left: 18px; } }
+  .product__subtitle {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 16px;
+    text-align: left; }
+    @media (min-width: 1024px) {
+      .product__subtitle {
+        font-size: 18px;
+        margin-bottom: 24px; } }
+  .product__table {
+    display: grid;
+    margin-bottom: 20px; }
+  .product__link {
+    font-size: 14px;
+    font-weight: 500;
+    position: relative;
+    padding-right: 23px;
+    -webkit-transition-duration: .3s;
+            transition-duration: .3s;
+    text-decoration: none;
+    color: #000; }
+    @media (min-width: 1024px) {
+      .product__link {
+        font-size: 16px;
+        font-weight: 600; }
+        .product__link:hover::after {
+          content: url("../img/icons/park-link-after-active.svg"); } }
+    .product__link:hover {
+      -webkit-transition-duration: .3s;
+              transition-duration: .3s;
+      color: #4AAB3C; }
+      .product__link:hover::after {
+        content: url("../img/icons/park-link-after-mobile-active.svg"); }
+    .product__link::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      content: url("../img/icons/park-link-after-mobile.svg"); }
+      @media (min-width: 1024px) {
+        .product__link::after {
+          top: 2px; } }
+
+.key__name {
+  font-size: 14px;
+  font-weight: 400;
+  display: block;
+  text-align: left;
+  color: #bdbdbd; }
+  @media (min-width: 768px) {
+    .key__name {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
+  @media (min-width: 1024px) {
+    .key__name {
+      font-size: 16px; } }
+
+.key__value {
+  font-weight: 600; }
+
+.table__string {
+  font-size: 16px;
+  display: block;
+  margin-bottom: 8px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  @media (min-width: 768px) {
+    .table__string {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
+  @media (min-width: 1024px) {
+    .table__string {
+      margin-bottom: 6px; } }
+
+.park-promo {
+  margin-top: 50px; }
+  @media (min-width: 1024px) {
+    .park-promo {
+      margin-bottom: 440px; } }
+  @media (min-width: 1024px) {
+    .park-promo {
+      margin-top: 24px; } }
+  @media (min-width: 1024px) {
+    .park-promo__columns {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; } }
+  @media (min-width: 1024px) {
+    .park-promo__column--text {
+      max-width: 600px; } }
+  .park-promo__title {
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-size: 24px; }
+    @media (min-width: 1024px) {
+      .park-promo__title {
+        font-size: 56px; } }
+  .park-promo__description {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 32px; }
+    @media (min-width: 1024px) {
+      .park-promo__description {
+        font-size: 22px;
+        margin-bottom: 72px; } }
+  .park-promo__img {
+    margin-left: calc(50% - 135px);
+    margin-bottom: 28px; }
+    @media (min-width: 1024px) {
+      .park-promo__img {
+        margin-left: 0;
+        margin-bottom: 0; } }
 
 .footer {
   padding-top: 24px;

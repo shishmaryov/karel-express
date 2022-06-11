@@ -1,0 +1,58 @@
+.park-promo {
+	margin-top: 50px;
+
+	@media(min-width: 1024px) {
+		margin-bottom: 440px;
+	}
+
+	@media(min-width: 1024px) {
+		margin-top: 24px;
+	}
+
+	&__columns {
+		@media(min-width: 1024px) {
+			display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	}
+	&__column {
+
+		&--text {
+			@media(min-width: 1024px) {
+				max-width: 600px;
+			}
+		}
+	}
+
+	&__title {
+		margin-top: 0;
+		margin-bottom: 24px;
+		font-size: 24px;
+
+		@media(min-width: 1024px) {
+			font-size: 56px;
+		}
+	}
+
+	&__description {
+		font-size: 18px;
+		margin-top: 0;
+		margin-bottom: 32px;
+
+		@media(min-width: 1024px) {
+			font-size: 22px;
+			margin-bottom: 72px;
+		}
+	}
+
+	&__img {
+		margin-left: calc(50% - 135px);
+		margin-bottom: 28px;
+
+		@media(min-width: 1024px) {
+			margin-left: 0;
+			margin-bottom: 0;
+		}
+	}
+}
