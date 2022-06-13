@@ -1,0 +1,181 @@
+.gallery {
+
+
+	&--active {
+		display: block;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+
+.container {
+}
+
+.card {
+	background: #fff;
+	padding: 50px 104px;
+}
+
+.card-slider {
+	height: 458px;
+	display: flex;
+	margin-bottom: 40px;
+}
+
+.card-info {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	&__top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 16px;
+	}
+
+	&__button {
+
+	}
+
+	&__geo {
+			position: relative;
+			margin: 0;
+			padding-left: 26px;
+
+			&::before {
+				content: url("../img/icons/geo.svg");
+				position: absolute;
+				top: 0px;
+				left: 0;
+
+				width: 16px;
+				height: 21px;
+			}
+	}
+}
+
+.slider-nav {
+	width: 100px;
+	margin-left: 30px;
+}
+
+.slider-nav__item {
+	height: 78px;
+	width: 100%;
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	filter: brightness(70%);
+}
+
+.nav__item--active {
+	border: 2px solid #FDE742;
+	box-sizing: border-box;
+	filter: brightness(100%);
+}
+
+.slider-nav__item:not(:last-child) {
+	margin-bottom: 20px;
+}
+
+.slider-nav__item img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.slider-block {
+	overflow: hidden;
+	width: calc(100% - 100px - 30px);
+	background-color: #fff;
+	position: relative;
+}
+
+.swiper-slide {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.swiper-slide img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.swiper-button-prev {
+	left: 0;
+	width: 30px;
+	height: 37px;
+	top: calc(50% - 17.5px);
+
+	&::after {
+		content: url('../img/icons/gallery-arrow-left.svg');
+	}
+}
+
+.swiper-button-next {
+	right: 0;
+	width: 30px;
+	height: 37px;
+	top: calc(50% - 17.5px);
+
+	&::after {
+		content: url('../img/icons/gallery-arrow-right.svg');
+	}
+}
+
+.modal-open {
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	padding: 0;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 19px;
+	color: #5D71DD;
+	border-bottom: 1px solid #5D71DD;
+}
+
+.product {
+	&__characteristics {
+		margin-top: 0;
+		padding-left: 0;
+	}
+	&__subtitle {
+		margin-bottom: 0;
+	}
+	&__table {
+		width: 680px;
+		margin-bottom: 0;
+
+		tbody {
+			display: flex;
+			justify-content: space-between;
+
+		}
+	}
+	&__link {
+	}
+}
+.table {
+	&__string {
+		margin-bottom: 0;
+		display: inline-table;
+	}
+}
+.key {
+	&__name {
+		margin-right: 18px;
+	}
+	&__value {
+	}
+}
+}
