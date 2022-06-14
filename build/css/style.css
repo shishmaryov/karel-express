@@ -882,7 +882,7 @@
   max-width: 380px;
   padding-top: 27.5px;
   padding-right: 45px;
-  height: 106.5px;
+  height: 105.75px;
   padding-bottom: 27.5px;
   padding-left: 150px;
   text-align: left;
@@ -4129,14 +4129,13 @@ img {
       display: flex; } }
 
 .how__buttons--mobile {
-  margin-bottom: 24px; }
+  margin-bottom: 40px; }
   @media (min-width: 1024px) {
     .how__buttons--mobile {
       display: none; } }
 
 .how__button {
   width: 100%;
-  margin-bottom: 18px;
   padding-top: 14px;
   padding-bottom: 14px;
   font-weight: 500;
@@ -4158,14 +4157,20 @@ img {
   .how__button--offer {
     padding-right: 0;
     padding-left: 0;
-    color: #ffffff; }
+    color: #ffffff;
+    margin-bottom: 35px; }
     @media (min-width: 1024px) {
       .how__button--offer {
-        margin-right: 30px; } }
+        margin-right: 30px;
+        margin-bottom: 0;
+        padding: 0;
+        height: 56px; } }
   .how__button--price {
     color: #000000;
     background: transparent;
     border: 1px solid #4AAB3C;
+    padding-left: calc(50% - 88px);
+    padding-right: calc(50% - 88px);
     -webkit-transition-duration: 0.3s;
             transition-duration: 0.3s; }
     @media (min-width: 1024px) {
@@ -5031,6 +5036,8 @@ img {
       .park-promo__img {
         margin-left: 0;
         margin-bottom: 0; } }
+  .park-promo .how-button--offer {
+    margin-bottom: 16px; }
 
 .gallery--active {
   display: block;
