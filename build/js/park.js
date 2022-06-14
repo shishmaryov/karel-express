@@ -1,32 +1,32 @@
 document.addEventListener('DOMContentLoaded', () => {
-const products = document.querySelectorAll('.product');
-
+const products = document.querySelectorAll('.product__item');
 if (products) {
-    products.forEach(el => {
-        let currentProduct = el;
-        const imageSwitchItems = currentProduct.querySelectorAll('.image-switch__item');
-        const imagePagination = currentProduct.querySelector('.image-pagination');
-        if (imageSwitchItems.length > 1) {
-            imageSwitchItems.forEach((el, index) => {
-                el.setAttribute('data-index', index);
-                imagePagination.innerHTML += `<li class="image-pagination__item ${index == 0 ? 'image-pagination__item--active' : ''}" data-index="${index}"></li>`;
-                el.addEventListener('mouseenter', (e) => {
-                    currentProduct.querySelectorAll('.image-pagination__item').forEach(el => {
-                        el.classList.remove('image-pagination__item--active')
-                    });
-                    currentProduct.querySelector(`.image-pagination__item[data-index="${e.currentTarget.dataset.index}"]`).classList.add('image-pagination__item--active');
-                });
+	products.forEach(el => {
+		let currentProduct = el;
+		const imageSwitchItems = currentProduct.querySelectorAll('.image-switch__item');
+		const imagePagination = currentProduct.querySelector('.image-pagination');
+		if (imageSwitchItems.length > 1) {
+			imageSwitchItems.forEach((el, index) => {
+				el.setAttribute('data-index', index);
+				imagePagination.innerHTML += `<li class="image-pagination__item ${index == 0 ? 'image-pagination__item--active' : ''}" data-index="${index}"></li>`;
+				el.addEventListener('mouseenter', (e) => {
+					currentProduct.querySelectorAll('.image-pagination__item').forEach(el => {
+						el.classList.remove('image-pagination__item--active')
+					});
+					currentProduct.querySelector(`.image-pagination__item[data-index="${e.currentTarget.dataset.index}"]`).classList.add('image-pagination__item--active');
+				});
 
-                el.addEventListener('mouseleave', (e) => {
-                    currentProduct.querySelectorAll('.image-pagination__item').forEach(el => {
-                        el.classList.remove('image-pagination__item--active')
-                    });
-                    currentProduct.querySelector(`.image-pagination__item[data-index="0"]`).classList.add('image-pagination__item--active');
-                });
-            });
-        }
-    });
+				el.addEventListener('mouseleave', (e) => {
+					currentProduct.querySelectorAll('.image-pagination__item').forEach(el => {
+						el.classList.remove('image-pagination__item--active')
+					});
+					currentProduct.querySelector(`.image-pagination__item[data-index="0"]`).classList.add('image-pagination__item--active');
+				});
+			});
+		}
+	});
 }
+
 
 function card (selector) {
 	let mySwiper = new Swiper(`.${selector} .slider-block`, {
@@ -54,6 +54,41 @@ function card (selector) {
 			el.classList.add('nav__item--active');
 			mySwiper.slideTo(index);
 		});
+	});
+
+	let presentItem = 0;
+	document.querySelector(`.${selector} .swiper-button-next`).addEventListener('click', () => {
+		for (let i = 0; i < sliderNavItems.length; i++) {
+			if (sliderNavItems[i].classList.contains('nav__item--active')) {
+				presentItem = i;
+			}
+		}
+
+		for (let item of sliderNavItems) {
+				if (item.classList.contains('nav__item--active')) {
+					item.classList.remove ('nav__item--active');
+				}
+			}
+
+				presentItem++;
+				sliderNavItems[presentItem].classList.add('nav__item--active');
+	});
+
+document.querySelector(`.${selector} .swiper-button-prev`).addEventListener('click', () => {
+		for (let i = 0; i < sliderNavItems.length; i++) {
+			if (sliderNavItems[i].classList.contains('nav__item--active')) {
+				presentItem = i;
+			}
+		}
+
+		for (let item of sliderNavItems) {
+				if (item.classList.contains('nav__item--active')) {
+					item.classList.remove ('nav__item--active');
+				}
+			}
+
+				presentItem--;
+				sliderNavItems[presentItem].classList.add('nav__item--active');
 	});
 
 	const showMore = () => {
