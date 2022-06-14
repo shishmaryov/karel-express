@@ -1882,14 +1882,6 @@ button.swiper-pagination-bullet {
 .suggestions-promo a {
   display: none; }
 
-html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
-
-*, :after, :before {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit; }
-
 .disable-scroll {
   position: relative;
   overflow: hidden;
