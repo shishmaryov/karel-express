@@ -28,17 +28,18 @@ if (products) {
     });
 }
 
-	let mySwiper = new Swiper('.slider-block', {
+function card (selector) {
+	let mySwiper = new Swiper(`.${selector} .slider-block`, {
 		slidesPerView: 1,
 		navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   }
-	})
+	});
 
 	const maxItems = 5;
-	const sliderNavItems = document.querySelectorAll('.slider-nav__item');
-	const sliderNav = document.querySelector('.slider-nav');
+	const sliderNavItems = document.querySelectorAll(`.${selector} .slider-nav__item`);
+	const sliderNav = document.querySelector(`.${selector} .slider-nav`);
 
 	sliderNavItems.forEach((el, index) => {
 		el.setAttribute('data-index', index);
@@ -57,23 +58,22 @@ if (products) {
 
 	const showMore = () => {
 		let childenLength = sliderNav.children.length;
-		console.log(childenLength)
 		if (childenLength > maxItems) {
 			sliderNav.insertAdjacentHTML('beforeend', `
 				<div class="btn-center">
 					<button class="modal-open">Еще ${childenLength - maxItems}</button>
 				</div>
 			`);
-			document.querySelectorAll(`.slider-nav__item:nth-child(n+${maxItems + 1})`).forEach(el => {el.style.display = 'none';});
+			document.querySelectorAll(`.${selector} .slider-nav__item:nth-child(n+${maxItems + 1})`).forEach(el => {el.style.display = 'none';});
 		}
-
-		const modalOpen = document.querySelector('.modal-open');
-		modalOpen.addEventListener('click', () => {new GraphModal().open('one');});
 	};
 
 	showMore();
+}
 
-document.querySelector('.product').addEventListener('click', () => {
-	document.querySelector('.gallery').classList.add('gallery--active');
-});
+card('card--gaz-black');
+card('card--gaz-green');
+card('card--gaz-white');
+
+const modal = new GraphModal();
 });
