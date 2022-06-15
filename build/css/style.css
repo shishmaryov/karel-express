@@ -4949,6 +4949,9 @@ img {
     display: grid;
     margin-bottom: 20px; }
   .product__link {
+    background: transparent;
+    border: none;
+    padding-left: 0;
     font-size: 14px;
     font-weight: 500;
     position: relative;
