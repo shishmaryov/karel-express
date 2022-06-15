@@ -1927,6 +1927,16 @@ button.swiper-pagination-bullet {
   cursor: default;
   text-align: left;
   display: none; }
+  .graph-modal__container--order-call {
+    width: auto;
+    padding-top: 50px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    border-radius: 3px; }
+    .graph-modal__container--order-call .graph-modal__close {
+      top: 20px;
+      right: 15px; }
 
 @media (max-width: 1024px) {
   .graph-modal__container {
@@ -2633,7 +2643,13 @@ img {
   font-size: 12px;
   line-height: 19px;
   color: #3b3b31;
-  text-decoration: none; }
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s; }
+  .header__phone:hover {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    color: #4AAB3C; }
   @media (min-width: 1024px) {
     .header__phone {
       margin-right: 24px;
@@ -2656,7 +2672,13 @@ img {
   width: 39px;
   height: 39px;
   margin-right: 24px;
-  margin-right: 24px; }
+  margin-right: 24px;
+  z-index: 2; }
+  .header__whatsapp img {
+    display: block; }
+
+.header__button {
+  z-index: 2; }
 
 .header__bottom {
   border: 1px solid #f7f7f7;
@@ -5046,6 +5068,9 @@ img {
   right: 0;
   bottom: 0; }
 
+.gallery__container {
+  width: auto; }
+
 .gallery .card {
   background: #fff;
   padding: 50px 104px; }
@@ -5223,6 +5248,15 @@ img {
   height: 12px;
   top: 24px;
   right: 36px; }
+
+.order-call__form {
+  margin-left: 0; }
+
+.order-call__phone {
+  margin-bottom: 16px; }
+
+.order-call__agreement {
+  text-align: center; }
 
 .footer {
   padding-top: 24px;

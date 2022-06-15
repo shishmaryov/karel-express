@@ -31,6 +31,7 @@ if (products) {
 function card (selector) {
 	let mySwiper = new Swiper(`.${selector} .slider-block`, {
 		slidesPerView: 1,
+		allowTouchMove: false,
 		navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -109,6 +110,4 @@ document.querySelector(`.${selector} .swiper-button-prev`).addEventListener('cli
 card('card--gaz-black');
 card('card--gaz-green');
 card('card--gaz-white');
-
-const modal = new GraphModal();
 });

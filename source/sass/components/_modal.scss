@@ -45,6 +45,20 @@
 	cursor: default;
 	text-align: left;
 	display: none;
+
+	&--order-call {
+		width: auto;
+    padding-top: 50px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    border-radius: 3px;
+
+    .graph-modal__close {
+    	top: 20px;
+    	right: 15px;
+    }
+	}
 }
 
 @media (max-width:1024px) {
