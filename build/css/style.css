@@ -1937,6 +1937,16 @@ button.swiper-pagination-bullet {
     .graph-modal__container--order-call .graph-modal__close {
       top: 20px;
       right: 15px; }
+  .graph-modal__container--success {
+    width: auto;
+    padding-top: 50px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    text-align: center; }
+    .graph-modal__container--success .graph-modal__close {
+      top: 20px;
+      right: 15px; }
 
 @media (max-width: 1024px) {
   .graph-modal__container {
@@ -4842,7 +4852,14 @@ img {
     border-radius: 10px;
     background: #fff;
     -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); }
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    -webkit-transition: 0.3s;
+    transition: 0.3s; }
+    .product__item:hover {
+      -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+      -webkit-transition: 0.3s;
+      transition: 0.3s; }
     @media (min-width: 1024px) {
       .product__item {
         display: block;

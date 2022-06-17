@@ -59,6 +59,20 @@
     	right: 15px;
     }
 	}
+
+	&--success {
+		width: auto;
+		padding-top: 50px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    text-align: center;
+
+    .graph-modal__close {
+    	top: 20px;
+    	right: 15px;
+    }
+	}
 }
 
 @media (max-width:1024px) {

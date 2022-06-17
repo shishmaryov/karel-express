@@ -69,10 +69,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
 		xhr.open('POST', '../mail.php', true);
 		xhr.send(formData);
-
-		document.querySelector('#promo-form').reset();
-		validation.refresh();
-
+		new GraphModal().open('success');
 	}
 
 	var phoneMask = IMask(
