@@ -35,6 +35,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	submenu(('.header--mobile .submenu__title--geo'), ('.header--mobile .submenu--geo'));
 	submenu(('.header--mobile .submenu__title--services'), ('.header--mobile .submenu--services'));
+	submenu(('footer .submenu__title--services'), ('footer .submenu--services'));
 
 	let geoTitle = ('.footer .submenu__title--geo');
 	let geoList = ('.footer .submenu--geo');

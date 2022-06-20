@@ -5282,6 +5282,17 @@ img {
   padding-top: 24px;
   padding-bottom: 24px;
   background: #f2f2f2; }
+  .footer .submenu--services {
+    position: relative;
+    width: 75px; }
+    .footer .submenu--services:hover .header__sublist {
+      display: grid; }
+  .footer .submenu__title--active::after {
+    content: none;
+    width: 0;
+    height: 0; }
+  .footer .header__sublist--active {
+    display: grid; }
   .footer__columns {
     display: -webkit-box;
     display: -ms-flexbox;
