@@ -1,0 +1,36 @@
+.service-page {
+	font-family: 'Exo 2', sans-serif;
+
+	&__promo {
+		margin-bottom: 60px;
+		position: relative;
+
+		&::after {
+			content: url('../img/icons/prices-promo-form-after-mobile.svg');
+			position: absolute;
+			bottom: -55px;
+			left: 0;
+
+			@media(min-width: 1024px) {
+				content: url('../img/icons/prices-promo-form-after-desktop.svg');
+				width: 230px;
+				height: 168px;
+				bottom: -100px;
+			}
+		}
+
+		@media(min-width: 1024px) {
+			margin-bottom: 120px;
+		}
+	}
+
+	.promo {
+		overflow: visible;
+	}
+
+	.promo__wrapper--info {
+		@media(min-width: 1024px) {
+			max-width: 590px;
+		}
+	}
+}

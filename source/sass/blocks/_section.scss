@@ -1,24 +1,24 @@
 .section {
-  &__title {
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 110%;
-    color: #000000;
+	&__title {
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 110%;
+		color: #000000;
 
-    @media(min-width: 1024px) {
-      font-weight: 500;
-      font-size: 48px;
-    }
-  }
+		@media(min-width: 1024px) {
+			font-weight: 500;
+			font-size: 48px;
+		}
+	}
 
-  &__description {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 130%;
-    color: #4f4f4f;
+	&__description {
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 130%;
+		color: #4f4f4f;
 
-    @media(min-width: 1024px) {
-      font-size: 18px;
-    }
-  }
+		@media(min-width: 1024px) {
+			font-size: 18px;
+		}
+	}
 }

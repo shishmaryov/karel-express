@@ -1,118 +1,220 @@
 .promo {
-  overflow: hidden;
+	overflow: hidden;
 
-  &__container {
-    position: relative;
+	&__container {
+		position: relative;
+
+		@media(min-width: 1024px) {
+			display: flex;
+			justify-content: space-between;
+			align-items: top;
+		}
+	}
+
+	&__wrapper {
+		&--info {
+			@media(min-width: 1024px) {
+				max-width: 769px;
+			}
+		}
+
+		&--img {
+			display: flex;
+			justify-content: center;
+
+			@media(min-width: 1024px) {
+				position: absolute;
+				top: 0;
+				right: -240px;
+			}
+
+			@media(min-width: 1140px) {
+				right: -143px;
+			}
+		}
+
+		&--mobile {
+			@media(min-width: 1024px) {
+				display: none;
+			}
+	}
+	&--desktop {
+			display: none;
+			@media(min-width: 1024px) {
+				display: block;
+			}
+		}
+}
+
+	&__title {
+		margin-top: 50px;
+		margin-bottom: 24px;
+
+		@media(min-width: 1024px) {
+			margin-top: 60px;
+
+			font-size: 56px;
+		}
+	}
+
+	&__description {
+		margin-top: 0;
+		margin-bottom: 42px;
+
+		@media(min-width: 1024px) {
+			margin-bottom: 80px;
+
+			font-size: 22px;
+		}
+	}
+
+	&__action {
+		position: relative;
+
+		margin-top: 0;
+
+		font-weight: 600;
+		color: $accent;
+
+		&::after {
+			position: absolute;
+			top: 4px;
+			right: 0;
+		}
+
+
+		&--mobile {
+			width: 255px;
+			margin-bottom: 30px;
+			padding-right: 40px;
+
+			font-size: 16px;
+
+			@media(min-width: 1024px) {
+				display: none;
+			}
+
+			&::after {
+				content: url("../img/icons/arrow-promo-mobile.svg");
+
+				width: 34px;
+				height: 72px;
+			}
+		}
+
+		&--desktop {
+			display: none;
+			width: 344px;
+			margin-bottom: 107px;
+
+			@media(min-width: 1024px) {
+				display: block;
+			}
+
+			&::after {
+				content: url("../img/icons/arrow-promo-desktop.svg");
+
+				width: 79px;
+				height: 112px;
+			}
+		}
+	}
+
+	&__img {
+		margin-bottom: 50px;
+
+		@media(min-width: 1024px) {
+			margin-bottom: 0;
+		}
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+    	grid-row-gap: 18px;
+		margin-bottom: 24px;
 
     @media(min-width: 1024px) {
-      display: flex;
-      justify-content: space-between;
-      align-items: top;
+    	margin-bottom: 50px;
     }
-  }
+	}
 
-  &__wrapper {
-    &--info {
-      @media(min-width: 1024px) {
-        max-width: 769px;
-      }
-    }
+	&__item {
+		font-size: 12px;
+		font-weight: 400;
+		color: #000;
+		margin-top: 0;
+		margin-bottom: 0;
+		position: relative;
+		padding-top: 18px;
+		padding-bottom: 18px;
+		vertical-align: middle;
+		padding-left: 50px;
+		max-width: 195px;
 
-    &--img {
-      display: flex;
-      justify-content: center;
+		&::before {
+			top: 20%;
 
-      @media(min-width: 1024px) {
-        position: absolute;
-        top: 0;
-        right: -240px;
-      }
+			@media(min-width: 600px) {
+				top: 7px;
+			}
 
-      @media(min-width: 1140px) {
-        right: -143px;
-      }
-    }
-  }
-
-  &__title {
-    margin-top: 50px;
-    margin-bottom: 24px;
-
-    @media(min-width: 1024px) {
-      margin-top: 60px;
-
-      font-size: 56px;
-    }
-  }
-
-  &__description {
-    margin-top: 0;
-    margin-bottom: 42px;
-
-    @media(min-width: 1024px) {
-      margin-bottom: 80px;
-
-      font-size: 22px;
-    }
-  }
-
-  &__action {
-    position: relative;
-
-    margin-top: 0;
-
-    font-weight: 600;
-    color: $accent;
-
-    &::after {
-      position: absolute;
-      top: 4px;
-      right: 0;
-    }
+		}
 
 
-    &--mobile {
-      width: 255px;
-      margin-bottom: 30px;
-      padding-right: 40px;
+		@media(min-width: 1024px) {
+			font-size: 16px;
+			padding-left: 60px;
+		}
 
-      font-size: 16px;
+		&--car {
+			padding-left: 83px;
+			&::before {
+				position: absolute;
+				left: 0;
+				@media(min-width: 1024px) {
+					content: url('../img/icons/promo-item-img-car-desktop.svg')
+				}
+				content: url('../img/icons/promo-item-img-car-mobile.svg');
+			}
+		}
+		&--payment {
+			padding-left: 68px;
+			&::before {
+				position: absolute;
+				left: 0;
+				@media(min-width: 1024px) {
+					content: url('../img/icons/promo-item-img-payment-desktop.svg')
+				}
+				content: url('../img/icons/promo-item-img-payment-mobile.svg');
+			}
+		}
+		&--movers {
+			padding-left: 66px;
+			&::before {
+				position: absolute;
+				left: 0;
+				@media(min-width: 1024px) {
+					content: url('../img/icons/promo-item-img-movers-desktop.svg')
+				}
+				content: url('../img/icons/promo-item-img-movers-mobile.svg');
+			}
+		}
+		&--24 {
+			&::before {
+				position: absolute;
+				left: 0;
 
-      @media(min-width: 1024px) {
-        display: none;
-      }
-
-      &::after {
-        content: url("../img/icons/arrow-promo-mobile.svg");
-
-        width: 34px;
-        height: 72px;
-      }
-    }
-
-    &--desktop {
-      display: none;
-      width: 344px;
-      margin-bottom: 107px;
-
-      @media(min-width: 1024px) {
-        display: block;
-      }
-
-      &::after {
-        content: url("../img/icons/arrow-promo-desktop.svg");
-
-        width: 79px;
-        height: 112px;
-      }
-    }
-  }
-
-  &__img {
-    margin-bottom: 50px;
-
-    @media(min-width: 1024px) {
-      margin-bottom: 0;
-    }
-  }
+				@media(min-width: 600px) {
+					top: 7.5px;
+				}
+				@media(min-width: 1024px) {
+					top: 14.5px;
+					content: url('../img/icons/promo-item-img-24-desktop.svg')
+				}
+				content: url('../img/icons/promo-item-img-24-mobile.svg');
+			}
+		}
+	}
 }

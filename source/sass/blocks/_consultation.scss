@@ -1,194 +1,198 @@
 .consultation {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
 
-  @media(min-width: 1024px) {
-    flex-direction: row;
-  }
+	@media(min-width: 1024px) {
+		flex-direction: row;
+	}
 
-  @media(min-width: 1024px) {
-    margin-bottom: 80px;
-  }
+	@media(min-width: 1024px) {
+		margin-bottom: 80px;
+	}
 
-  &__img {
-    &--mobile {
-      margin-bottom: 34px;
-      margin-left: calc(50% - 164px);
+	&__img {
+		&--mobile {
+			margin-bottom: 34px;
+			margin-left: calc(50% - 164px);
 
-      @media(min-width: 1024px) {
-        display: none;
-      }
-    }
+			@media(min-width: 1024px) {
+				display: none;
+			}
+		}
 
-    &--desktop {
-      display: none;
-      @media(min-width: 1024px) {
-        display: block;
-      }
-    }
-  }
+		&--desktop {
+			display: none;
+			@media(min-width: 1024px) {
+				display: block;
+			}
+		}
+	}
 
-  &__title {
-    margin-top: 0;
-    margin-bottom: 18px;
+	&__title {
+		margin-top: 0;
+		margin-bottom: 18px;
 
-    font-size: 24px;
-    font-size: 32px;
-    line-height: 110%;
-    text-align: center;
-    color: #000000;
+		font-size: 24px;
+		font-size: 32px;
+		line-height: 110%;
+		text-align: center;
+		color: #000000;
 
-    @media(min-width: 1024px) {
-      margin-bottom: 32px;
+		@media(min-width: 1024px) {
+			margin-bottom: 32px;
 
-      font-size: 32px;
-      text-align: left;
-    }
-  }
-  &__columns {
-    @media(min-width: 1024px) {
-      display: flex;
-    }
-  }
+			font-size: 32px;
+			text-align: left;
+		}
+	}
+	&__columns {
+		@media(min-width: 1024px) {
+			display: flex;
+		}
+	}
 
-  &__description {
-    margin-top: 0;
-    margin-bottom: 30px;
+	&__description {
+		margin-top: 0;
+		margin-bottom: 30px;
 
-    font-weight: 400;
-    font-size: 16px;
-    text-align: center;
-    color: #4f4f4f;
+		font-weight: 400;
+		font-size: 16px;
+		text-align: center;
+		color: #4f4f4f;
 
-    @media(min-width: 1024px) {
-      max-width: 285px;
-      margin-top: 0;
-      margin-bottom: 0;
+		@media(min-width: 1024px) {
+			max-width: 285px;
+			margin-top: 0;
+			margin-bottom: 0;
 
-      font-size: 18px;
-      text-align: left;
-    }
-  }
+			font-size: 18px;
+			text-align: left;
+		}
+	}
 
-  &__form {
-    @media(min-width: 1024px) {
-      max-width: 328px;
-      margin-left: 50px;
-    }
-  }
+	&__form {
+		@media(min-width: 1024px) {
+			max-width: 328px;
+			margin-left: 50px;
+		}
+	}
 
-  .is-invalid {
-    color: #b81111;
+	.is-invalid {
+		color: #b81111;
 
-    border: 1px solid #b81111;
+		border: 1px solid #b81111;
 
-    &::placeholder {
-      color: #b81111;
-    }
-  }
-
-
-  &__phone {
-    width: calc(100% - 22px);
-    margin-bottom: 18px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    padding-left: 20px;
-
-    font-weight: 500;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 17px;
-    color: #8c8c8c;
-
-    background: #f8f8f8;
-    border: none;
-    border-radius: 5px;
-
-    @media(min-width: 1024px) {
-      width: calc(100% - 150px);
-      margin-bottom: 32px;
-      padding-top: 16px;
-      padding-right: 130px;
-      padding-bottom: 16px;
-
-      font-size: 16px;
-      line-height: 19px;
-    }
-
-    &-wrapper {
-      position: relative;
-
-      &::after {
-        content: url("../img/icons/consult-phone.svg");
-        position: absolute;
-        top: 8px;
-        right: 20px;
-
-        width: 24px;
-        height: 24px;
-
-        @media(min-width: 1024px) {
-          top: 14px;
-        }
-      }
-
-      &--active {
-        &::after {
-          content: url("../img/icons/consult-phone-active.svg");
-        }
-
-        .consultation__phone {
-          color: $accent;
-
-          border: 1px solid $accent;
-        }
-      }
-    }
-  }
-  &__button {
-    width: 100%;
-    margin-bottom: 8px;
-    padding-top: 14px;
-    padding-right: calc(50% - 92px);
-    padding-bottom: 14px;
-    padding-left: calc(50% - 92px);
-
-    font-weight: 500;
-    font-size: 16px;
-    text-align: center;
-    color: #ffffff;
-
-    border: none;
-    border-radius: 5px;
+		&::placeholder {
+			color: #b81111;
+		}
+	}
 
 
-    @media(min-width: 1024px) {
-      width: 100%;
-      margin-bottom: 12px;
-      padding-top: 17px;
-      padding-right: 60px;
-      padding-bottom: 17px;
-      padding-left: 60px;
+	&__phone {
+		width: calc(100% - 22px);
+		margin-bottom: 18px;
+		padding-top: 12px;
+		padding-bottom: 12px;
+		padding-left: 20px;
 
-      font-size: 18px;
-    }
-  }
-  &__agreement {
-    margin-top: 0;
-    margin-bottom: 24px;
+		font-weight: 500;
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 17px;
+		color: #8c8c8c;
 
-    font-size: 12px;
-    line-height: 130%;
-    text-align: center;
-    color: #828282;
+		background: #f8f8f8;
+		border: none;
+		border-radius: 5px;
 
-    @media(min-width: 1024px) {
-      margin-bottom: 0;
+		&:focus-visible {
+			outline: none;
+		}
 
-      text-align: left;
-    }
-  }
+		@media(min-width: 1024px) {
+			width: calc(100% - 150px);
+			margin-bottom: 32px;
+			padding-top: 16px;
+			padding-right: 130px;
+			padding-bottom: 16px;
+
+			font-size: 16px;
+			line-height: 19px;
+		}
+
+		&-wrapper {
+			position: relative;
+
+			&::after {
+				content: url("../img/icons/consult-phone.svg");
+				position: absolute;
+				top: 8px;
+				right: 20px;
+
+				width: 24px;
+				height: 24px;
+
+				@media(min-width: 1024px) {
+					top: 14px;
+				}
+			}
+
+			&--active {
+				&::after {
+					content: url("../img/icons/consult-phone-active.svg");
+				}
+
+				.consultation__phone {
+					color: $accent;
+
+					border: 1px solid $accent;
+				}
+			}
+		}
+	}
+	&__button {
+		width: 100%;
+		margin-bottom: 8px;
+		padding-top: 14px;
+		padding-right: calc(50% - 92px);
+		padding-bottom: 14px;
+		padding-left: calc(50% - 92px);
+
+		font-weight: 500;
+		font-size: 16px;
+		text-align: center;
+		color: #ffffff;
+
+		border: none;
+		border-radius: 5px;
+
+
+		@media(min-width: 1024px) {
+			width: 100%;
+			margin-bottom: 12px;
+			padding-top: 17px;
+			padding-right: 60px;
+			padding-bottom: 17px;
+			padding-left: 60px;
+
+			font-size: 18px;
+		}
+	}
+	&__agreement {
+		margin-top: 0;
+		margin-bottom: 24px;
+
+		font-size: 12px;
+		line-height: 130%;
+		text-align: center;
+		color: #828282;
+
+		@media(min-width: 1024px) {
+			margin-bottom: 0;
+
+			text-align: left;
+		}
+	}
 }

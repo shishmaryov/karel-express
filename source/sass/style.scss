@@ -22,6 +22,7 @@
 @import "pages/index";
 @import "pages/prices";
 @import "pages/park";
+@import "pages/service";
 
 // Blocks
 @import "blocks/container";
@@ -40,7 +41,6 @@
 @import "blocks/questions";
 @import "blocks/park";
 
-
 @import "blocks/prices-promo";
 @import "blocks/prices-table";
 @import "blocks/prices-questions";
@@ -48,5 +48,8 @@
 @import "blocks/park-promo";
 @import "blocks/gallery";
 @import "blocks/order-call";
+
+@import "blocks/service";
+@import "blocks/options";
 
 @import "blocks/footer";

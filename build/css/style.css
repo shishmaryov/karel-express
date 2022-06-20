@@ -2497,6 +2497,31 @@ img {
         padding-top: 1px;
         padding-bottom: 152px; } }
 
+.service-page {
+  font-family: 'Exo 2', sans-serif; }
+  .service-page__promo {
+    margin-bottom: 60px;
+    position: relative; }
+    .service-page__promo::after {
+      content: url("../img/icons/prices-promo-form-after-mobile.svg");
+      position: absolute;
+      bottom: -55px;
+      left: 0; }
+      @media (min-width: 1024px) {
+        .service-page__promo::after {
+          content: url("../img/icons/prices-promo-form-after-desktop.svg");
+          width: 230px;
+          height: 168px;
+          bottom: -100px; } }
+    @media (min-width: 1024px) {
+      .service-page__promo {
+        margin-bottom: 120px; } }
+  .service-page .promo {
+    overflow: visible; }
+  @media (min-width: 1024px) {
+    .service-page .promo__wrapper--info {
+      max-width: 590px; } }
+
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -2861,7 +2886,7 @@ img {
     content: url("../img/icons/arrow-up.svg"); }
 
 .section__title {
-  font-weight: 600;
+  font-weight: 400;
   font-size: 24px;
   line-height: 110%;
   color: #000000; }
@@ -2912,6 +2937,14 @@ img {
     @media (min-width: 1140px) {
       .promo__wrapper--img {
         right: -143px; } }
+  @media (min-width: 1024px) {
+    .promo__wrapper--mobile {
+      display: none; } }
+  .promo__wrapper--desktop {
+    display: none; }
+    @media (min-width: 1024px) {
+      .promo__wrapper--desktop {
+        display: block; } }
   .promo__title {
     margin-top: 50px;
     margin-bottom: 24px; }
@@ -2963,6 +2996,74 @@ img {
     @media (min-width: 1024px) {
       .promo__img {
         margin-bottom: 0; } }
+  .promo__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 18px;
+    margin-bottom: 24px; }
+    @media (min-width: 1024px) {
+      .promo__items {
+        margin-bottom: 50px; } }
+  .promo__item {
+    font-size: 12px;
+    font-weight: 400;
+    color: #000;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: relative;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    vertical-align: middle;
+    padding-left: 50px;
+    max-width: 195px; }
+    .promo__item::before {
+      top: 20%; }
+      @media (min-width: 600px) {
+        .promo__item::before {
+          top: 7px; } }
+    @media (min-width: 1024px) {
+      .promo__item {
+        font-size: 16px;
+        padding-left: 60px; } }
+    .promo__item--car {
+      padding-left: 83px; }
+      .promo__item--car::before {
+        position: absolute;
+        left: 0;
+        content: url("../img/icons/promo-item-img-car-mobile.svg"); }
+        @media (min-width: 1024px) {
+          .promo__item--car::before {
+            content: url("../img/icons/promo-item-img-car-desktop.svg"); } }
+    .promo__item--payment {
+      padding-left: 68px; }
+      .promo__item--payment::before {
+        position: absolute;
+        left: 0;
+        content: url("../img/icons/promo-item-img-payment-mobile.svg"); }
+        @media (min-width: 1024px) {
+          .promo__item--payment::before {
+            content: url("../img/icons/promo-item-img-payment-desktop.svg"); } }
+    .promo__item--movers {
+      padding-left: 66px; }
+      .promo__item--movers::before {
+        position: absolute;
+        left: 0;
+        content: url("../img/icons/promo-item-img-movers-mobile.svg"); }
+        @media (min-width: 1024px) {
+          .promo__item--movers::before {
+            content: url("../img/icons/promo-item-img-movers-desktop.svg"); } }
+    .promo__item--24::before {
+      position: absolute;
+      left: 0;
+      content: url("../img/icons/promo-item-img-24-mobile.svg"); }
+      @media (min-width: 600px) {
+        .promo__item--24::before {
+          top: 7.5px; } }
+      @media (min-width: 1024px) {
+        .promo__item--24::before {
+          top: 14.5px;
+          content: url("../img/icons/promo-item-img-24-desktop.svg"); } }
 
 .promo-form {
   position: relative;
@@ -3707,6 +3808,8 @@ img {
     background: #f8f8f8;
     border: none;
     border-radius: 5px; }
+    .consultation__phone:focus-visible {
+      outline: none; }
     @media (min-width: 1024px) {
       .consultation__phone {
         width: calc(100% - 150px);
@@ -5277,6 +5380,38 @@ img {
 
 .order-call__agreement {
   text-align: center; }
+
+@media (min-width: 1024px) {
+  .service__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; } }
+
+.service__phone {
+  background: #fff;
+  border: 1px solid #4AAB3C; }
+  @media (min-width: 1024px) {
+    .service__phone {
+      padding-right: 60px;
+      width: 200px; } }
+  .service__phone-wrapper::after {
+    content: url("../img/icons/consult-phone-active.svg"); }
+
+.service__button {
+  margin-bottom: 40px; }
+  @media (min-width: 1024px) {
+    .service__button {
+      width: 282px;
+      height: 51px;
+      margin-bottom: 0; } }
+
+.options .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
 .footer {
   padding-top: 24px;
