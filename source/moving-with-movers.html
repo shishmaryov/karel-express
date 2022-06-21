@@ -223,7 +223,7 @@
 				</div>
 			</header>
 			<main>
-				<section class="promo">
+				<section class="promo service-page__promo">
 					<div class="container promo__container">
 						<div class="promo__wrapper--info">
 							<h2 class="section__title promo__title">Квартирный переезд с грузчиками</h2>
@@ -266,8 +266,9 @@
 				</section>
 				<section class="service__options options">
 					<div class="container">
-						<nav class="options__nav">
-						<ul class="options__list">
+						<div class="flex">
+							<nav class="options__nav">
+							<ul class="options__list">
 							<li class="options__item">
 								<a href="moving-with-movers.html" class="options__link options__link--active">
 									Квартирный переезд с грузчиками
@@ -298,14 +299,14 @@
 								Межгород
 								</a>
 							</li>
-						</ul>
-					</nav>
-					<div class="options__table">
-						<p class="options__text">Собираетесь переезжать? «КарелЭкспресс» возьмёт на себя все хлопоты квартирного переезда в Петрозаводске недорого: упаковка, погрузка, перевозка. Бережная транспортировка вещей и отличное настроение гарантированы.
+							</ul>
+						</nav>
+						<div class="">
+							<p class="options__text">Собираетесь переезжать? «КарелЭкспресс» возьмёт на себя все хлопоты квартирного переезда в Петрозаводске недорого: упаковка, погрузка, перевозка. Бережная транспортировка вещей и отличное настроение гарантированы.
 						Сервис работает 24 часа в сутки 7 дней в неделю. Мы организуем перевозку квартиры тогда, когда вам удобно. Хотите переехать прямо сейчас? Звонить заранее не обязательно: подача машины занимает 15 минут.</p>
-						<div class="prices-table">
-							<div class="container">
-								<div class="prices-table__table">
+						<div class="prices-table options__table--desktop">
+							<div class="container--nb">
+								<div class="prices-table__table service__table">
 									<div class="prices-table__string prices-table__string--green">
 										<p class="prices-table__key">Грузовая машина</p>
 										<p class="prices-table__value">800 ₽/ час</p>
@@ -334,11 +335,44 @@
 								</div>
 							</div>
 						</div>
-					</div>
+						</div>
+
+						</div>
+						<div class="prices-table options__table--mobile">
+							<div class="container--nb">
+								<div class="prices-table__table service__table">
+									<div class="prices-table__string prices-table__string--green">
+										<p class="prices-table__key">Грузовая машина</p>
+										<p class="prices-table__value">800 ₽/ час</p>
+										<button data-graph-path="order-call" class="prices-table__button">Заказать</button>
+									</div>
+									<div class="prices-table__string">
+										<p class="prices-table__key">Грузовая машина + 2 адреса погрузки/выгрузки</p>
+										<p class="prices-table__value">1100 ₽/ час</p>
+										<button data-graph-path="order-call" class="prices-table__button">Заказать</button>
+									</div>
+									<div class="prices-table__string prices-table__string--green">
+										<p class="prices-table__key">Грузовая машина + 1 грузчик</p>
+										<p class="prices-table__value">1300 ₽/ час</p>
+										<button data-graph-path="order-call" class="prices-table__button">Заказать</button>
+									</div>
+									<div class="prices-table__string" prices-table__string--green>
+										<p class="prices-table__key">Грузовая машина + 2 грузчика</p>
+										<p class="prices-table__value">1800 ₽/ час</p>
+										<button data-graph-path="order-call" class="prices-table__button">Заказать</button>
+									</div>
+									<div class="prices-table__string prices-table__string--green">
+										<p class="prices-table__key">Межгород</p>
+										<p class="prices-table__value">24 ₽/ км</p>
+										<button data-graph-path="order-call" class="prices-table__button">Заказать</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
 					</div>
 				</section>
-			<section class="service__promo"></section>
-			<section class="promo park-page__promo">
+			<section class="promo service-page__promo">
 				<div class="container promo-form__wrapper">
 					<p class="prices-promo-form__text">Рассчитаем стоимость</p>
 					<div class="promo-form">

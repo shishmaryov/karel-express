@@ -133,6 +133,7 @@
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
     	grid-row-gap: 18px;
+    	grid-column-gap: 30px;
 		margin-bottom: 24px;
 
     @media(min-width: 1024px) {
@@ -150,11 +151,10 @@
 		padding-top: 18px;
 		padding-bottom: 18px;
 		vertical-align: middle;
-		padding-left: 50px;
 		max-width: 195px;
 
 		&::before {
-			top: 20%;
+			top: 12%;
 
 			@media(min-width: 600px) {
 				top: 7px;
@@ -169,10 +169,15 @@
 		}
 
 		&--car {
-			padding-left: 83px;
+			padding-left: 57px;
+
+			@media(min-width: 1024px) {
+				padding-left: 83px;
+			}
 			&::before {
 				position: absolute;
 				left: 0;
+				top: 20%;
 				@media(min-width: 1024px) {
 					content: url('../img/icons/promo-item-img-car-desktop.svg')
 				}
@@ -180,10 +185,21 @@
 			}
 		}
 		&--payment {
-			padding-left: 68px;
+			padding-left: 53px;
+
+			@media(min-width: 1024px) {
+				padding-left: 68px;
+			}
+
 			&::before {
 				position: absolute;
 				left: 0;
+				top: 17%;
+
+				@media(min-width: 600px) {
+					top: 7px;
+				}
+
 				@media(min-width: 1024px) {
 					content: url('../img/icons/promo-item-img-payment-desktop.svg')
 				}
@@ -191,10 +207,21 @@
 			}
 		}
 		&--movers {
-			padding-left: 66px;
+			padding-left: 56px;
+
+			@media(min-width: 1024px) {
+				padding-left: 66px;
+			}
+
 			&::before {
 				position: absolute;
 				left: 0;
+				top: 25%;
+
+				@media(min-width: 600px) {
+					top: 14px;
+				}
+
 				@media(min-width: 1024px) {
 					content: url('../img/icons/promo-item-img-movers-desktop.svg')
 				}
@@ -202,13 +229,22 @@
 			}
 		}
 		&--24 {
+			padding-left: 53px;
+
+			@media(min-width: 1024px) {
+				padding-left: 60px;
+			}
+
 			&::before {
 				position: absolute;
 				left: 0;
+				top: 28%;
 
 				@media(min-width: 600px) {
-					top: 7.5px;
+					top: 14px;
 				}
+
+
 				@media(min-width: 1024px) {
 					top: 14.5px;
 					content: url('../img/icons/promo-item-img-24-desktop.svg')
