@@ -70,6 +70,7 @@ window.addEventListener("DOMContentLoaded", function() {
 		xhr.open('POST', '../mail.php', true);
 		xhr.send(formData);
 		new GraphModal().open('success');
+		thisForm.reset();
 	}
 
 	var phoneMask = IMask(

@@ -3,6 +3,11 @@
 	margin-left: auto;
 	padding: 0 15px;
 
+	&--nb {
+		max-width: 100%;
+		padding: 0;
+	}
+
 	@media(min-width: 768px){
 		max-width: 768px;
 	}

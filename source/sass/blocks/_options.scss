@@ -2,15 +2,33 @@
 	position: relative;
 	&::before {
 			position: absolute;
-			top: -200px;
+			top: -215px;
 			right: 0;
-			content: url('../img/icons/service-promo-after.svg');
+			content: url('../img/icons/service-promo-after-mobile.svg');
+			z-index: -2;
+
+			@media(min-width: 1024px) {
+				top: -200px;
+				content: url('../img/icons/service-promo-after.svg');
+			}
 		}
+
+	&::after {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		content: url('../img/icons/options-after.svg');
+		z-index: -2;
+	}
+
+
 	&__nav {
 		margin-right: 30px;
+		margin-bottom: 16px;
 
 		@media(min-width: 1024px) {
 			margin-right: 100px;
+			margin-bottom: 0;
 		}
 	}
 	&__list {
@@ -56,6 +74,10 @@
 	}
 
 	&__table {
+		@media(min-width: 1024px) {
+			margin-bottom: 50px;
+		}
+
 		&--desktop {
 			display: none;
 			@media(min-width: 1024px) {
@@ -65,9 +87,22 @@
 
 		&--mobile {
 			display: block;
+			position: relative;
+
+			&::before {
+				z-index: -2;
+				top: -115px;
+				position: absolute;
+				right: 0;
+				content: url('../img/icons/options-table-before-mobile.svg');
+			}
 
 			@media(min-width: 1024px) {
 				display: none;
+			}
+
+			.prices-table__string {
+				border-radius: 0px;
 			}
 		}
 	}

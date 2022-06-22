@@ -18,7 +18,7 @@
 					<div class="header__top">
 						<div class="header__top--left">
 							<div class="logo header__logo">
-								<a class="undecorated-link">
+								<a href="index.html" class="undecorated-link">
 									<img src="img/logotypes/karel-express-logo.svg" alt="Карел экспресс" width="165" height="58" class="logo__img">
 								</a>
 							</div>
@@ -223,14 +223,14 @@
 				</div>
 			</header>
 			<main>
-				<section class="promo service-page__promo">
+				<section class="promo">
 					<div class="container promo__container">
 						<div class="promo__wrapper--info">
 							<h2 class="section__title promo__title">Квартирный переезд с грузчиками</h2>
 							<div class="promo__wrapper--img promo__wrapper--mobile">
 							<picture>
-								<source srcset="img/content-images/promo-img-desktop.svg" media="(min-width: 1024px)">
-								<img src="img/content-images/promo-img.svg" alt="Illustration of delivery" class="promo__img">
+								<source srcset="img/content-images/moving-with-movers-desktop.svg" media="(min-width: 1024px)">
+								<img src="img/content-images/moving-with-movers-mobile.svg" alt="Illustration of delivery" class="promo__img">
 							</picture>
 						</div>
 							<div class="promo__items">
@@ -285,12 +285,12 @@
 								</a>
 							</li>
 							<li class="options__item">
-								<a href="" class="options__link">
+								<a href="countryside.html" class="options__link">
 									Дачный переезд
 								</a>
 							</li>
 							<li class="options__item">
-								<a href="" class="options__link">
+								<a href="materials.html" class="options__link">
 									Перевозка стойматериалов
 								</a>
 							</li>
@@ -336,7 +336,7 @@
 							</div>
 						</div>
 						</div>
-
+						</div>
 						</div>
 						<div class="prices-table options__table--mobile">
 							<div class="container--nb">
@@ -372,9 +372,9 @@
 
 					</div>
 				</section>
-			<section class="promo service-page__promo">
+			<section class="service-page__promo-form">
 				<div class="container promo-form__wrapper">
-					<p class="prices-promo-form__text">Рассчитаем стоимость</p>
+					<p class="prices-promo-form__text">Воспользуйтесь удобным калькулятором для расчета стоимости</p>
 					<div class="promo-form">
 						<button class="promo-form__clean" type="reset">
 						Очистить
@@ -541,28 +541,24 @@
 					</div>
 				</div>
 			</section>
-			<section class="prices-questions">
-				<div class="container">
-					<p class="prices-questions__description">Транспортные средства в Карел экспресс проходят техническое обслуживание, с выходом на маршрут сложностей не возникнет.
-					Бригады грузчиков сформированы из ответственных и аккуратных сотрудников.</p>
-					<div class="container--nb">
-						<div class="prices-questions__columns">
-							<div class="prices-questions__column">
-								<h2 class="prices-questions__title">Остались вопросы?</h2>
-								<p class="prices-question__text">Оставьте свой номер и наш специались свяжется с вами в течении 5 минут!</p>
-							</div>
-							<form method="POST" action="../mail.php" name="order" id="consultation__form" class="prices-questions__column">
-								<input type="hidden" name="admin_email[]" value="karel-express.ru@yandex.ru">
-								<input type="hidden" name="form_subject" value="Karel express">
-								<div class="consultation__phone-wrapper">
-									<input type="text" name="phone" placeholder="+7 (9xx) - xxx - xx - xx" id="consultation__phone" class="tel form__control form__input consultation__phone">
-								</div>
-								<button type="submit" class="button consultation__button">Получить консультацию</button>
-							</form>
+			<section class="questions">
+				<div class="questions__wrapper">
+					<div class="container">
+						<div class="questions__text">
+							<h2 class="questions__title">Остались вопросы?</h2>
+							<p class="questions__description">Оставьте свой номер и наш специались свяжется с вами в течении 5 минут!</p>
 						</div>
+						<form method="POST" action="../mail.php" name="phone" id="questions__form" class="questions__form">
+							<input type="hidden" name="admin_email[]" value="karel-express.ru@yandex.ru">
+							<input type="hidden" name="form_subject" value="Karel express">
+							<div class="questions__phone-wrapper">
+								<input type="text" name="phone" placeholder="+7 (9xx) - xxx - xx - xx" id="questions__phone" class="tel form__control form__input questions__phone">
+							</div>
+							<button type="submit" class="button questions__button">Получить консультацию</button>
+						</form>
 					</div>
 				</div>
-			</section>
+				</section>
 		</main>
 		<footer class="footer">
 			<div class="container">

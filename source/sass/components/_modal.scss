@@ -63,10 +63,11 @@
 	&--success {
 		width: auto;
 		padding-top: 50px;
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-bottom: 25px;
-    text-align: center;
+    	padding-left: 25px;
+    	padding-right: 25px;
+    	padding-bottom: 25px;
+    	text-align: center;
+    	border-radius: 5px;
 
     .graph-modal__close {
     	top: 20px;

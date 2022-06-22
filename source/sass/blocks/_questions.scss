@@ -2,23 +2,38 @@
 	padding-top: 24px;
 	padding-bottom: 24px;
 	overflow: hidden;
+	position: relative;
 
 	background-color: #faeecc;
 	border-radius: 15% 0 0 0;
 
 	@media(min-width: 1024px) {
-		padding-top: 40px;
-		padding-bottom: 40px;
+		padding-top: 30px;
+		padding-bottom: 30px;
 
 		background-color: transparent;
 		background-image: url("../img/icons/questions-bg.svg");
 		background-repeat: no-repeat;
 		background-position-x: 135px;
-		background-size: cover;
+		background-size: contain;
 		border-radius: 0 0 0 0;
 	}
 
+	@media(min-width: 1140px) {
+		padding-top: 40px;
+		padding-bottom: 40px;
 
+		&::after {
+			position: absolute;
+			top: 0;
+			content: '';
+			right: 0;
+			height: 100%;
+			width: 50%;
+			background: #FAEECC;
+			z-index: -2;
+		}
+	}
 
 	.container {
 		position: relative;
@@ -99,6 +114,10 @@
 
 	&__form {
 		@media(min-width: 1024px) {
+			display: inline-block;
+		}
+
+		@media(min-width: 1140px) {
 			display: flex;
 			align-items: center;
 			max-width: 640px;
@@ -164,6 +183,12 @@
 					border: 1px solid $accent;
 				}
 			}
+
+			@media(min-width: 1024px) {
+				@media(max-width: 1140px) {
+						margin-bottom: 15px;
+				}
+			}
 		}
 	}
 
@@ -195,6 +220,11 @@
 			padding-left: 0;
 
 			font-size: 18px;
+
+			@media(max-width: 1140px) {
+				margin: 0;
+				width: 100%;
+			}
 		}
 	}
 

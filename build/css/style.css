@@ -1943,7 +1943,8 @@ button.swiper-pagination-bullet {
     padding-left: 25px;
     padding-right: 25px;
     padding-bottom: 25px;
-    text-align: center; }
+    text-align: center;
+    border-radius: 5px; }
     .graph-modal__container--success .graph-modal__close {
       top: 20px;
       right: 15px; }
@@ -2499,22 +2500,140 @@ img {
 
 .service-page {
   font-family: 'Exo 2', sans-serif; }
-  .service-page__promo {
-    margin-bottom: 60px;
+  .service-page__promo-form {
+    margin-bottom: 50px;
     position: relative; }
+    .service-page__promo-form::before {
+      position: absolute;
+      top: 30px;
+      right: 0;
+      content: url("../img/icons/service-promo-form-after-mobile.svg"); }
+      @media (min-width: 1024px) {
+        .service-page__promo-form::before {
+          top: 0;
+          content: url("../img/icons/service-promo-form-after-desktop.svg"); } }
+    .service-page__promo-form::after {
+      position: absolute;
+      bottom: -45px;
+      left: 0;
+      content: url("../img/icons/service-promo-form-before-mobile.svg"); }
+      @media (min-width: 1024px) {
+        .service-page__promo-form::after {
+          bottom: -68px;
+          content: url("../img/icons/service-promo-form-before-desktop.svg"); } }
     @media (min-width: 1024px) {
-      .service-page__promo {
-        margin-bottom: 120px; } }
+      .service-page__promo-form {
+        margin-bottom: 80px; } }
+    .service-page__promo-form .prices-promo-form__text {
+      color: #4AAB3C;
+      position: relative;
+      font-weight: 600;
+      font-size: 16px; }
+      @media (min-width: 1024px) {
+        .service-page__promo-form .prices-promo-form__text {
+          font-size: 22px;
+          width: 710px;
+          padding-right: 145px; }
+          .service-page__promo-form .prices-promo-form__text::after {
+            position: absolute;
+            top: -30px;
+            right: 0;
+            content: url("../img/icons/options-promo-form-arrow.svg"); } }
   .service-page .promo {
     overflow: hidden; }
   @media (min-width: 1024px) {
     .service-page .promo__wrapper--info {
       max-width: 590px; } }
+  .service-page .reviews {
+    margin-top: 0; }
+    .service-page .reviews .container::before {
+      content: none;
+      width: 0;
+      height: 0;
+      display: none; }
+    .service-page .reviews .container::after {
+      content: none;
+      width: 0;
+      height: 0;
+      display: none; }
+    .service-page .reviews::before {
+      z-index: -2;
+      position: absolute;
+      top: -50px;
+      left: 10px;
+      content: url("../img/icons/service-reviews-before-mobile.svg"); }
+      @media (min-width: 1024px) {
+        .service-page .reviews::before {
+          top: -75px;
+          left: 0;
+          content: url("../img/icons/service-reviews-before-desktop.svg"); } }
+    .service-page .reviews::after {
+      z-index: -2;
+      position: absolute;
+      top: 160px;
+      left: 10px;
+      content: url("../img/icons/service-reviews-after-mobile.svg"); }
+      @media (min-width: 1024px) {
+        .service-page .reviews::after {
+          top: -50px;
+          left: calc(100% - 90px);
+          content: url("../img/icons/service-reviews-after-desktop.svg"); } }
+  .service-page .reviews {
+    margin-bottom: 40px; }
+    @media (min-width: 1024px) {
+      .service-page .reviews {
+        margin-bottom: 80px; } }
+    .service-page .reviews .swiper-button-prev:after, .service-page .reviews .swiper-rtl .swiper-button-next:after {
+      content: url("../img/icons/service-reviews-arrow-prev.svg"); }
+    .service-page .reviews .swiper-button-next:after, .service-page .reviews .swiper-rtl .swiper-button-prev:after {
+      content: url("../img/icons/service-reviews-arrow-next.svg"); }
+  .service-page .questions {
+    position: relative;
+    margin-bottom: 60px;
+    overflow: visible;
+    padding-top: 0;
+    padding-bottom: 0; }
+    .service-page .questions__wrapper {
+      overflow: hidden;
+      padding-top: 24px;
+      padding-bottom: 24px; }
+      @media (min-width: 1024px) {
+        .service-page .questions__wrapper {
+          padding-top: 35px;
+          padding-bottom: 35px; } }
+      @media (min-width: 1140px) {
+        .service-page .questions__wrapper {
+          padding-top: 40px;
+          padding-bottom: 40px; } }
+    @media (min-width: 1024px) {
+      .service-page .questions {
+        margin-bottom: 120px; } }
+    .service-page .questions::before {
+      position: absolute;
+      top: -95px;
+      right: 0;
+      content: url("../img/icons/service-questions-before-mobile.svg");
+      z-index: -2; }
+      @media (min-width: 1024px) {
+        .service-page .questions::before {
+          left: -85px;
+          top: -20px;
+          content: url("../img/icons/service-questions-before-desktop.svg"); } }
+    @media (max-width: 1024px) {
+      .service-page .questions::after {
+        position: absolute;
+        bottom: -93px;
+        left: calc(50% - 1160px);
+        content: url("../img/icons/service-questions-after-mobile.svg");
+        z-index: -2; } }
 
 .container {
   margin-right: auto;
   margin-left: auto;
   padding: 0 15px; }
+  .container--nb {
+    max-width: 100%;
+    padding: 0; }
   @media (min-width: 768px) {
     .container {
       max-width: 768px; } }
@@ -4344,18 +4463,32 @@ img {
   padding-top: 24px;
   padding-bottom: 24px;
   overflow: hidden;
+  position: relative;
   background-color: #faeecc;
   border-radius: 15% 0 0 0; }
   @media (min-width: 1024px) {
     .questions {
-      padding-top: 40px;
-      padding-bottom: 40px;
+      padding-top: 30px;
+      padding-bottom: 30px;
       background-color: transparent;
       background-image: url("../img/icons/questions-bg.svg");
       background-repeat: no-repeat;
       background-position-x: 135px;
-      background-size: cover;
+      background-size: contain;
       border-radius: 0 0 0 0; } }
+  @media (min-width: 1140px) {
+    .questions {
+      padding-top: 40px;
+      padding-bottom: 40px; }
+      .questions::after {
+        position: absolute;
+        top: 0;
+        content: '';
+        right: 0;
+        height: 100%;
+        width: 50%;
+        background: #FAEECC;
+        z-index: -2; } }
   .questions .container {
     position: relative; }
     @media (min-width: 1024px) {
@@ -4417,6 +4550,9 @@ img {
         margin: 0; } }
   @media (min-width: 1024px) {
     .questions__form {
+      display: inline-block; } }
+  @media (min-width: 1140px) {
+    .questions__form {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -4466,6 +4602,10 @@ img {
       .questions__phone-wrapper--active .questions__phone {
         color: #4AAB3C;
         border: 1px solid #4AAB3C; }
+
+@media (min-width: 1024px) and (max-width: 1140px) {
+  .questions__phone-wrapper {
+    margin-bottom: 15px; } }
   .questions__button {
     z-index: 2;
     width: 100%;
@@ -4490,6 +4630,10 @@ img {
         padding-bottom: 14.5px;
         padding-left: 0;
         font-size: 18px; } }
+  @media (min-width: 1024px) and (max-width: 1140px) {
+    .questions__button {
+      margin: 0;
+      width: 100%; } }
   .questions .is-invalid {
     color: #b81111;
     border: 1px solid #b81111; }
@@ -5423,20 +5567,34 @@ img {
 
 .service__table {
   width: auto;
-  margin: 0; }
+  margin: 0;
+  background: #fff; }
 
 .options {
   position: relative; }
   .options::before {
     position: absolute;
-    top: -200px;
+    top: -215px;
     right: 0;
-    content: url("../img/icons/service-promo-after.svg"); }
+    content: url("../img/icons/service-promo-after-mobile.svg");
+    z-index: -2; }
+    @media (min-width: 1024px) {
+      .options::before {
+        top: -200px;
+        content: url("../img/icons/service-promo-after.svg"); } }
+  .options::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: url("../img/icons/options-after.svg");
+    z-index: -2; }
   .options__nav {
-    margin-right: 30px; }
+    margin-right: 30px;
+    margin-bottom: 16px; }
     @media (min-width: 1024px) {
       .options__nav {
-        margin-right: 100px; } }
+        margin-right: 100px;
+        margin-bottom: 0; } }
   .options__list {
     padding-left: 0;
     margin-top: 0;
@@ -5467,16 +5625,28 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
+  @media (min-width: 1024px) {
+    .options__table {
+      margin-bottom: 50px; } }
   .options__table--desktop {
     display: none; }
     @media (min-width: 1024px) {
       .options__table--desktop {
         display: block; } }
   .options__table--mobile {
-    display: block; }
+    display: block;
+    position: relative; }
+    .options__table--mobile::before {
+      z-index: -2;
+      top: -115px;
+      position: absolute;
+      right: 0;
+      content: url("../img/icons/options-table-before-mobile.svg"); }
     @media (min-width: 1024px) {
       .options__table--mobile {
         display: none; } }
+    .options__table--mobile .prices-table__string {
+      border-radius: 0px; }
   .options__text {
     margin-top: 0; }
 

@@ -400,6 +400,7 @@ window.addEventListener('DOMContentLoaded', () => {
 		xhr.open('POST', '../mail.php', true);
 		xhr.send(formData);
 		new GraphModal().open('success');
+		thisForm.reset();
 	}
 
 	document.getElementById('time').addEventListener('click', function() {
@@ -457,7 +458,7 @@ window.addEventListener('DOMContentLoaded', () => {
             errorMessage: ' '
         }, ])
         .onSuccess((event) => {
-        	document.querySelector('graph-modal__container--order-call').classList.remove('graph-modal-open');
+        	document.querySelector('.graph-modal__container--order-call').classList.remove('graph-modal-open');
             submitHandler(document.querySelector('#order-call__form'));
         });
 

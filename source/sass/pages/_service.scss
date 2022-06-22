@@ -1,12 +1,57 @@
 .service-page {
 	font-family: 'Exo 2', sans-serif;
 
-	&__promo {
-		margin-bottom: 60px;
+	&__promo-form {
+		margin-bottom: 50px;
 		position: relative;
 
+		&::before {
+			position: absolute;
+			top: 30px;
+			right: 0;
+			content: url('../img/icons/service-promo-form-after-mobile.svg');
+
+			@media(min-width: 1024px) {
+				top: 0;
+				content: url('../img/icons/service-promo-form-after-desktop.svg');
+			}
+		}
+
+		&::after {
+			position: absolute;
+			bottom: -45px;
+			left: 0;
+			content: url('../img/icons/service-promo-form-before-mobile.svg');
+
+			@media(min-width: 1024px) {
+				bottom: -68px;
+				content: url('../img/icons/service-promo-form-before-desktop.svg');
+			}
+		}
+
 		@media(min-width: 1024px) {
-			margin-bottom: 120px;
+			margin-bottom: 80px;
+		}
+
+		.prices-promo-form__text {
+			color: $accent;
+			position: relative;
+			font-weight: 600;
+			font-size: 16px;
+
+
+			@media(min-width: 1024px) {
+				font-size: 22px;
+				width: 710px;
+				padding-right: 145px;
+
+				&::after {
+					position: absolute;
+					top: -30px;
+					right: 0;
+					content: url('../img/icons/options-promo-form-arrow.svg');
+				}
+			}
 		}
 	}
 
@@ -17,6 +62,123 @@
 	.promo__wrapper--info {
 		@media(min-width: 1024px) {
 			max-width: 590px;
+		}
+	}
+
+	.reviews {
+		margin-top: 0;
+
+		.container {
+			&::before {
+				content: none;
+				width: 0;
+				height: 0;
+				display: none;
+			}
+
+			&::after {
+				content: none;
+				width: 0;
+				height: 0;
+				display: none;
+			}
+		}
+
+		&::before {
+			z-index: -2;
+			position: absolute;
+			top: -50px;
+			left: 10px;
+			content: url('../img/icons/service-reviews-before-mobile.svg');
+
+			@media(min-width: 1024px) {
+				top: -75px;
+				left: 0;
+				content: url('../img/icons/service-reviews-before-desktop.svg');
+			}
+		}
+
+		&::after {
+			z-index: -2;
+			position: absolute;
+			top: 160px;
+			left: 10px;
+			content: url('../img/icons/service-reviews-after-mobile.svg');
+
+			@media(min-width: 1024px) {
+				top: -50px;
+				left: calc(100% - 90px);
+				content: url('../img/icons/service-reviews-after-desktop.svg');
+			}
+		}
+	}
+
+	.reviews {
+		margin-bottom: 40px;
+
+		@media(min-width: 1024px) {
+			margin-bottom: 80px;
+		}
+
+		.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+			content: url('../img/icons/service-reviews-arrow-prev.svg');
+		}
+
+		.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+			content: url('../img/icons/service-reviews-arrow-next.svg');
+		}
+	}
+
+	.questions {
+		position: relative;
+		margin-bottom: 60px;
+		overflow: visible;
+		padding-top: 0;
+		padding-bottom: 0;
+
+		&__wrapper {
+			overflow: hidden;
+			padding-top: 24px;
+			padding-bottom: 24px;
+
+
+			@media(min-width: 1024px) {
+				padding-top: 35px;
+				padding-bottom: 35px;
+			}
+
+			@media(min-width: 1140px) {
+				padding-top: 40px;
+				padding-bottom: 40px;
+			}
+		}
+
+		@media(min-width: 1024px) {
+			margin-bottom: 120px;
+		}
+
+		&::before {
+			position: absolute;
+			top: -95px;
+			right: 0;
+			content: url('../img/icons/service-questions-before-mobile.svg');
+			z-index: -2;
+
+			@media(min-width: 1024px) {
+				left: -85px;
+				top: -20px;
+				content: url('../img/icons/service-questions-before-desktop.svg');
+			}
+		}
+
+		@media(max-width: 1024px) {
+			&::after {
+			position: absolute;
+			bottom: -93px;
+			left: calc(50% - 1160px);
+			content: url('../img/icons/service-questions-after-mobile.svg');
+			z-index: -2;
+		}
 		}
 	}
 }

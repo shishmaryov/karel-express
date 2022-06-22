@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		xhr.open('POST', '../mail.php', true);
 		xhr.send(formData);
 		new GraphModal().open('success');
+		thisForm.reset();
 	}
 
 	const validation2 = new JustValidate('#consultation__form', {
