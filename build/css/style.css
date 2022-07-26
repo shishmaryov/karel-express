@@ -3717,7 +3717,14 @@ img {
   height: 195px;
   margin-right: 55px;
   margin-bottom: 24px;
-  border-radius: 20px; }
+  border-radius: 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s; }
+  .benefits__item:hover {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    -webkit-filter: drop-shadow(0px 3px 10px rgba(0, 0, 0, 0.3));
+            filter: drop-shadow(0px 3px 10px rgba(0, 0, 0, 0.3)); }
   @media (min-width: 1150px) {
     .benefits__item {
       width: 385px;
@@ -3833,6 +3840,7 @@ img {
     content: url("../img/icons/benefit-link-bg.svg");
     position: absolute;
     left: 0;
+    z-index: -1;
     width: 142px;
     height: 35px; }
   .benefit__link::after {
@@ -3842,6 +3850,14 @@ img {
     right: 0;
     width: 22px;
     height: 22px; }
+  @media (min-width: 1024px) {
+    .benefit__link:hover {
+      color: #fff; }
+      .benefit__link:hover::before {
+        left: 3px;
+        content: url("../img/icons/benefit-link-bg-active.svg"); }
+      .benefit__link:hover::after {
+        content: url("../img/icons/benefit-link-arrow-active.svg"); } }
 
 .benefits__consultation {
   margin-top: 40px; }
@@ -4815,19 +4831,6 @@ img {
     text-decoration: none;
     -webkit-transition-duration: 0.3s;
             transition-duration: 0.3s; }
-    @media (min-width: 1024px) {
-      .park__link {
-        padding-right: 29px;
-        font-weight: 600;
-        font-size: 16px; }
-        .park__link:hover::after {
-          content: url("../img/icons/park-link-after-active.svg"); } }
-    .park__link:hover {
-      color: #4AAB3C;
-      -webkit-transition-duration: 0.3s;
-              transition-duration: 0.3s; }
-      .park__link:hover::after {
-        content: url("../img/icons/park-link-after-mobile-active.svg"); }
     .park__link::after {
       content: url("../img/icons/park-link-after-mobile.svg");
       position: absolute;
@@ -4836,6 +4839,20 @@ img {
       @media (min-width: 1024px) {
         .park__link::after {
           content: url("../img/icons/park-link-after.svg"); } }
+    .park__link:hover {
+      color: #4AAB3C;
+      -webkit-transition-duration: 0.3s;
+              transition-duration: 0.3s; }
+      .park__link:hover::after {
+        content: url("../img/icons/park-link-after-mobile-active.svg"); }
+        @media (min-width: 1024px) {
+          .park__link:hover::after {
+            content: url("../img/icons/park-link-after-active.svg"); } }
+    @media (min-width: 1024px) {
+      .park__link {
+        padding-right: 29px;
+        font-weight: 600;
+        font-size: 16px; } }
   .park__img {
     width: auto;
     height: 290px;

@@ -165,17 +165,14 @@
     text-decoration: none;
     transition-duration: 0.3s;
 
+&::after {
+      content: url("../img/icons/park-link-after-mobile.svg");
+      position: absolute;
+      top: 0;
+      right: 0;
 
-    @media(min-width: 1024px) {
-      padding-right: 29px;
-
-      font-weight: 600;
-      font-size: 16px;
-
-      &:hover {
-        &::after {
-          content: url("../img/icons/park-link-after-active.svg");
-        }
+      @media(min-width: 1024px) {
+        content: url("../img/icons/park-link-after.svg");
       }
     }
 
@@ -186,20 +183,24 @@
 
       &::after {
         content: url("../img/icons/park-link-after-mobile-active.svg");
+
+        @media(min-width: 1024px) {
+        	content: url("../img/icons/park-link-after-active.svg");
+        }
       }
     }
 
-    &::after {
-      content: url("../img/icons/park-link-after-mobile.svg");
-      position: absolute;
-      top: 0;
-      right: 0;
 
-      @media(min-width: 1024px) {
-        content: url("../img/icons/park-link-after.svg");
-      }
-    }
+
+
+    @media(min-width: 1024px) {
+      padding-right: 29px;
+
+      font-weight: 600;
+      font-size: 16px;
+
   }
+}
   &__img {
     width: auto;
     height: 290px;
