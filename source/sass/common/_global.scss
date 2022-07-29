@@ -11,6 +11,21 @@ img {
   height: auto;
 }
 
+@keyframes flareAnimation {
+    0% {
+        left: -150%;
+    }
+    1% {
+    	left: -10%;
+    }
+    50% {
+        left: 150%;
+    }
+    100% {
+    	left: 150%;
+    }
+}
+
 .button {
 	display: flex;
 	flex-direction: row;
@@ -26,10 +41,32 @@ img {
 	color: #FFFFFF;
 	transition-duration: 0.3s;
 	text-decoration: none;
+	position: relative;
+	overflow-x: hidden;
+
+
+	&::after {
+		position: absolute;
+    top: 0;
+    height: 100%;
+    width: 30px;
+    content: '';
+    transform: skewX(-45deg);
+    animation: flareAnimation;
+    left: -150%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 1));
+    animation: flareAnimation 5s infinite linear;
+    animation-delay: 0s;
+
+	}
 
 	&:hover {
 		background: linear-gradient(268.55deg, #4caa3c 0%, rgba(76, 170, 60, .6) 100%);
 		box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+
+		&::after {
+			animation: 0;
+		}
 	}
 
 	&:active {
