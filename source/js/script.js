@@ -438,6 +438,16 @@ window.addEventListener('DOMContentLoaded', () => {
 			rule: 'required',
 			errorMessage: ' '
 		}, ])
+
+	.addField('#start-address', [{
+			rule: 'required',
+			errorMessage: ' '
+		}, ])
+
+	.addField('#end-address', [{
+			rule: 'required',
+			errorMessage: ' '
+		}, ])
 		.onSuccess((event) => {
 			submitHandler(document.querySelector('#promo-form'));
 			validation.refresh();

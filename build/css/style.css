@@ -1976,10 +1976,13 @@ button.swiper-pagination-bullet {
   border-radius: 30%;
   padding: 15px;
   background-repeat: no-repeat;
-  background-position: 4px 4px; }
+  background-position: 9px 9px;
+  background-size: 12px; }
   .graph-modal__close--gallery {
     width: 24px;
     height: 24px;
+    background-position: 4px 4px;
+    background-size: 24px;
     background-image: url("../img/icons/popup-close.svg"); }
 
 .graph-modal.is-open {
