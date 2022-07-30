@@ -310,5 +310,11 @@ card('card--gaz-black');
 card('card--gaz-green');
 card('card--gaz-white');
 
+if (window.screen.availWidth < 1023) {
+		let delList = document.querySelectorAll('.park__img-wrapper');
 
+		for (let i = 0; i < delList.length; i++) {
+			delList[i].removeAttribute('data-graph-path');
+		}
+	}
 });
