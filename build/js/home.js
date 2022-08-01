@@ -228,14 +228,25 @@ if (products) {
 
 
 function card (selector) {
-	let mySwiper = new Swiper(`.${selector} .slider-block`, {
-		slidesPerView: 1,
-		allowTouchMove: false,
-		navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  }
-	});
+	if (window.screen.availWidth < 1023) {
+			let mySwiper = new Swiper(`.${selector} .slider-block`, {
+			slidesPerView: 1,
+			allowTouchMove: true,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+		});
+		} else {
+			let mySwiper = new Swiper(`.${selector} .slider-block`, {
+			slidesPerView: 1,
+			allowTouchMove: false,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+		});
+		}
 
 	const maxItems = 5;
 	const sliderNavItems = document.querySelectorAll(`.${selector} .slider-nav__item`);
@@ -309,12 +320,4 @@ document.querySelector(`.${selector} .swiper-button-prev`).addEventListener('cli
 card('card--gaz-black');
 card('card--gaz-green');
 card('card--gaz-white');
-
-if (window.screen.availWidth < 1023) {
-		let delList = document.querySelectorAll('.park__img-wrapper');
-
-		for (let i = 0; i < delList.length; i++) {
-			delList[i].removeAttribute('data-graph-path');
-		}
-	}
 });

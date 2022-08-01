@@ -30,10 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 
 	if (window.screen.availWidth < 1023) {
-		let delList = document.querySelectorAll('.product__switch');
-		for (let i = 0; i < delList.length; i++) {
-			delList[i].removeAttribute('data-graph-path');
-		}
 
 		let switcherSlider1 = new Swiper('.product__img--1', {
 				slidesPerView: 1,
@@ -68,14 +64,28 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	function card(selector) {
-		let mySwiper = new Swiper(`.${selector} .slider-block`, {
+
+		if (window.screen.availWidth < 1023) {
+			let mySwiper = new Swiper(`.${selector} .slider-block`, {
+			slidesPerView: 1,
+			allowTouchMove: true,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+		});
+		} else {
+			let mySwiper = new Swiper(`.${selector} .slider-block`, {
 			slidesPerView: 1,
 			allowTouchMove: false,
 			navigation: {
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev',
-			}
+			},
 		});
+		}
+
+
 
 		const maxItems = 5;
 		const sliderNavItems = document.querySelectorAll(`.${selector} .slider-nav__item`);
