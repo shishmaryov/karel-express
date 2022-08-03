@@ -1,0 +1,59 @@
+.reviews-page {
+	.park-promo {
+		@media(min-width: 1024px) {
+			margin-bottom: 0;
+		}
+
+	}
+
+	.park-promo__column--text {
+		@media(min-width: 1024px) {
+			max-width: 720px;
+		}
+	}
+
+	.reviews__row {
+		.container {
+			margin-top: 0;
+			@media(min-width: 1024px) {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+		}
+
+		.reviews__slide {
+			width: 280px;
+		margin-left: calc(50% - 156px);
+		padding: 14px 32px;
+
+		background-image: url("../img/icons/review-bg-mobile.svg");
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-size: 328px 100%;
+
+			@media(min-width: 768px) {
+				width: 321px;
+			margin-left: calc(50% - 192.5px);
+
+			background-image: url("../img/icons/review-bg.svg");
+			background-size: 381px 100%;
+			}
+
+			@media(max-width: 1024px) {
+				&:not(:last-child) {
+					margin-bottom: 18px;
+				}
+			}
+
+			@media(min-width: 1024px) {
+				margin-left: 0;
+			}
+		}
+
+	}
+
+	.how__buttons--desktop {
+		margin-bottom: 60px;
+	}
+}

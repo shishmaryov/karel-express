@@ -26,6 +26,8 @@
 	}
 
 	&__button {
+
+		overflow-y: hidden;
 		@media(min-width: 1024px) {
 			width: 282px;
 			height: 51px;

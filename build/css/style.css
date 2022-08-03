@@ -2692,6 +2692,52 @@ img {
         content: url("../img/icons/service-questions-after-mobile.svg");
         z-index: -2; } }
 
+@media (min-width: 1024px) {
+  .reviews-page .park-promo {
+    margin-bottom: 0; } }
+
+@media (min-width: 1024px) {
+  .reviews-page .park-promo__column--text {
+    max-width: 720px; } }
+
+.reviews-page .reviews__row .container {
+  margin-top: 0; }
+  @media (min-width: 1024px) {
+    .reviews-page .reviews__row .container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; } }
+
+.reviews-page .reviews__row .reviews__slide {
+  width: 280px;
+  margin-left: calc(50% - 156px);
+  padding: 14px 32px;
+  background-image: url("../img/icons/review-bg-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: 328px 100%; }
+  @media (min-width: 768px) {
+    .reviews-page .reviews__row .reviews__slide {
+      width: 321px;
+      margin-left: calc(50% - 192.5px);
+      background-image: url("../img/icons/review-bg.svg");
+      background-size: 381px 100%; } }
+  @media (max-width: 1024px) {
+    .reviews-page .reviews__row .reviews__slide:not(:last-child) {
+      margin-bottom: 18px; } }
+  @media (min-width: 1024px) {
+    .reviews-page .reviews__row .reviews__slide {
+      margin-left: 0; } }
+
+.reviews-page .how__buttons--desktop {
+  margin-bottom: 60px; }
+
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -4322,7 +4368,6 @@ img {
     padding: 14px 32px;
     background-image: url("../img/icons/review-bg-mobile.svg");
     background-repeat: no-repeat;
-    background-repeat: no-repeat;
     background-size: contain;
     background-size: 328px 100%; }
     @media (min-width: 450px) {
@@ -4504,7 +4549,7 @@ img {
       display: flex; } }
 
 .how__buttons--mobile {
-  margin-bottom: 40px; }
+  margin-bottom: 53px; }
   @media (min-width: 1024px) {
     .how__buttons--mobile {
       display: none; } }
@@ -5756,6 +5801,7 @@ img {
     content: url("../img/icons/consult-phone-active.svg"); }
 
 .service__button {
+  overflow-y: hidden;
   margin-bottom: 40px; }
   @media (min-width: 1024px) {
     .service__button {
