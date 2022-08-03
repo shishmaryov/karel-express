@@ -3814,16 +3814,19 @@ img {
 
 @media (max-width: 1150px) and (max-width: 1150px) and (min-width: 1024px) {
   .benefits__item--clock .benefit__link {
-    margin-top: 10px; } }
+    margin-top: 11px; } }
   .benefits__item--clock::after {
     content: url("../img/icons/benefits-clock.svg"); }
 
 @media (max-width: 1150px) and (min-width: 1024px) {
   .benefits__item--mover {
-    margin-top: 10px; } }
+    margin-top: 11px; } }
   @media (max-width: 1150px) {
     .benefits__item--mover .benefit__link {
       margin-top: 32px; } }
+  @media (max-width: 1150px) and (min-width: 1024px) {
+    .benefits__item--mover .benefit__link {
+      margin-top: 12px; } }
   .benefits__item--mover::after {
     content: url("../img/icons/benefits-mover.svg"); }
   @media (min-width: 1024px) {
@@ -3890,7 +3893,7 @@ img {
   text-decoration: none; }
   @media (min-width: 1024px) {
     .benefit__link {
-      margin-top: 6px; } }
+      margin-top: 7px; } }
   @media (min-width: 1150px) {
     .benefit__link {
       margin-top: 11px;
