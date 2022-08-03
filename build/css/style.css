@@ -1031,7 +1031,8 @@
     content: '';
     background: #BDBDBD; }
   .accordion__header--active {
-    background: #4AAB3C; }
+    background: #4AAB3C;
+    margin-top: -1px; }
     .accordion__header--active .accordion__title {
       color: #fff; }
     .accordion__header--active::after {

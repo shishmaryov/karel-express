@@ -20,6 +20,7 @@
 
 	&--active {
 		background: $accent;
+		margin-top: -1px;
 
 		.accordion__title {
 			color: #fff;
