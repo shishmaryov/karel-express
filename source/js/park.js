@@ -64,26 +64,20 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	function card(selector) {
-
-		if (window.screen.availWidth < 1023) {
 			let mySwiper = new Swiper(`.${selector} .slider-block`, {
 			slidesPerView: 1,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
 			allowTouchMove: true,
-			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev',
-			},
+			breakpoints: {
+				1024: {
+            allowTouchMove: false,
+        	}
+        }
 		});
-		} else {
-			let mySwiper = new Swiper(`.${selector} .slider-block`, {
-			slidesPerView: 1,
-			allowTouchMove: false,
-			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev',
-			},
-		});
-		}
+
 
 
 
