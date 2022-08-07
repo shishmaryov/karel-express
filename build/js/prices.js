@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			submitHandler(document.querySelector('#consultation__form'));
 		});
 
-	document.querySelector('#consultation__phone').addEventListener('change', () => {
+	document.querySelector('#consultation__phone').addEventListener('input', () => {
 		document.querySelector('.consultation__phone-wrapper').classList.add('consultation__phone-wrapper--active');
 
 	});

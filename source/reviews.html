@@ -231,7 +231,7 @@
 								<p class="section__description park-promo__description">Здесь вы можете ознакомиться с отзывами реальных заказчиков о грузоперевозках по Карелии и не только. Для нас важно. чтобы каждый из наших клиентов мог оставить свой отзыв: хорошие комментарии радуют нас, а негативные отзывы являются поводом улучшить качество обслуживания и грузоперевозок.</p>
 								<div class="how__buttons how__buttons--desktop">
 									<button data-graph-path="order-call" class="button how__button how__button--offer">Заказать звонок</button>
-									<a href="#promo-form" class="undecorated-link how__button how__button--price">Рассчитать стоимость</a>
+									<a href="./index.html#promo-form" class="undecorated-link how__button how__button--price">Рассчитать стоимость</a>
 								</div>
 							</div>
 							<div class="park-promo__column">
@@ -242,7 +242,7 @@
 							</div>
 							<div class="how__buttons how__buttons--mobile">
 								<button data-graph-path="order-call" class="button how__button how__button--offer">Заказать звонок</button>
-								<a href="#promo-form" class="undecorated-link how__button how__button--price">Рассчитать стоимость</a>
+								<a href="./index.html#promo-form" class="undecorated-link how__button how__button--price">Рассчитать стоимость</a>
 							</div>
 						</div>
 					</div>
@@ -313,29 +313,221 @@
 						<div class="reviews-form__wrapper">
 							<h2 class="reviews-form__title">Оставить отзыв</h2>
 							<form method="POST" action="../mail.php" name="review" id="review__form" class="review__form">
-									<input type="hidden" name="admin_email[]" value="karel-express.ru@yandex.ru">
-									<input type="hidden" name="form_subject" value="Karel express">
-									<label for="raiting__ball" class="review-form__label review-form__label--raiting">Ваша оценка
-										<div data-total-value="0" class="raiting" id="raiting__ball">
-											<div data-item-value="5" class="raiting__item">★</div>
-											<div data-item-value="4" class="raiting__item">★</div>
-											<div data-item-value="3" class="raiting__item">★</div>
-											<div data-item-value="2" class="raiting__item">★</div>
-											<div data-item-value="1" class="raiting__item">★</div>
-										</div>
-									</label>
-									<input type="hidden" name="ball" id="review__ball">
-									<label for="review__name" class="review-form__label">
-										Ваше имя
-										<input type="text" name="name" placeholder="Введите имя" id="review__name" class="review__input review__input--name tel form__control form__input">
-									</label>
-									<label for="review__text" class="review-form__label review-form__label--text">
-										Ваш отзыв
-										<textarea name="review text" id="review__text" class="review__input review__text"></textarea>
-									</label>
-									<button type="submit" class="button review__button">Оставить отзыв</button>
-									<p class="review__agreement">Нажимая кнопку «Оставить отзыв», вы соглашаетесь на обработку <span class="review__agreement--active">Ваших персональных данных</span></p>
+								<input type="hidden" name="admin_email[]" value="karel-express.ru@yandex.ru">
+								<input type="hidden" name="form_subject" value="Karel express">
+								<label for="raiting__ball" class="review-form__label review-form__label--raiting">Ваша оценка
+									<div data-total-value="0" class="raiting" id="raiting__ball">
+										<div data-item-value="5" class="raiting__item">★</div>
+										<div data-item-value="4" class="raiting__item">★</div>
+										<div data-item-value="3" class="raiting__item">★</div>
+										<div data-item-value="2" class="raiting__item">★</div>
+										<div data-item-value="1" class="raiting__item">★</div>
+									</div>
+								</label>
+								<input type="hidden" name="ball" id="review__ball">
+								<label for="review__name" class="review-form__label">
+									Ваше имя
+									<input type="text" name="name" placeholder="Введите имя" id="review__name" class="review__input review__input--name tel form__control form__input">
+								</label>
+								<label for="review__text" class="review-form__label review-form__label--text">
+									Ваш отзыв
+									<textarea name="review text" id="review__text" class="review__input review__text"></textarea>
+								</label>
+								<button type="submit" class="button review__button review__button--disabled">Оставить отзыв</button>
+								<p class="review__agreement">Нажимая кнопку «Оставить отзыв», вы соглашаетесь на обработку <span class="review__agreement--active">Ваших персональных данных</span></p>
 							</form>
+						</div>
+					</div>
+				</section>
+				<section class="reviews-grid">
+					<div class="container">
+						<div class="reviews">
+							<div class="reviews__slide">
+								<div class="reviews__header">
+									<div class="review__author">
+										<p class="review__name">Владимир</p>
+										<p class="review__status">Прораб</p>
+									</div>
+									<div class="review__stars">
+										<img src="img/icons/star.svg" alt="star" class="review__star">
+										<img src="img/icons/star.svg" alt="star" class="review__star">
+										<img src="img/icons/star.svg" alt="star" class="review__star">
+										<img src="img/icons/star.svg" alt="star" class="review__star">
+										<img src="img/icons/star.svg" alt="star" class="review__star">
+									</div>
+								</div>
+								<p class="review__text">
+									Вчера мороз -26, мне нужно заказать манипулятор очень срочно, так как сроки уже "горели", обзвонил абсолютно все объявления, никто не хотел ехать в такой мороз, было жалко машину, что и
+								</p>
+								<p class="review__company">Авито</p>
+							</div>
+							<div class="reviews__slide">
+								<div class="reviews__header">
+									<div class="review__author">
+										<p class="review__name">Владимир</p>
+										<p class="review__status">Прораб</p>
+									</div>
+									<div class="review__stars">
+										<img src="img/icons/star.svg" alt="star" class="review__star">
+										<img src="img/icons/star.svg" alt="star" class="review__star">
+										<img src="img/icons/star.svg" alt="star" class="review__star">
+										<img src="img/icons/star.svg" alt="star" class="review__star">
+										<img src="img/icons/star.svg" alt="star" class="review__star">
+									</div>
+								</div>
+								<p class="review__text">
+									Вчера мороз -26, мне нужно заказать манипулятор очень срочно, так как сроки уже "горели", обзвонил абсолютно все объявления, никто не хотел ехать в такой мороз, было жалко машину, что и
+								</p>
+								<p class="review__company">Авито</p>
+							</div>
+							<div class="reviews__slide">
+								<div class="reviews__header">
+									<div class="review__author">
+										<p class="review__name">Владимир</p>
+										<p class="review__status">Прораб</p>
+									</div>
+									<div class="review__stars">
+										<img src="img/icons/star.svg" alt="star" class="review__star">
+										<img src="img/icons/star.svg" alt="star" class="review__star">
+										<img src="img/icons/star.svg" alt="star" class="review__star">
+										<img src="img/icons/star.svg" alt="star" class="review__star">
+										<img src="img/icons/star.svg" alt="star" class="review__star">
+									</div>
+								</div>
+								<p class="review__text">
+									Вчера мороз -26, мне нужно заказать манипулятор очень срочно, так как сроки уже "горели", обзвонил абсолютно все объявления, никто не хотел ехать в такой мороз, было жалко машину, что и
+								</p>
+								<p class="review__company">Авито</p>
+							</div>
+							<div class="reviews__slide">
+								<div class="reviews__header">
+									<div class="review__author">
+										<p class="review__name">Владимир</p>
+										<p class="review__status">Прораб</p>
+									</div>
+									<div class="review__stars">
+										<img src="img/icons/star.svg" alt="star" class="review__star">
+										<img src="img/icons/star.svg" alt="star" class="review__star">
+										<img src="img/icons/star.svg" alt="star" class="review__star">
+										<img src="img/icons/star.svg" alt="star" class="review__star">
+										<img src="img/icons/star.svg" alt="star" class="review__star">
+									</div>
+								</div>
+								<p class="review__text">
+									Вчера мороз -26, мне нужно заказать манипулятор очень срочно, так как сроки уже "горели", обзвонил абсолютно все объявления, никто не хотел ехать в такой мороз, было жалко машину, что и
+								</p>
+								<p class="review__company">Авито</p>
+							</div>
+							<div class="reviews__slide">
+								<div class="reviews__header">
+									<div class="review__author">
+										<p class="review__name">Владимир</p>
+										<p class="review__status">Прораб</p>
+									</div>
+									<div class="review__stars">
+										<img src="img/icons/star.svg" alt="star" class="review__star">
+										<img src="img/icons/star.svg" alt="star" class="review__star">
+										<img src="img/icons/star.svg" alt="star" class="review__star">
+										<img src="img/icons/star.svg" alt="star" class="review__star">
+										<img src="img/icons/star.svg" alt="star" class="review__star">
+									</div>
+								</div>
+								<p class="review__text">
+									Вчера мороз -26, мне нужно заказать манипулятор очень срочно, так как сроки уже "горели", обзвонил абсолютно все объявления, никто не хотел ехать в такой мороз, было жалко машину, что и
+								</p>
+								<p class="review__company">Авито</p>
+							</div>
+							<div class="reviews__slide">
+								<div class="reviews__header">
+									<div class="review__author">
+										<p class="review__name">Владимир</p>
+										<p class="review__status">Прораб</p>
+									</div>
+									<div class="review__stars">
+										<img src="img/icons/star.svg" alt="star" class="review__star">
+										<img src="img/icons/star.svg" alt="star" class="review__star">
+										<img src="img/icons/star.svg" alt="star" class="review__star">
+										<img src="img/icons/star.svg" alt="star" class="review__star">
+										<img src="img/icons/star.svg" alt="star" class="review__star">
+									</div>
+								</div>
+								<p class="review__text">
+									Вчера мороз -26, мне нужно заказать манипулятор очень срочно, так как сроки уже "горели", обзвонил абсолютно все объявления, никто не хотел ехать в такой мороз, было жалко машину, что и
+								</p>
+								<p class="review__company">Авито</p>
+							</div>
+							<div class="reviews__slide">
+								<div class="reviews__header">
+									<div class="review__author">
+										<p class="review__name">Владимир</p>
+										<p class="review__status">Прораб</p>
+									</div>
+									<div class="review__stars">
+										<img src="img/icons/star.svg" alt="star" class="review__star">
+										<img src="img/icons/star.svg" alt="star" class="review__star">
+										<img src="img/icons/star.svg" alt="star" class="review__star">
+										<img src="img/icons/star.svg" alt="star" class="review__star">
+										<img src="img/icons/star.svg" alt="star" class="review__star">
+									</div>
+								</div>
+								<p class="review__text">
+									Вчера мороз -26, мне нужно заказать манипулятор очень срочно, так как сроки уже "горели", обзвонил абсолютно все объявления, никто не хотел ехать в такой мороз, было жалко машину, что и
+								</p>
+								<p class="review__company">Авито</p>
+							</div>
+							<div class="reviews__slide">
+								<div class="reviews__header">
+									<div class="review__author">
+										<p class="review__name">Владимир</p>
+										<p class="review__status">Прораб</p>
+									</div>
+									<div class="review__stars">
+										<img src="img/icons/star.svg" alt="star" class="review__star">
+										<img src="img/icons/star.svg" alt="star" class="review__star">
+										<img src="img/icons/star.svg" alt="star" class="review__star">
+										<img src="img/icons/star.svg" alt="star" class="review__star">
+										<img src="img/icons/star.svg" alt="star" class="review__star">
+									</div>
+								</div>
+								<p class="review__text">
+									Вчера мороз -26, мне нужно заказать манипулятор очень срочно, так как сроки уже "горели", обзвонил абсолютно все объявления, никто не хотел ехать в такой мороз, было жалко машину, что и
+								</p>
+								<p class="review__company">Авито</p>
+							</div>
+							<div class="reviews__slide">
+								<div class="reviews__header">
+									<div class="review__author">
+										<p class="review__name">Владимир</p>
+										<p class="review__status">Прораб</p>
+									</div>
+									<div class="review__stars">
+										<img src="img/icons/star.svg" alt="star" class="review__star">
+										<img src="img/icons/star.svg" alt="star" class="review__star">
+										<img src="img/icons/star.svg" alt="star" class="review__star">
+										<img src="img/icons/star.svg" alt="star" class="review__star">
+										<img src="img/icons/star.svg" alt="star" class="review__star">
+									</div>
+								</div>
+								<p class="review__text">
+									Вчера мороз -26, мне нужно заказать манипулятор очень срочно, так как сроки уже "горели", обзвонил абсолютно все объявления, никто не хотел ехать в такой мороз, было жалко машину, что и
+								</p>
+								<p class="review__company">Авито</p>
+							</div>
+						</div>
+						<div class="pagination reviews__pagination">
+							<span class="pagination__item pagination__item--active">1</span>
+							<span class="pagination__item">2</span>
+							<span class="pagination__item">3</span>
+							<span class="pagination__item">4</span>
+							<span class="pagination__item">5</span>
+							<span class="pagination__item">6</span>
+							<span class="pagination__item">7</span>
+							<span class="pagination__item">8</span>
+							<a href="" class="pagination__link">Дальше
+								<svg class="pagination__arrow" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M15 5.5L13.59 6.91L18.17 11.5H2V13.5H18.17L13.58 18.09L15 19.5L22 12.5L15 5.5Z" fill="black"/>
+								</svg>
+							</a>
 						</div>
 					</div>
 				</section>
@@ -372,7 +564,7 @@
 									</ul>
 								</li>
 								<li class="actions__item actions__item--review">
-									<a href="#" class="actions__link">Оставить отзыв</a>
+									<a href="./reviews.html" class="actions__link">Оставить отзыв</a>
 								</li>
 								<a href="tel:+79814026011" class="button actions__button">Позвонить</a>
 							</ul>
@@ -466,11 +658,18 @@
 						<p class="success__text">В ближайшее время с вами свяжется наш специалист</p>
 					</div>
 				</div>
+				<div class="graph-modal__container graph-modal__container--success" role="dialog" aria-modal="true" data-graph-target="success-review">
+					<button class="btn-reset graph-modal__close graph-modal__close--success js-modal-close" aria-label="Закрыть модальное окно"></button>
+					<div class="graph-modal__content">
+						<h2 class="success__title">Спасибо за отзыв!</h2>
+						<p class="success__text">Мы опубликуем его после проверки.</p>
+						<button class="button success__button js-modal-close">Отлично</button>
+					</div>
+				</div>
+
 			</div>
 			<script src="js/imask.js"></script>
 			<script src="js/just-validate.min.js"></script>
 			<script src="js/reviews.js"></script>
-			<script>
-			</script>
 		</body>
 	</html>

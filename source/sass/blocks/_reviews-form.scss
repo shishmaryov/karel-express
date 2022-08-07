@@ -1,8 +1,11 @@
 .reviews-form {
 	overflow: hidden;
+	margin-bottom: 24px;
+	z-index: 1;
 
 	@media(min-width: 1024px) {
 		position: relative;
+		margin-bottom: 32px;
 
 		&::after {
 			position: absolute;
@@ -28,6 +31,7 @@
 			top: 0;
 			right: -10px;
 			width: 69px;
+			z-index: -2;
 			height: 64px;
 			content: url('../img/icons/review-form-before-mobile.svg');
 		}
@@ -37,6 +41,7 @@
 			bottom: 105px;
 			left: -7px;
 			width: 64px;
+			z-index: -2;
 			height: 62px;
 			content: url('../img/icons/review-form-after-mobile.svg');
 		}
@@ -93,6 +98,15 @@
 
 		@media(min-width: 1024px) {
 			font-size: 32px;
+		}
+	}
+
+	.is-invalid {
+		background: #FFF5F5;
+		border: 1px solid #FFD8D8;
+
+		&::placeholder {
+			color: #F93232;
 		}
 	}
 }
@@ -180,6 +194,17 @@
 		line-height: 20px;
 		margin-bottom: 12px;
 		font-weight: 700;
+
+		&--disabled {
+			background: #D8D8D8;
+
+			&::after {
+				animation: none;
+			}
+			&:hover {
+				background: #D8D8D8;
+			}
+		}
 	}
 }
 
@@ -223,6 +248,11 @@
 			~.raiting__item {
 				color: #FFD806;
 			}
+		}
+
+		&--error {
+			color: #FFF5F5;
+			-webkit-text-stroke: 1px #F93232;
 		}
 	}
 }

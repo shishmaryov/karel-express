@@ -148,12 +148,12 @@ window.addEventListener("DOMContentLoaded", function() {
 	accordion('office');
 	accordion('country-house');
 
-	document.querySelector('#consultation__phone').addEventListener('change', () => {
+	document.querySelector('#consultation__phone').addEventListener('input', () => {
 		document.querySelector('.consultation__phone-wrapper').classList.add('consultation__phone-wrapper--active');
 
 	});
 
-	document.querySelector('#questions__phone').addEventListener('change', () => {
+	document.querySelector('#questions__phone').addEventListener('input', () => {
 		document.querySelector('.questions__phone-wrapper').classList.add('questions__phone-wrapper--active');
 
 	});

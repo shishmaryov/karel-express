@@ -52,9 +52,9 @@ window.addEventListener('DOMContentLoaded', () => {
         sublistElse.classList.toggle('header__sublist--active');
         elseImg.classList.toggle('active');
         if (elseImg.classList.contains('active')) {
-            elseImg.src = '../img/icons/else-active.svg';
+            elseImg.src = './img/icons/else-active.svg';
         } else {
-            elseImg.src = '../img/icons/else.svg';
+            elseImg.src = './img/icons/else.svg';
         }
     });
 
@@ -472,7 +472,7 @@ window.addEventListener('DOMContentLoaded', () => {
             submitHandler(document.querySelector('#order-call__form'));
         });
 
-    document.querySelector('#order-call__phone').addEventListener('change', () => {
+    document.querySelector('#order-call__phone').addEventListener('input', () => {
         document.querySelector('.order-call__phone-wrapper').classList.add('consultation__phone-wrapper--active');
 
     });

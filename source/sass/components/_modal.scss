@@ -62,10 +62,10 @@
 
 	&--success {
 		width: auto;
-		padding-top: 50px;
-    	padding-left: 25px;
-    	padding-right: 25px;
-    	padding-bottom: 25px;
+		padding-top: 75px;
+    	padding-left: 130px;
+    	padding-right: 130px;
+    	padding-bottom: 75px;
     	text-align: center;
     	border-radius: 5px;
 
@@ -73,12 +73,6 @@
     	top: 20px;
     	right: 15px;
     }
-	}
-}
-
-@media (max-width:1024px) {
-	.graph-modal__container {
-		width: 90%;
 	}
 }
 

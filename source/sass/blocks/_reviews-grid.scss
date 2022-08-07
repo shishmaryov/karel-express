@@ -1,0 +1,38 @@
+.reviews-grid {
+	margin-bottom: 60px;
+
+	@media(min-width: 1024px) {
+		margin-bottom: 120px;
+	}
+
+	.reviews {
+		margin-top: 0;
+		display: grid;
+		row-gap: 18px;
+		grid-template-columns: 1fr;
+		margin-bottom: 24px;
+
+		&::after {
+			content: '';
+			width: 0;
+			height: 0;
+			visibility: hidden;
+		}
+
+		@media(min-width: 768px) {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		@media(min-width: 1024px) {
+			column-gap: calc(100% - 770px);
+			margin-bottom: 42px;
+		}
+
+		@media(min-width: 1215px) {
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-rows: 1fr 1fr 1fr;
+			row-gap: 24px;
+			column-gap: 30px;
+		}
+}
+}

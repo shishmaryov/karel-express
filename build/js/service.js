@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			submitHandler(document.querySelector('#questions__form'));
 		});
 
-	document.querySelector('#service__phone').addEventListener('change', () => {
+	document.querySelector('#service__phone').addEventListener('input', () => {
 		document.querySelector('.service__phone-wrapper').classList.add('consultation__phone-wrapper--active');
 
 	});
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	});
 
-	document.querySelector('#questions__phone').addEventListener('change', () => {
+	document.querySelector('#questions__phone').addEventListener('input', () => {
 		document.querySelector('.questions__phone-wrapper').classList.add('questions__phone-wrapper--active');
 
 	});
