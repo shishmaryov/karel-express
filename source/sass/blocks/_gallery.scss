@@ -169,10 +169,14 @@
 }
 
 .swiper-button-prev {
-	left: 36px;
+	left: 8px;
 	width: 30px;
 	height: 37px;
 	top: calc(50% - 17.5px);
+
+	@media(min-width: 1024px) {
+		left: 18px;
+	}
 
 	&::after {
 		content: url('../img/icons/gallery-arrow-left.svg');
@@ -180,13 +184,40 @@
 }
 
 .swiper-button-next {
-	right: 36px;
+	right: 8px;
 	width: 30px;
 	height: 37px;
 	top: calc(50% - 17.5px);
 
+	@media(min-width: 1024px) {
+		right: 18px;
+	}
+
 	&::after {
 		content: url('../img/icons/gallery-arrow-right.svg');
+	}
+}
+
+.swiper-pagination {
+	position: absolute;
+	top: 13px;
+	left: 13px;
+	z-index: 2;
+	color: #BDBDBD;
+	border-radius: 3px;
+    width: max-content;
+    height: max-content;
+    padding-top: 13px;
+    padding-left: 17.5px;
+    top: 10px;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.75);
+
+
+	@media(min-width: 1024px) {
+		display: none;
 	}
 }
 
@@ -246,9 +277,15 @@
 .graph-modal__close--gallery {
 	width: 24px;
 	height: 24px;
-	top: 24px;
-	right: 36px;
-	background-color: #404040;
+	top: 13px;
+	right: 13px;
+	background-color: rgba(0, 0, 0, 0.75);
+
+	@media(min-width: 1024px) {
+		right: 14px;
+		top: 14px;
+		background-color: rgba(80, 80, 80, 0.8);
+	}
 
 	path {
 		fill: #fff;

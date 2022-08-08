@@ -341,8 +341,10 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+
     document.querySelector('.success__button').addEventListener('click', () => {
-    	new GraphModal().close('success-review');
+    	document.querySelector('div[data-graph-target="success-review"]').classList.remove('graph-modal-open');
+    	document.querySelector('.graph-modal').classList.remove('is-open');
     });
 
     if (window.screen.availWidth < 769) {

@@ -229,18 +229,32 @@ if (products) {
 
 function card (selector) {
 	let mySwiper = new Swiper(`.${selector} .slider-block`, {
-			slidesPerView: 1,
-			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev',
-			},
-			allowTouchMove: true,
-			breakpoints: {
-				1024: {
-            allowTouchMove: false,
-        	}
-        }
-		});
+            slidesPerView: 1,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'custom',
+                renderCustom: function(swiper, current, total) {
+                    return (current) + ' из ' + (total);
+                }
+            },
+            allowTouchMove: true,
+            renderCustom: function(swiper, current, total) {
+                return current + ' из ' + total;
+            },
+            breakpoints: {
+                1024: {
+                    allowTouchMove: false,
+                    pagination: {
+                        el: '',
+                    },
+                }
+            }
+        });
 
 	const maxItems = 5;
 	const sliderNavItems = document.querySelectorAll(`.${selector} .slider-nav__item`);
