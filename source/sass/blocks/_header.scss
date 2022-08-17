@@ -9,7 +9,7 @@
 
 	&--mobile {
 		position: relative;
-		z-index: 2;
+		z-index: 5;
 
 		@media(min-width: 1024px) {
 			display: none;
