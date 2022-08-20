@@ -38,6 +38,14 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    document.querySelector('.submenu--else').addEventListener('mouseover', function() {
+        document.querySelector('.header__else > img').src = 'img/icons/else-active.svg';
+    });
+
+    document.querySelector('.submenu--else').addEventListener('mouseout', function() {
+        document.querySelector('.header__else > img').src = 'img/icons/else.svg';
+    });
+
     function submitHandler(thisForm) {
         let formData = new FormData(thisForm);
 
