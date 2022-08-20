@@ -32,9 +32,9 @@ window.addEventListener('DOMContentLoaded', () => {
         sublistElse.classList.toggle('header__sublist--active');
         elseImg.classList.toggle('active');
         if (elseImg.classList.contains('active')) {
-            elseImg.src = '../img/icons/else-active.svg';
+            elseImg.src = './img/icons/else-active.svg';
         } else {
-            elseImg.src = '../img/icons/else.svg';
+            elseImg.src = './img/icons/else.svg';
         }
     });
 

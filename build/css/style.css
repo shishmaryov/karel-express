@@ -1942,7 +1942,11 @@ button.swiper-pagination-bullet {
     padding-left: 25px;
     padding-right: 25px;
     padding-bottom: 25px;
-    border-radius: 3px; }
+    border-radius: 20px;
+    margin-right: 16px;
+    margin-left: 16px; }
+    .graph-modal__container--order-call .graph-modal__content {
+      margin-top: 29px; }
     .graph-modal__container--order-call .graph-modal__close {
       top: 12px;
       right: 12px; }
@@ -1953,7 +1957,11 @@ button.swiper-pagination-bullet {
     padding-left: 25px;
     padding-right: 25px;
     text-align: center;
-    border-radius: 5px; }
+    border-radius: 20px;
+    margin-left: 16px;
+    margin-right: 16px; }
+    .graph-modal__container--success .graph-modal__content {
+      margin-top: 29px; }
     @media (min-width: 510px) {
       .graph-modal__container--success {
         padding-left: 100px;
@@ -3874,11 +3882,11 @@ img {
         right: 15px; } }
   @media (max-width: 1150px) {
     .benefits__item--clock .benefit__link {
-      margin-top: 29px; } }
+      margin-top: 19px; } }
 
 @media (max-width: 1150px) and (max-width: 1150px) and (min-width: 1024px) {
   .benefits__item--clock .benefit__link {
-    margin-top: 11px; } }
+    margin-top: 6px; } }
   .benefits__item--clock::after {
     content: url("../img/icons/benefits-clock.svg"); }
 
@@ -3887,10 +3895,10 @@ img {
     margin-top: 11px; } }
   @media (max-width: 1150px) {
     .benefits__item--mover .benefit__link {
-      margin-top: 32px; } }
+      margin-top: 22px; } }
   @media (max-width: 1150px) and (min-width: 1024px) {
     .benefits__item--mover .benefit__link {
-      margin-top: 12px; } }
+      margin-top: 7px; } }
   .benefits__item--mover::after {
     content: url("../img/icons/benefits-mover.svg"); }
   @media (min-width: 1024px) {
@@ -3947,8 +3955,8 @@ img {
           align-items: center;
   width: 85px;
   height: 22px;
-  margin-top: 29px;
-  margin-left: calc(100% - 100px);
+  margin-top: 19px;
+  margin-left: calc(100% - 110px);
   padding-right: 26px;
   padding-left: 20px;
   font-weight: 400;
@@ -3957,7 +3965,8 @@ img {
   text-decoration: none; }
   @media (min-width: 1024px) {
     .benefit__link {
-      margin-top: 7px; } }
+      margin-top: 2px;
+      margin-left: calc(100% - 105px); } }
   @media (min-width: 1150px) {
     .benefit__link {
       margin-top: 11px;
@@ -5834,6 +5843,11 @@ img {
 
 .order-call__agreement {
   text-align: center; }
+
+.order-call__link {
+  text-decoration: none;
+  color: #4AAB3C;
+  cursor: pointer; }
 
 @media (min-width: 1024px) {
   .service__form {
