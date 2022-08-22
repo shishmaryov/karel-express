@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Karel express</title>
+		<link rel="stylesheet" href="css/style.min.css">
+		<link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+		<link rel="manifest" href="img/favicons/site.webmanifest">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+		<body class="auth-page">
+			<header class="header header--desktop auth-page__header">
+				<div class="container">
+					<div class="header__top">
+						<div class="header__top--left">
+							<div class="logo header__logo">
+								<a href="index.html" class="undecorated-link">
+									<img src="img/logotypes/karel-express-logo.svg" alt="Карел экспресс" width="165" height="58" class="logo__img">
+								</a>
+							</div>
+							<p class="header__description">Грузоперевозки в Петрозаводске для физических и юридических лиц</p>
+						</div>
+						<div class="header__top--right">
+							<a href="tel:+79814026011" class="header__phone">8(981)402-60-11</a>
+							<div class="header__whatsapp">
+								<a href="https://wa.clck.bar/79814026011" class="whatsapp-link">
+									<img src="img/icons/whatsapp.svg" alt="whatsapp" width="39" height="39" class="whasapp__img">
+								</a>
+							</div>
+							<button data-graph-path="order-call" class="button header__button">Заказать звонок</button>
+						</div>
+					</div>
+				</div>
+				<div class="header__bottom">
+					<div class="container">
+						<menu class="header__menu">
+						<li class="menu__geo submenu__title submenu__title--geo submenu submenu--geo">
+							<a href="#" class="menu__link">Петрозаводск</a>
+							<ul class="header__sublist header__sublist--geo">
+								<li class="header__subitem">
+									<a href="#" class="menu__link">Медвежьегорск</a>
+								</li>
+								<li class="header__subitem">
+									<a href="#" class="menu__link">Кондопога</a>
+								</li>
+								<li class="header__subitem">
+									<a href="#" class="menu__link">Сегежа</a>
+								</li>
+								<li class="header__subitem">
+									<a href="#" class="menu__link">Костомукша</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<ul class="header__list">
+								<li class="header__item header__services submenu__title submenu__title--services submenu submenu--services">
+									<a href="#" class="menu__link">Услуги</a>
+									<ul class="header__sublist header__sublist--services">
+										<li class="header__subitem">
+											<a href="apartments.html" class="menu__link">Квартирный переезд</a>
+										</li>
+										<li class="header__subitem">
+											<a href="moving-with-movers.html" class="menu__link">Квартирный переезд c грузчиками</a>
+										</li>
+										<li class="header__subitem">
+											<a href="office.html" class="menu__link">Офисный переезд</a>
+										</li>
+										<li class="header__subitem">
+											<a href="materials.html" class="menu__link">Перевозка стройматериалов</a>
+										</li>
+										<li class="header__subitem">
+											<a href="countryside.html" class="menu__link">Дачный переезд</a>
+										</li>
+										<li class="header__subitem">
+											<a href="cities.html" class="menu__link">Межгород</a>
+										</li>
+									</ul>
+								</li>
+								<li class="header__item">
+									<a href="prices.html" class="menu__link">Цены</a>
+								</li>
+								<li class="header__item">
+									<a href="discounts.html" class="menu__link">Акции</a>
+								</li>
+								<li class="header__item">
+									<a href="park.html" class="menu__link">Автопарк</a>
+								</li>
+								<li class="header__item header__else submenu submenu--else">
+									<img src="img/icons/else.svg" alt="Другое" width="25" height="25">
+									<div class="header__submenu header__submenu--else">
+										<ul class="header__sublist header__sublist--else">
+											<li class="header__subitem">
+												<a href="company.html" class="menu__link">О компании</a>
+											</li>
+											<li class="header__subitem">
+												<a href="inforamtion.html" class="menu__link">Полезная информация</a>
+											</li>
+											<li class="header__subitem">
+												<a href="reviews.html" class="menu__link">Отзывы</a>
+											</li>
+											<li class="header__subitem">
+												<a href="FAQ.html" class="menu__link">Частые вопросы</a>
+											</li>
+											<li class="header__subitem">
+												<a href="news.html" class="menu__link">Новости</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</li>
+						<li class="header__log-in log-in">
+							<a href="auth.html" class="menu__link log-in__link">Личный кабинет</a>
+						</li>
+						</menu>
+					</div>
+				</div>
+			</header>
+			<header class="header header--mobile auth-page__header">
+				<div class="container">
+					<div class="header__top">
+						<div class="logo header__logo">
+							<a href="index.html" class="undecorated-link">
+								<img src="img/logotypes/karel-express-logo-mobile.svg" alt="Карел экспресс" width="115" height="41" class="logo__img">
+							</a>
+						</div>
+						<a href="tel:+79814026011" class="header__phone">8(981)402-60-11</a>
+						<span class="header__burger"></span>
+					</div>
+					<div class="header__bottom">
+						<ul class="header__menu">
+							<li class="menu__geo submenu__title submenu__title--geo submenu submenu--geo">
+								<a href="#" class="menu__link">Петрозаводск</a>
+								<ul class="header__sublist header__sublist--geo">
+									<li class="header__subitem">
+										<a href="#" class="menu__link">Медвежьегорск</a>
+									</li>
+									<li class="header__subitem">
+										<a href="#" class="menu__link">Кондопога</a>
+									</li>
+									<li class="header__subitem">
+										<a href="#" class="menu__link">Сегежа</a>
+									</li>
+									<li class="header__subitem">
+										<a href="#" class="menu__link">Костомукша</a>
+									</li>
+								</ul>
+							</li>
+							<li class="header__item header__services submenu__title submenu__title--services submenu submenu--services">
+								<a href="" class="menu__link">Услуги</a>
+								<ul class="header__sublist header__sublist--services">
+									<li class="header__subitem">
+										<a href="apartments.html" class="menu__link">Квартирный переезд</a>
+									</li>
+									<li class="header__subitem">
+										<a href="moving-with-movers.html" class="menu__link">Квартирный переезд c грузчиками</a>
+									</li>
+									<li class="header__subitem">
+										<a href="office.html" class="menu__link">Офисный переезд</a>
+									</li>
+									<li class="header__subitem">
+										<a href="materials.html" class="menu__link">Перевозка стройматериалов</a>
+									</li>
+									<li class="header__subitem">
+										<a href="countryside.html" class="menu__link">Дачный переезд</a>
+									</li>
+									<li class="header__subitem">
+										<a href="cities.html" class="menu__link">Межгород</a>
+									</li>
+								</ul>
+							</li>
+							<li class="header__item">
+								<a href="prices.html" class="menu__link">Цены</a>
+							</li>
+							<li class="header__item">
+								<a href="discounts.html" class="menu__link">Акции</a>
+							</li>
+							<li class="header__item">
+								<a href="park.html" class="menu__link">Автопарк</a>
+							</li>
+							<li class="header__item header__else submenu submenu--else">
+								<img src="img/icons/else.svg" alt="Другое" width="25" height="25">
+								<div class="header__submenu header__submenu--else">
+									<ul class="header__sublist header__sublist--else">
+										<li class="header__subitem">
+											<a href="company.html" class="menu__link">О компании</a>
+										</li>
+										<li class="header__subitem">
+											<a href="inforamtion.html" class="menu__link">Полезная информация</a>
+										</li>
+										<li class="header__subitem">
+											<a href="reviews.html" class="menu__link">Отзывы</a>
+										</li>
+										<li class="header__subitem">
+											<a href="FAQ.html" class="menu__link">Частые вопросы</a>
+										</li>
+										<li class="header__subitem">
+											<a href="news.html" class="menu__link">Новости</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="header__item header__log-in log-in">
+								<a href="auth.html" class="menu__link log-in__link">Личный кабинет</a>
+							</li>
+							<li class="header__item header__social-links">
+								<a href="https://wa.clck.bar/79814026011" class="header__social-link">
+									<img src="img/icons/whatsapp.svg" alt="whatsapp" width="42" height="42" class="header__social-icon">
+								</a>
+								<a href="" class="header__social-link">
+									<img src="img/icons/instagram.svg" alt="instagram" width="42" height="42" class="header__social-icon">
+								</a>
+								<a href="https://vk.com/karel.express" class="header__social-link">
+									<img src="img/icons/vk.svg" alt="vk" width="42" height="42" class="header__social-icon">
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</header>
+			<main class="auth-page__main">
+				<div class="container">
+					<div class="auth">
+						<div class="auth__img">
+							<picture>
+								<source srcset="img/content-images/auth-client-desktop.svg" media="(min-width: 1024px)">
+								<img src="img/content-images/auth-client-mobile.svg" alt="Illustration of delivery" class="auth__img">
+							</picture>
+						</div>
+						<div class="auth__form auth-form">
+							<form method="POST" action="../mail.php" name="phone" id="auth-form" class="consultation__form">
+								<input type="hidden" name="admin_email[]" value="karel-express.ru@yandex.ru">
+								<input type="hidden" name="form_subject" value="Karel express">
+								<h2 class="section__title auth-form__title">Войти или зарегистрироваться</h2>
+								<div class="auth-form__radio-buttons">
+									<label class="auth-form__label" for="customer">
+									<input type="radio" id="customer"
+									name="I`m" value="customer" class="auth-form__radio-button" checked>Я клиент</label>
+									<label class="auth-form__label" for="driver">
+									<input type="radio" id="driver"
+									name="I`m" value="driver" class="auth-form__radio-button">Я водитель</label>
+								</div>
+									<label for="consultation__phone" class="auth-form__label">Введите ваш номер телефона</label>
+									<div class="consultation__phone-wrapper">
+									<input type="text" name="phone" placeholder="+7 (9xx) - xxx - xx - xx" id="consultation__phone" class="tel form__control form__input consultation__phone">
+								</div>
+								<button type="submit" class="button consultation__button">Получить код</button>
+								<!-- <p class="consultation__agreement">Отправляя форму Вы соглашаетесь <a href="policy" class="order-call__link">с обработкой персональных данных и политикой конфеденциальности</a></p> -->
+							</form>
+						</div>
+					</div>
+				</div>
+			</main>
+			<footer class="footer">
+				<div class="container">
+					<a href="index.html" class="undecorated-link">
+						<picture>
+							<source srcset="img/logotypes/footer-logo-desktop.svg" media="(min-width: 1024px)">
+							<img src="img/logotypes/footer-logo-mobile.svg" alt="Karel express" class="footer__logo">
+						</picture>
+					</a>
+					<div class="footer__columns">
+						<div class="footer__actions actions">
+							<ul class="actions__list">
+								<li class="actions__item actions__item--phone">
+									<a href="tel:+79814026011" class="actions__link">8(981)402-60-11</a>
+								</li>
+								<li class="menu__geo submenu__title submenu__title--geo submenu submenu--geo">
+									<a href="#" class="menu__link">Петрозаводск</a>
+									<ul class="footer__sublist footer__sublist--geo">
+										<li class="footer__subitem">
+											<a href="#" class="menu__link">Медвежьегорск</a>
+										</li>
+										<li class="footer__subitem">
+											<a href="#" class="menu__link">Кондопога</a>
+										</li>
+										<li class="footer__subitem">
+											<a href="#" class="menu__link">Сегежа</a>
+										</li>
+										<li class="footer__subitem">
+											<a href="#" class="menu__link">Костомукша</a>
+										</li>
+									</ul>
+								</li>
+								<li class="actions__item actions__item--review">
+									<a href="./reviews.html" class="actions__link">Оставить отзыв</a>
+								</li>
+								<a href="tel:+79814026011" class="button actions__button">Позвонить</a>
+							</ul>
+						</div>
+						<nav class="footer__nav">
+							<div class="submenu--services">
+								<a class="menu__link footer__link submenu__title--services">
+									Услуги
+								</a>
+								<ul class="header__sublist header__sublist--services">
+									<li class="header__subitem">
+										<a href="apartments.html" class="menu__link">Квартирный переезд</a>
+									</li>
+									<li class="header__subitem">
+										<a href="moving-with-movers.html" class="menu__link">Квартирный переезд c грузчиками</a>
+									</li>
+									<li class="header__subitem">
+										<a href="office.html" class="menu__link">Офисный переезд</a>
+									</li>
+									<li class="header__subitem">
+										<a href="materials.html" class="menu__link">Перевозка стройматериалов</a>
+									</li>
+									<li class="header__subitem">
+										<a href="countryside.html" class="menu__link">Дачный переезд</a>
+									</li>
+									<li class="header__subitem">
+										<a href="cities.html" class="menu__link">Межгород</a>
+									</li>
+								</ul>
+							</div>
+							<a href="prices.html" class="footer__link">
+								Цены
+							</a>
+							<a href="discounts.html" class="footer__link">
+								Акции
+							</a>
+							<a href="park.html" class="footer__link">
+								Автопарк
+							</a>
+							<a href="company.html" class="footer__link">
+								О компании
+							</a>
+							<a href="contacts.html" class="footer__link">
+								Контакты
+							</a>
+						</nav>
+						<div class="footer__links">
+							<a href="policy.html" class="footer__link footer__link--middle">Политика конфиденциальности</a>
+							<a href="agreement.html" class="footer__link footer__link--middle">Пользовательское соглашение</a>
+							<div class="footer__social">
+								<a href="https://wa.clck.bar/79814026011" class="footer__social-link">
+									<img src="img/icons/footer-whatsapp.svg" alt="whatsapp" class="footer__social-icon">
+								</a>
+								<a href="#" class="footer__social-link">
+									<img src="img/icons/footer-instagram.svg" alt="instagram" class="footer__social-icon">
+								</a>
+								<a href="https://vk.com/karel.express" class="footer__social-link">
+									<img src="img/icons/footer-vk.svg" alt="vk" class="footer__social-icon">
+								</a>
+							</div>
+						</div>
+					</div>
+					<a href="#" class="undecorated-link">
+						<picture>
+							<source srcset="img/logotypes/cidgital-desktop.svg" media="(min-width: 1024px)">
+							<img src="img/logotypes/cidgital-mobile.svg" alt="cidgital" class="footer__company">
+						</picture>
+					</a>
+				</div>
+			</footer>
+			<div class="graph-modal">
+				<div class="graph-modal__container graph-modal__container--order-call" role="dialog" aria-modal="true" data-graph-target="order-call">
+					<button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+					<div class="graph-modal__content">
+						<form method="POST" action="../mail.php" name="phone" id="order-call__form" class="consultation__form order-call__form">
+							<input type="hidden" name="admin_email[]" value="karel-express.ru@yandex.ru">
+							<input type="hidden" name="form_subject" value="Karel express">
+							<div class="consultation__phone-wrapper order-call__phone-wrapper">
+								<input type="text" name="phone" placeholder="+7 (9xx) - xxx - xx - xx" id="order-call__phone" class="tel form__control form__input consultation__phone order-call__phone">
+							</div>
+							<button type="submit" class="button consultation__button order-call__button">Заказать звонок</button>
+							<p class="consultation__agreement order-call__agreement">Отправляя форму Вы соглашаетесь <a href="policy" class="order-call__link">с обработкой персональных данных и политикой конфеденциальности</a></p>
+						</form>
+					</div>
+				</div>
+				<div class="graph-modal__container graph-modal__container--success" role="dialog" aria-modal="true" data-graph-target="success">
+					<button class="btn-reset graph-modal__close graph-modal__close--success js-modal-close" aria-label="Закрыть модальное окно"></button>
+					<div class="graph-modal__content">
+						<img src="img/icons/tick.svg" alt="" class="success__img">
+						<h2 class="success__title">Ваша заявка принята</h2>
+						<p class="success__text">В ближайшее время с вами свяжется наш специалист</p>
+					</div>
+				</div>
+			</div>
+			<script src="js/imask.js"></script>
+			<script src="js/just-validate.min.js"></script>
+			<!-- <script src="js/auth.js"></script> -->
+			<script>
+				window.addEventListener('DOMContentLoaded', () => {
+			let burger = document.querySelector('.header__burger');
+			burger.addEventListener('click', function() {
+			burger.classList.toggle('header__burger--active');
+			document.querySelector('.header--mobile .header__bottom').classList.toggle('header__bottom--active');
+			});
+			function submenu(title, menu) {
+			document.querySelector(title).addEventListener('click', function() {
+			document.querySelector(menu + '> .header__sublist').classList.toggle('header__sublist--active');
+			document.querySelector(title).classList.toggle('submenu__title--active');
+			document.querySelector(menu + '> .menu__link').classList.toggle('menu__link--active');
+			});
+			}
+			submenu(('.header--mobile .submenu__title--geo'), ('.header--mobile .submenu--geo'));
+			submenu(('.header--mobile .submenu__title--services'), ('.header--mobile .submenu--services'));
+			submenu(('footer .submenu__title--services'), ('footer .submenu--services'));
+			let geoTitle = ('.footer .submenu__title--geo');
+			let geoList = ('.footer .submenu--geo');
+			document.querySelector(geoTitle).addEventListener('click', function() {
+			document.querySelector(geoList + '> .footer__sublist').classList.toggle('footer__sublist--active');
+			document.querySelector(geoTitle).classList.toggle('submenu__title--active');
+			document.querySelector(geoList + '> .menu__link').classList.toggle('menu__link--active');
+			});
+			let sublistElse = document.querySelector('.header--mobile  .header__sublist--else'),
+			elseImg = document.querySelector('.header--mobile .submenu--else img');
+			document.querySelector('.header--mobile .header__else').addEventListener('click', function() {
+			sublistElse.classList.toggle('header__sublist--active');
+			elseImg.classList.toggle('active');
+			if (elseImg.classList.contains('active')) {
+			elseImg.src = './img/icons/else-active.svg';
+			} else {
+			elseImg.src = './img/icons/else.svg';
+			}
+			});
+			document.querySelector('.submenu--else').addEventListener('mouseover', function() {
+			document.querySelector('.header__else > img').src = 'img/icons/else-active.svg';
+			});
+			document.querySelector('.submenu--else').addEventListener('mouseout', function() {
+			document.querySelector('.header__else > img').src = 'img/icons/else.svg';
+			});
+
+			function submitHandler(thisForm) {
+			let formData = new FormData(thisForm);
+			let xhr = new XMLHttpRequest();
+			xhr.onreadystatechange = function() {
+			if (xhr.readyState === 4) {
+				if (xhr.status === 200) {
+					console.log('Отправлено');
+				}
+			}
+			}
+			xhr.open('POST', '../mail.php', true);
+			xhr.send(formData);
+			new GraphModal().open('success');
+			thisForm.reset();
+			}
+
+			const validation1 = new JustValidate('#order-call__form', {
+			errorFieldCssClass: 'is-invalid'
+			});
+			validation1
+			.addField('#order-call__phone', [{
+			rule: 'required',
+			errorMessage: ' '
+			}])
+			.onSuccess((event) => {
+			document.querySelector('.graph-modal__container--order-call').classList.remove('graph-modal-open');
+			submitHandler(document.querySelector('#order-call__form'));
+			});
+
+			const validation2 = new JustValidate('#auth-form', {
+			errorFieldCssClass: 'is-invalid'
+			});
+			validation2
+			.addField('#consultation__phone', [{
+			rule: 'required',
+			errorMessage: ' '
+			}])
+			.onSuccess((event) => {
+			submitHandler(document.querySelector('#auth-form'));
+			});
+
+			document.querySelector('#order-call__phone').addEventListener('input', () => {
+			document.querySelector('.order-call__phone-wrapper').classList.add('consultation__phone-wrapper--active');
+			});
+			document.querySelector('.order-call__button').addEventListener('click', () => {
+			if ((document.querySelector('#order-call__phone').classList.contains('is-invalid')) == true) {
+			document.querySelector('.order-call__phone-wrapper').classList.remove('consultation__phone-wrapper--active');
+			document.querySelector('#order-call__phone').placeholder = 'Введите телефон';
+			}
+			});
+
+
+			! function(t) {
+			var e = {};
+			function o(n) {
+			if (e[n]) return e[n].exports;
+			var i = e[n] = {
+				i: n,
+				l: !1,
+				exports: {}
+			};
+			return t[n].call(i.exports, i, i.exports, o), i.l = !0, i.exports
+			}
+			o.m = t, o.c = e, o.d = function(t, e, n) {
+			o.o(t, e) || Object.defineProperty(t, e, {
+				enumerable: !0,
+				get: n
+			})
+			}, o.r = function(t) {
+			"undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(t, Symbol.toStringTag, {
+				value: "Module"
+			}), Object.defineProperty(t, "__esModule", {
+				value: !0
+			})
+			}, o.t = function(t, e) {
+			if (1 & e && (t = o(t)), 8 & e) return t;
+			if (4 & e && "object" == typeof t && t && t.__esModule) return t;
+			var n = Object.create(null);
+			if (o.r(n), Object.defineProperty(n, "default", {
+					enumerable: !0,
+					value: t
+				}), 2 & e && "string" != typeof t)
+				for (var i in t) o.d(n, i, function(e) {
+					return t[e]
+				}.bind(null, i));
+			return n
+			}, o.n = function(t) {
+			var e = t && t.__esModule ? function() {
+				return t.default
+			} : function() {
+				return t
+			};
+			return o.d(e, "a", e), e
+			}, o.o = function(t, e) {
+			return Object.prototype.hasOwnProperty.call(t, e)
+			}, o.p = "", o(o.s = 1)
+			}([function(t, e, o) {
+			"use strict";
+			o.d(e, "a", (function() {
+			return n
+			}));
+			class n {
+			constructor(t) {
+				this.options = Object.assign({
+					isOpen: () => {},
+					isClose: () => {}
+				}, t), this.modal = document.querySelector(".graph-modal"), this.speed = 300, this.animation = "fade", this._reOpen = !1, this._nextContainer = !1, this.modalContainer = !1, this.isOpen = !1, this.previousActiveElement = !1, this._focusElements = ["a[href]", "input", "select", "textarea", "button", "iframe", "[contenteditable]", '[tabindex]:not([tabindex^="-"])'], this._fixBlocks = document.querySelectorAll(".fix-block"), this.events()
+			}
+			events() {
+				this.modal && (document.addEventListener("click", function(t) {
+					const e = t.target.closest("[data-graph-path]");
+					if (e) {
+						let t = e.dataset.graphPath,
+							o = e.dataset.graphAnimation,
+							n = e.dataset.graphSpeed;
+						return this.animation = o || "fade", this.speed = n ? parseInt(n) : 300, this._nextContainer = document.querySelector(`[data-graph-target="${t}"]`), void this.open()
+					}
+					t.target.closest(".graph-modal__close") && this.close()
+				}.bind(this)), window.addEventListener("keydown", function(t) {
+					27 == t.keyCode && this.isOpen && this.close(), 9 == t.which && this.isOpen && this.focusCatch(t)
+				}.bind(this)), document.addEventListener("click", function(t) {
+					t.target.classList.contains("graph-modal") && t.target.classList.contains("is-open") && this.close()
+				}.bind(this)))
+			}
+			open(t) {
+				if (this.previousActiveElement = document.activeElement, this.isOpen) return this.reOpen = !0, void this.close();
+				this.modalContainer = this._nextContainer, t && (this.modalContainer = document.querySelector(`[data-graph-target="${t}"]`)), this.modal.style.setProperty("--transition-time", this.speed / 1e3 + "s"), this.modal.classList.add("is-open"), document.body.style.scrollBehavior = "auto", document.documentElement.style.scrollBehavior = "auto", this.disableScroll(), this.modalContainer.classList.add("graph-modal-open"), this.modalContainer.classList.add(this.animation), setTimeout(() => {
+					this.options.isOpen(this), this.modalContainer.classList.add("animate-open"), this.isOpen = !0, this.focusTrap()
+				}, this.speed)
+			}
+			close() {
+				this.modalContainer && (this.modalContainer.classList.remove("animate-open"), this.modalContainer.classList.remove(this.animation), this.modal.classList.remove("is-open"), this.modalContainer.classList.remove("graph-modal-open"), this.enableScroll(), document.body.style.scrollBehavior = "auto", document.documentElement.style.scrollBehavior = "auto", this.options.isClose(this), this.isOpen = !1, this.focusTrap(), this.reOpen && (this.reOpen = !1, this.open()))
+			}
+			focusCatch(t) {
+				const e = this.modalContainer.querySelectorAll(this._focusElements),
+					o = Array.prototype.slice.call(e),
+					n = o.indexOf(document.activeElement);
+				t.shiftKey && 0 === n && (o[o.length - 1].focus(), t.preventDefault()), t.shiftKey || n !== o.length - 1 || (o[0].focus(), t.preventDefault())
+			}
+			focusTrap() {
+				const t = this.modalContainer.querySelectorAll(this._focusElements);
+				this.isOpen ? t.length && t[0].focus() : this.previousActiveElement.focus()
+			}
+			disableScroll() {
+				let t = window.scrollY;
+				this.lockPadding(), document.body.classList.add("disable-scroll"), document.body.dataset.position = t, document.body.style.top = -t + "px"
+			}
+			enableScroll() {
+				let t = parseInt(document.body.dataset.position, 10);
+				this.unlockPadding(), document.body.style.top = "auto", document.body.classList.remove("disable-scroll"), window.scroll({
+					top: t,
+					left: 0
+				}), document.body.removeAttribute("data-position")
+			}
+			lockPadding() {
+				let t = window.innerWidth - document.body.offsetWidth + "px";
+				this._fixBlocks.forEach(e => {
+					e.style.paddingRight = t
+				}), document.body.style.paddingRight = t
+			}
+			unlockPadding() {
+				this._fixBlocks.forEach(t => {
+					t.style.paddingRight = "0px"
+				}), document.body.style.paddingRight = "0px"
+			}
+			}
+			}, function(t, e, o) {
+			"use strict";
+			o.r(e),
+			function(t) {
+				var e = o(0);
+				o(3), o(4);
+				t.GraphModal = e.a
+			}.call(this, o(2))
+			}, function(t, e) {
+			var o;
+			o = function() {
+			return this
+			}();
+			try {
+			o = o || new Function("return this")()
+			} catch (t) {
+			"object" == typeof window && (o = window)
+			}
+			t.exports = o
+			}, function(t, e) {
+			"undefined" != typeof Element && (Element.prototype.matches || (Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector), Element.prototype.closest || (Element.prototype.closest = function(t) {
+			var e = this;
+			do {
+				if (e.matches(t)) return e;
+				e = e.parentElement || e.parentNode
+			} while (null !== e && 1 === e.nodeType);
+			return null
+			}))
+			}, function(t, e, o) {}]);
+			const modal = new GraphModal();
+			var phoneMask = IMask(
+			document.getElementById('order-call__phone'), {
+			mask: '+{7} (000) 000 - 00 - 00'
+			});
+
+			var phoneMask = IMask(
+		document.getElementById('consultation__phone'), {
+			mask: '+{7} (000) 000 - 00 - 00'
+		});
+
+			document.querySelector('#consultation__phone').addEventListener('input', () => {
+		document.querySelector('.consultation__phone-wrapper').classList.add('consultation__phone-wrapper--active');
+
+	});
+
+			document.querySelector('.consultation__button').addEventListener('click', () => {
+		if ((document.querySelector('#consultation__phone').classList.contains('is-invalid')) == true) {
+			document.querySelector('.consultation__phone-wrapper').classList.remove('consultation__phone-wrapper--active');
+			document.querySelector('#consultation__phone').placeholder = 'Введите телефон';
+		}
+	});
+			});
+			</script>
+		</body>
+	</html>

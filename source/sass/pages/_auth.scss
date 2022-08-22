@@ -1,0 +1,40 @@
+.auth-page {
+
+	&__main {
+		margin-top: 180px;
+		margin-bottom: 335px;
+	}
+
+	.consultation {
+		&__form {
+			margin: 0;
+			max-width: none;
+		}
+
+		&__phone {
+			margin-bottom: 0;
+			font-size: 18px;
+			font-weight: 500;
+
+			&::placeholder {
+				font-size: 18px;
+				font-weight: 500;
+				color: #BDBDBD;
+			}
+
+		&-wrapper {
+			margin-top: 14px;
+			margin-bottom: 32px;
+
+			&--active {
+				.consultation__phone {
+					color: #000;
+					font-size: 18px;
+					font-weight: 500;
+					background: #F5FFF4;
+				}
+			}
+		}
+	}
+}
+}
