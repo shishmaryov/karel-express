@@ -227,8 +227,9 @@ if (products) {
 }
 
 
-function card (selector) {
-	let mySwiper = new Swiper(`.${selector} .slider-block`, {
+function card(selector) {
+
+        let mySwiper = new Swiper(`.${selector} .slider-block`, {
             slidesPerView: 1,
             navigation: {
                 nextEl: '.swiper-button-next',
@@ -256,76 +257,80 @@ function card (selector) {
             }
         });
 
-	const maxItems = 5;
-	const sliderNavItems = document.querySelectorAll(`.${selector} .slider-nav__item`);
-	const sliderNav = document.querySelector(`.${selector} .slider-nav`);
 
-	sliderNavItems.forEach((el, index) => {
-		el.setAttribute('data-index', index);
 
-		el.addEventListener('click', (e) => {
-			const index = parseInt(e.currentTarget.dataset.index);
-			for (let item of sliderNavItems) {
-				if (item.classList.contains('nav__item--active')) {
-					item.classList.remove ('nav__item--active');
-				}
-			}
-			el.classList.add('nav__item--active');
-			mySwiper.slideTo(index);
-		});
-	});
 
-	let presentItem = 0;
-	document.querySelector(`.${selector} .swiper-button-next`).addEventListener('click', () => {
-		for (let i = 0; i < sliderNavItems.length; i++) {
-			if (sliderNavItems[i].classList.contains('nav__item--active')) {
-				presentItem = i;
-			}
-		}
+        const maxItems = 5;
+        const sliderNavItems = document.querySelectorAll(`.${selector} .slider-nav__item`);
+        const sliderNav = document.querySelector(`.${selector} .slider-nav`);
 
-		for (let item of sliderNavItems) {
-				if (item.classList.contains('nav__item--active')) {
-					item.classList.remove ('nav__item--active');
-				}
-			}
+        sliderNavItems.forEach((el, index) => {
+            el.setAttribute('data-index', index);
 
-				presentItem++;
-				sliderNavItems[presentItem].classList.add('nav__item--active');
-	});
+            el.addEventListener('click', (e) => {
+                const index = parseInt(e.currentTarget.dataset.index);
+                for (let item of sliderNavItems) {
+                    if (item.classList.contains('nav__item--active')) {
+                        item.classList.remove('nav__item--active');
+                    }
+                }
+                el.classList.add('nav__item--active');
+                mySwiper.slideTo(index);
+            });
+        });
 
-document.querySelector(`.${selector} .swiper-button-prev`).addEventListener('click', () => {
-		for (let i = 0; i < sliderNavItems.length; i++) {
-			if (sliderNavItems[i].classList.contains('nav__item--active')) {
-				presentItem = i;
-			}
-		}
+        let presentItem = 0;
+        document.querySelector(`.${selector} .swiper-button-next`).addEventListener('click', () => {
+            for (let i = 0; i < sliderNavItems.length; i++) {
+                if (sliderNavItems[i].classList.contains('nav__item--active')) {
+                    presentItem = i;
+                }
+            }
 
-		for (let item of sliderNavItems) {
-				if (item.classList.contains('nav__item--active')) {
-					item.classList.remove ('nav__item--active');
-				}
-			}
+            for (let item of sliderNavItems) {
+                if (item.classList.contains('nav__item--active')) {
+                    item.classList.remove('nav__item--active');
+                }
+            }
 
-				presentItem--;
-				sliderNavItems[presentItem].classList.add('nav__item--active');
-	});
+            presentItem++;
+            sliderNavItems[presentItem].classList.add('nav__item--active');
+        });
 
-	const showMore = () => {
-		let childenLength = sliderNav.children.length;
-		if (childenLength > maxItems) {
-			sliderNav.insertAdjacentHTML('beforeend', `
+        document.querySelector(`.${selector} .swiper-button-prev`).addEventListener('click', () => {
+            for (let i = 0; i < sliderNavItems.length; i++) {
+                if (sliderNavItems[i].classList.contains('nav__item--active')) {
+                    presentItem = i;
+                }
+            }
+
+            for (let item of sliderNavItems) {
+                if (item.classList.contains('nav__item--active')) {
+                    item.classList.remove('nav__item--active');
+                }
+            }
+
+            presentItem--;
+            sliderNavItems[presentItem].classList.add('nav__item--active');
+        });
+
+        const showMore = () => {
+            let childenLength = sliderNav.children.length;
+            if (childenLength > maxItems) {
+                sliderNav.insertAdjacentHTML('beforeend', `
 				<div class="btn-center">
 					<button class="modal-open">Еще ${childenLength - maxItems}</button>
 				</div>
 			`);
-			document.querySelectorAll(`.${selector} .slider-nav__item:nth-child(n+${maxItems + 1})`).forEach(el => {el.style.display = 'none';});
-		}
-	};
+                document.querySelectorAll(`.${selector} .slider-nav__item:nth-child(n+${maxItems + 1})`).forEach(el => {
+                    el.style.display = 'none';
+                });
+            }
+        };
 
-	showMore();
-}
+        showMore();
+    }
 
 card('card--gaz-black');
 card('card--gaz-green');
-card('card--gaz-white');
 });
