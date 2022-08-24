@@ -1,8 +1,12 @@
 .auth-page {
 
 	&__main {
-		margin-top: 180px;
-		margin-bottom: 335px;
+		margin-top: 50px;
+
+		@media(min-width: 1024px) {
+			margin-top: 180px;
+		}
+
 	}
 
 	.consultation {
@@ -23,8 +27,13 @@
 			}
 
 		&-wrapper {
-			margin-top: 14px;
-			margin-bottom: 32px;
+			margin-top: 8px;
+			margin-bottom: 24px;
+
+			@media(min-width: 1024px) {
+				margin-top: 14px;
+				margin-bottom: 32px;
+			}
 
 			&--active {
 				.consultation__phone {

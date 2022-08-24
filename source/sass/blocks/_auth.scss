@@ -1,10 +1,37 @@
 .auth {
-	display: grid;
-	grid-template-columns: 1fr 600px;
-	grid-template-rows: 1fr;
+	display: flex;
+	flex-direction: column-reverse;
+
+
+	@media(min-width: 1024px) {
+		display: grid;
+		grid-template-columns: 1fr 600px;
+		grid-template-rows: 1fr;
+	}
+
 
 
 	&__wrapper {
 
+}
+
+&__img {
+	width: 100%;
+	transform: translateX(-15px);
+
+	img {
+		width: 100%;
+	}
+	@media(min-width: 768px) {
+		transform: none;
+	}
+
+	@media(min-width: 1024px) {
+		width: auto;
+
+		img {
+			width: auto;
+		}
+	}
 }
 }
