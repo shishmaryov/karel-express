@@ -14,14 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     submenu(('.header--mobile .submenu__title--geo'), ('.header--mobile .submenu--geo'));
     submenu(('.header--mobile .submenu__title--services'), ('.header--mobile .submenu--services'));
-    submenu(('footer .submenu__title--services'), ('footer .submenu--services'));
-    let geoTitle = ('.footer .submenu__title--geo');
-    let geoList = ('.footer .submenu--geo');
-    document.querySelector(geoTitle).addEventListener('click', function() {
-        document.querySelector(geoList + '> .footer__sublist').classList.toggle('footer__sublist--active');
-        document.querySelector(geoTitle).classList.toggle('submenu__title--active');
-        document.querySelector(geoList + '> .menu__link').classList.toggle('menu__link--active');
-    });
+
     let sublistElse = document.querySelector('.header--mobile  .header__sublist--else'),
         elseImg = document.querySelector('.header--mobile .submenu--else img');
     document.querySelector('.header--mobile .header__else').addEventListener('click', function() {
