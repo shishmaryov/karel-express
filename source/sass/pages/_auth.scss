@@ -34,7 +34,22 @@
 					background: #F5FFF4;
 				}
 			}
+
+			&--code {
+				margin-bottom: 8px;
+				&::after {
+					content: none;
+				}
+
+				.is-invalid {
+
+				}
+			}
 		}
+	}
+
+	&__button--code {
+		display: none;
 	}
 }
 }

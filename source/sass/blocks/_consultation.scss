@@ -179,6 +179,15 @@
 
 			font-size: 18px;
 		}
+
+		&--disabled {
+			animation: none;
+			background: #D8D8D8;
+
+			&:hover {
+				background: #D8D8D8;
+			}
+		}
 	}
 	&__agreement {
 		margin-top: 0;

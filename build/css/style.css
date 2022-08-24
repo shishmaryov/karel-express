@@ -2804,6 +2804,13 @@ img {
       font-size: 18px;
       font-weight: 500;
       background: #F5FFF4; }
+    .auth-page .consultation__phone-wrapper--code {
+      margin-bottom: 8px; }
+      .auth-page .consultation__phone-wrapper--code::after {
+        content: none; }
+
+.auth-page .consultation__button--code {
+  display: none; }
 
 .container {
   margin-right: auto;
@@ -4188,6 +4195,12 @@ img {
         padding-bottom: 17px;
         padding-left: 60px;
         font-size: 18px; } }
+    .consultation__button--disabled {
+      -webkit-animation: none;
+              animation: none;
+      background: #D8D8D8; }
+      .consultation__button--disabled:hover {
+        background: #D8D8D8; }
   .consultation__agreement {
     margin-top: 0;
     margin-bottom: 24px;
@@ -4489,6 +4502,7 @@ img {
     .reviews .review__text {
       margin-top: 16px;
       margin-bottom: 16px;
+      overflow: auto;
       font-size: 16px; }
     .reviews .review__company {
       margin: 0;
@@ -6372,6 +6386,10 @@ img {
   grid-template-columns: 1fr 600px;
   grid-template-rows: 1fr; }
 
+@media (min-width: 1024px) {
+  #auth-form-code .auth-form__title {
+    text-align: left; } }
+
 .auth-form {
   padding: 40px 56px;
   -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
@@ -6439,6 +6457,96 @@ img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
+  .auth-form__change-phone {
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-size: 18px;
+    line-height: 130%;
+    font-weight: 400; }
+    .auth-form__change-phone a {
+      font-weight: 600;
+      color: #4AAB3C;
+      line-height: 130%;
+      text-decoration: none; }
+  .auth-form__timer {
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-size: 18px;
+    color: #828282;
+    text-align: center; }
+    .auth-form__timer--active {
+      color: #4AAB3C; }
+  .auth-form .agreement {
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-size: 18px;
+    line-height: 130%; }
+    .auth-form .agreement__label {
+      display: block;
+      position: relative;
+      padding-left: 36px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      font-size: 18px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none; }
+      .auth-form .agreement__label input:checked ~ .agreement__checkmark {
+        background-color: #4AAB3C; }
+      .auth-form .agreement__label input:checked ~ .agreement__checkmark:after {
+        display: block; }
+      .auth-form .agreement__label .agreement__checkmark::after {
+        content: url("data:image/svg+xml,%3Csvg width='14' height='10' viewBox='0 0 14 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.3333 1L4.99996 8.33333L1.66663 5' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+        width: 14px;
+        height: 10px;
+        position: absolute;
+        top: 1px;
+        left: 5px; }
+    .auth-form .agreement__checkbox {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0; }
+    .auth-form .agreement__checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 24px;
+      width: 24px;
+      background-color: transparent;
+      border-radius: 4px;
+      border: 1px solid #4AAB3C; }
+      .auth-form .agreement__checkmark::after {
+        content: "";
+        position: absolute;
+        display: none; }
+    .auth-form .agreement .is-invalid {
+      border: 1px solid red; }
+  .auth-form .auth__code-input {
+    font-size: 24px;
+    border: 1px solid #4AAB3C;
+    background: #ffffff;
+    color: #000;
+    letter-spacing: 5px;
+    font-weight: 500;
+    padding-left: calc(50% - 35px);
+    padding-right: calc(50% - 35px);
+    width: 70px; }
+  .auth-form .is-invalid {
+    color: #b81111;
+    border: 1px solid #b81111; }
+    .auth-form .is-invalid::-webkit-input-placeholder {
+      color: #b81111; }
+    .auth-form .is-invalid::-moz-placeholder {
+      color: #b81111; }
+    .auth-form .is-invalid:-ms-input-placeholder {
+      color: #b81111; }
+    .auth-form .is-invalid::-ms-input-placeholder {
+      color: #b81111; }
+    .auth-form .is-invalid::placeholder {
+      color: #b81111; }
 
 .footer {
   padding-top: 24px;
