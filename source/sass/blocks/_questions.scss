@@ -157,6 +157,17 @@
 		&-wrapper {
 			position: relative;
 
+			&--active {
+				&::after {
+				content: url('../img/icons/consult-phone-active.svg');
+			}
+			}
+
+			.is-invalid {
+		background: #fff5f5;
+    border: 1px solid #ffd8d8;
+	}
+
 			&::after {
 				content: url("../img/icons/consult-phone.svg");
 				position: absolute;

@@ -1,4 +1,5 @@
 .reviews-page {
+	font-family: 'Exo 2', sans-serif;
 	.park-promo {
 		margin-top: 32px;
 		@media(min-width: 1024px) {
@@ -68,8 +69,8 @@
 
 	.how__button--price {
 		@media(max-width: 1024px) {
-			    padding-left: calc(50% - 83.5px);
-    padding-right: calc(50% - 83.5px);
+			    padding-left: calc(50% - 85.5px);
+    padding-right: calc(50% - 85.5px);
 		}
 	}
 }

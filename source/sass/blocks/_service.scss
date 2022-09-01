@@ -7,6 +7,7 @@
 		justify-content: space-between;
 		}
 	}
+
 	&__phone {
 		background: #fff;
 		border: 1px solid $accent;
@@ -16,12 +17,21 @@
 		}
 
 		&-wrapper {
-			&::after {
+			&--active {
+				&::after {
 				content: url('../img/icons/consult-phone-active.svg');
-				@media(min-width: 1024px) {
-
-				}
 			}
+			}
+
+
+			.is-invalid {
+		background: #fff5f5;
+    border: 1px solid #ffd8d8;
+	}
+
+			@media(min-width: 1024px) {
+					margin-right: 33px;
+				}
 		}
 	}
 

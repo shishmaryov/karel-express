@@ -91,6 +91,12 @@
 			}
 		}
 
+		@media(min-width: 1024px) {
+			.benefit__link {
+				margin-top: 10px;
+			}
+		}
+
 		&::after {
 			content: url("../img/icons/benefits-clock.svg");
 		}
@@ -128,8 +134,7 @@
 
 		@media(min-width: 1150px) {
 			.benefit__link {
-				margin-top: 8px;
-				margin-left: calc(100% - 153px);
+				margin-top: 10px;
 			}
 		}
 		&::after {
@@ -165,20 +170,12 @@
 	margin-bottom: 0;
 
 	font-size: 16px;
-
-	@media(min-width: 1024px) {
-		font-size: 18px;
-	}
 }
 
 .benefit__description--accent {
 	font-weight: 600;
 	font-size: 18px;
 	color: $accent;
-
-	@media(min-width: 1024px) {
-		font-size: 22px;
-	}
 }
 
 .benefit__link {
@@ -206,8 +203,8 @@
 
 
 	@media(min-width: 1150px) {
-		margin-top: 11px;
-		margin-left: calc(100% - 152px);
+		margin-top: 14px;
+		margin-left: calc(100% - 162px);
 	}
 
 	&::before {

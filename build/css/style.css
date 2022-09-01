@@ -1946,7 +1946,7 @@ button.swiper-pagination-bullet {
     margin-right: 16px;
     margin-left: 16px; }
     .graph-modal__container--order-call .graph-modal__content {
-      margin-top: 29px; }
+      margin-top: 8px; }
     .graph-modal__container--order-call .graph-modal__close {
       top: 12px;
       right: 12px; }
@@ -2576,6 +2576,12 @@ img {
       .park-page__bg {
         padding-top: 1px;
         padding-bottom: 152px; } }
+  .park-page #promo-form-target::before {
+    display: block;
+    content: " ";
+    margin-top: -75px;
+    height: 75px;
+    visibility: hidden; }
 
 .service-page {
   font-family: 'Exo 2', sans-serif; }
@@ -2620,9 +2626,30 @@ img {
             content: url("../img/icons/options-promo-form-arrow.svg"); } }
   .service-page .promo {
     overflow: hidden; }
-  @media (min-width: 1024px) {
-    .service-page .promo__wrapper--info {
-      max-width: 590px; } }
+    @media (min-width: 1024px) {
+      .service-page .promo__container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; } }
+    @media (min-width: 1024px) {
+      .service-page .promo__wrapper--info {
+        max-width: 600px; } }
+    .service-page .promo__wrapper--img {
+      position: static;
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
+      height: fit-content; }
+      @media (min-width: 1024px) {
+        .service-page .promo__wrapper--img {
+          -webkit-transform: translateX(143px);
+                  transform: translateX(143px); } }
+    @media (min-width: 1024px) {
+      .service-page .promo__wrapper__img {
+        width: 718px;
+        height: auto; } }
   .service-page .reviews {
     margin-top: 0; }
     .service-page .reviews .container::before {
@@ -2706,119 +2733,116 @@ img {
         content: url("../img/icons/service-questions-after-mobile.svg");
         z-index: -2; } }
 
-.reviews-page .park-promo {
-  margin-top: 32px; }
-  @media (min-width: 1024px) {
-    .reviews-page .park-promo {
-      margin-bottom: 0;
-      margin-top: 0; } }
-  .reviews-page .park-promo__description {
-    margin-bottom: 18px; }
-
-@media (min-width: 1024px) {
-  .reviews-page .park-promo__column--text {
-    max-width: 720px;
-    margin-top: 75px; } }
-
-.reviews-page .reviews__row {
-  margin-bottom: 24px; }
-  .reviews-page .reviews__row .container {
-    margin-top: 0; }
+.reviews-page {
+  font-family: 'Exo 2', sans-serif; }
+  .reviews-page .park-promo {
+    margin-top: 32px; }
     @media (min-width: 1024px) {
-      .reviews-page .reviews__row .container {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center; } }
-  .reviews-page .reviews__row .reviews__slide {
-    width: 280px;
-    margin-left: calc(50% - 156px);
-    padding: 14px 32px;
-    background-image: url("../img/icons/review-bg-mobile.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-size: 328px 100%; }
-    @media (min-width: 768px) {
-      .reviews-page .reviews__row .reviews__slide {
-        width: 321px;
-        margin-left: calc(50% - 192.5px);
-        background-image: url("../img/icons/review-bg.svg");
-        background-size: 381px 100%; } }
-    @media (max-width: 1024px) {
-      .reviews-page .reviews__row .reviews__slide:not(:last-child) {
-        margin-bottom: 18px; } }
-    @media (min-width: 1024px) {
-      .reviews-page .reviews__row .reviews__slide {
-        margin-left: 0; } }
-
-.reviews-page .how__buttons--desktop {
-  margin-bottom: 60px; }
-
-@media (max-width: 1024px) {
-  .reviews-page .how__button--price {
-    padding-left: calc(50% - 83.5px);
-    padding-right: calc(50% - 83.5px); } }
-
-.auth-page__main {
-  margin-top: 50px;
-  margin-bottom: 50px; }
+      .reviews-page .park-promo {
+        margin-bottom: 0;
+        margin-top: 0; } }
+    .reviews-page .park-promo__description {
+      margin-bottom: 18px; }
   @media (min-width: 1024px) {
-    .auth-page__main {
-      margin-top: 180px;
-      margin-bottom: 180px; } }
-
-.auth-page .consultation__form {
-  margin: 0;
-  max-width: none; }
-
-.auth-page .consultation__phone {
-  margin-bottom: 0;
-  font-size: 18px;
-  font-weight: 500; }
-  .auth-page .consultation__phone::-webkit-input-placeholder {
-    font-size: 18px;
-    font-weight: 500;
-    color: #BDBDBD; }
-  .auth-page .consultation__phone::-moz-placeholder {
-    font-size: 18px;
-    font-weight: 500;
-    color: #BDBDBD; }
-  .auth-page .consultation__phone:-ms-input-placeholder {
-    font-size: 18px;
-    font-weight: 500;
-    color: #BDBDBD; }
-  .auth-page .consultation__phone::-ms-input-placeholder {
-    font-size: 18px;
-    font-weight: 500;
-    color: #BDBDBD; }
-  .auth-page .consultation__phone::placeholder {
-    font-size: 18px;
-    font-weight: 500;
-    color: #BDBDBD; }
-  .auth-page .consultation__phone-wrapper {
-    margin-top: 8px;
+    .reviews-page .park-promo__column--text {
+      max-width: 720px;
+      margin-top: 75px; } }
+  .reviews-page .reviews__row {
     margin-bottom: 24px; }
+    .reviews-page .reviews__row .container {
+      margin-top: 0; }
+      @media (min-width: 1024px) {
+        .reviews-page .reviews__row .container {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: justify;
+              -ms-flex-pack: justify;
+                  justify-content: space-between;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center; } }
+    .reviews-page .reviews__row .reviews__slide {
+      width: 280px;
+      margin-left: calc(50% - 156px);
+      padding: 14px 32px;
+      background-image: url("../img/icons/review-bg-mobile.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-size: 328px 100%; }
+      @media (min-width: 768px) {
+        .reviews-page .reviews__row .reviews__slide {
+          width: 321px;
+          margin-left: calc(50% - 192.5px);
+          background-image: url("../img/icons/review-bg.svg");
+          background-size: 381px 100%; } }
+      @media (max-width: 1024px) {
+        .reviews-page .reviews__row .reviews__slide:not(:last-child) {
+          margin-bottom: 18px; } }
+      @media (min-width: 1024px) {
+        .reviews-page .reviews__row .reviews__slide {
+          margin-left: 0; } }
+  .reviews-page .how__buttons--desktop {
+    margin-bottom: 60px; }
+  @media (max-width: 1024px) {
+    .reviews-page .how__button--price {
+      padding-left: calc(50% - 85.5px);
+      padding-right: calc(50% - 85.5px); } }
+
+.auth-page {
+  font-family: 'Exo 2', sans-serif; }
+  .auth-page__main {
+    margin-top: 50px;
+    margin-bottom: 50px; }
     @media (min-width: 1024px) {
-      .auth-page .consultation__phone-wrapper {
-        margin-top: 14px;
-        margin-bottom: 32px; } }
-    .auth-page .consultation__phone-wrapper--active .consultation__phone {
-      color: #000;
+      .auth-page__main {
+        margin-top: 180px;
+        margin-bottom: 180px; } }
+  .auth-page .consultation__form {
+    margin: 0;
+    max-width: none; }
+  .auth-page .consultation__phone {
+    margin-bottom: 0;
+    font-size: 18px;
+    font-weight: 500; }
+    .auth-page .consultation__phone::-webkit-input-placeholder {
       font-size: 18px;
       font-weight: 500;
-      background: #F5FFF4; }
-    .auth-page .consultation__phone-wrapper--code {
-      margin-bottom: 8px; }
-      .auth-page .consultation__phone-wrapper--code::after {
-        content: none; }
-
-.auth-page .consultation__button--code {
-  display: none; }
+      color: #BDBDBD; }
+    .auth-page .consultation__phone::-moz-placeholder {
+      font-size: 18px;
+      font-weight: 500;
+      color: #BDBDBD; }
+    .auth-page .consultation__phone:-ms-input-placeholder {
+      font-size: 18px;
+      font-weight: 500;
+      color: #BDBDBD; }
+    .auth-page .consultation__phone::-ms-input-placeholder {
+      font-size: 18px;
+      font-weight: 500;
+      color: #BDBDBD; }
+    .auth-page .consultation__phone::placeholder {
+      font-size: 18px;
+      font-weight: 500;
+      color: #BDBDBD; }
+    .auth-page .consultation__phone-wrapper {
+      margin-top: 8px;
+      margin-bottom: 24px; }
+      @media (min-width: 1024px) {
+        .auth-page .consultation__phone-wrapper {
+          margin-top: 14px;
+          margin-bottom: 32px; } }
+      .auth-page .consultation__phone-wrapper--active .consultation__phone {
+        color: #000;
+        font-size: 18px;
+        font-weight: 500;
+        background: #F5FFF4; }
+      .auth-page .consultation__phone-wrapper--code {
+        margin-bottom: 8px; }
+        .auth-page .consultation__phone-wrapper--code::after {
+          content: none; }
+  .auth-page .consultation__button--code {
+    display: none; }
 
 .container {
   margin-right: auto;
@@ -3943,6 +3967,9 @@ img {
 @media (max-width: 1150px) and (max-width: 1150px) and (min-width: 1024px) {
   .benefits__item--clock .benefit__link {
     margin-top: 6px; } }
+  @media (min-width: 1024px) {
+    .benefits__item--clock .benefit__link {
+      margin-top: 10px; } }
   .benefits__item--clock::after {
     content: url("../img/icons/benefits-clock.svg"); }
 
@@ -3962,8 +3989,7 @@ img {
       margin-top: 5px; } }
   @media (min-width: 1150px) {
     .benefits__item--wednesday .benefit__link {
-      margin-top: 8px;
-      margin-left: calc(100% - 153px); } }
+      margin-top: 10px; } }
   .benefits__item--wednesday::after {
     content: url("../img/icons/benefits-calendar.svg"); }
   .benefits__item-wrapper {
@@ -3986,17 +4012,11 @@ img {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 16px; }
-  @media (min-width: 1024px) {
-    .benefit__description {
-      font-size: 18px; } }
 
 .benefit__description--accent {
   font-weight: 600;
   font-size: 18px;
   color: #4AAB3C; }
-  @media (min-width: 1024px) {
-    .benefit__description--accent {
-      font-size: 22px; } }
 
 .benefit__link {
   position: relative;
@@ -4025,8 +4045,8 @@ img {
       margin-left: calc(100% - 105px); } }
   @media (min-width: 1150px) {
     .benefit__link {
-      margin-top: 11px;
-      margin-left: calc(100% - 152px); } }
+      margin-top: 14px;
+      margin-left: calc(100% - 162px); } }
   .benefit__link::before {
     content: url("../img/icons/benefit-link-bg.svg");
     position: absolute;
@@ -4830,6 +4850,11 @@ img {
         color: #bdbdbd; } }
     .questions__phone-wrapper {
       position: relative; }
+      .questions__phone-wrapper--active::after {
+        content: url("../img/icons/consult-phone-active.svg"); }
+      .questions__phone-wrapper .is-invalid {
+        background: #fff5f5;
+        border: 1px solid #ffd8d8; }
       .questions__phone-wrapper::after {
         content: url("../img/icons/consult-phone.svg");
         position: absolute;
@@ -5892,7 +5917,7 @@ img {
   background-color: rgba(0, 0, 0, 0.75); }
   @media (min-width: 1024px) {
     .graph-modal__close--gallery {
-      right: 14px;
+      right: 16px;
       top: 14px;
       background-color: rgba(80, 80, 80, 0.8); } }
   .graph-modal__close--gallery path {
@@ -5928,8 +5953,14 @@ img {
     .service__phone {
       padding-right: 60px;
       width: 200px; } }
-  .service__phone-wrapper::after {
+  .service__phone-wrapper--active::after {
     content: url("../img/icons/consult-phone-active.svg"); }
+  .service__phone-wrapper .is-invalid {
+    background: #fff5f5;
+    border: 1px solid #ffd8d8; }
+  @media (min-width: 1024px) {
+    .service__phone-wrapper {
+      margin-right: 33px; } }
 
 .service__button {
   overflow-y: hidden;

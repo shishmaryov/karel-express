@@ -55,4 +55,12 @@ font-family: 'Exo 2', sans-serif;
 			padding-bottom: 152px;
 		}
 	}
+
+	#promo-form-target::before {
+		display: block;
+  		content: " ";
+  		margin-top: -75px;
+  		height: 75px;
+  		visibility: hidden;
+	}
 }

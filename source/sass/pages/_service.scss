@@ -57,13 +57,41 @@
 
 	.promo {
 		overflow: hidden;
-	}
 
-	.promo__wrapper--info {
+		&__container {
+			@media(min-width: 1024px) {
+				display: flex;
+				align-items: center;
+			}
+
+		}
+
+		&__wrapper {
+		&--info {
 		@media(min-width: 1024px) {
-			max-width: 590px;
+			max-width: 600px;
 		}
 	}
+
+	&--img {
+		@media(min-width: 1024px) {
+			transform: translateX(143px);
+		}
+
+		position: static;
+		height: fit-content;
+	}
+
+	&__img {
+		@media(min-width: 1024px) {
+			width: 718px;
+			height: auto;
+		}
+	}
+}
+	}
+
+
 
 	.reviews {
 		margin-top: 0;
