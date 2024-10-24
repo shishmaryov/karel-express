@@ -3194,21 +3194,21 @@ img {
   padding-bottom: 14px; }
   @media (min-width: 1024px) {
     .submenu__title:hover::after {
-      content: url("../img/icons/arrow-up.svg"); } }
+      content: ""; } }
   @media (max-width: 1024px) {
     .submenu__title--geo {
       width: 106px; }
     .submenu__title--services {
       width: 51px; } }
   .submenu__title::after {
-    content: url("../img/icons/arrow-down.svg");
+    content: "";
     position: absolute;
     top: 18px;
     right: 0;
     width: 14px;
     height: 17px; }
   .submenu__title--active::after {
-    content: url("../img/icons/arrow-up.svg"); }
+    content: ""; }
 
 .section__title {
   font-weight: 400;
