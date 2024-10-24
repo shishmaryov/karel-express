@@ -3184,7 +3184,7 @@ img {
   .submenu:hover .header__sublist {
     display: grid; }
   .submenu:hover .submenu__title::after {
-    content: url("../img/icons/arrow-up.svg"); } }
+    content: ""; } }
 
 .submenu__title {
   position: relative;
